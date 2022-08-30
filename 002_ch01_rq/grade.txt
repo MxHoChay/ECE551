@@ -1,0 +1,12 @@
+Grading at 08/30/2022:14:55:51.629063
+For commit ID 20b4d3ce892455982bc68902cc0b417aba8a22f0
+Grading at Tue Aug 30 10:55:51 AM EDT 2022
+Reading your quiz answers from answers.txt
+You got 2 questions incorrect.
+You might want to review these concepts:
+------------
+How to approach developing an algorithm
+The basic ideas of algorithms
+------------
+
+Overall Grade: FAILED
