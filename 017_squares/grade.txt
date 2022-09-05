@@ -1,0 +1,7 @@
+Grading at 09/05/2022:20:18:23.685025
+For commit ID 13b801710f5225da2ac602f835ee30e40533a3b3
+Grading at Mon Sep  5 04:18:23 PM EDT 2022
+Checking the syntax of your code in squares.c
+This code is not legal.  Please check the syntax.
+
+Overall Grade: F
