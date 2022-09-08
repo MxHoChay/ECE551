@@ -11,7 +11,7 @@ typedef struct _retire_info retire_info;
 
 double myCalc(int nowAge, double init, retire_info info) {
   for (int i = 0; i < info.months; i++) {
-    printf("Age %3d month %2d you have $%.2f\n", nowAge / 12, nowAge % 12 + 1, init);
+    printf("Age %3d month %2d you have $%.2f\n", nowAge / 12, nowAge % 12, init);
     init += info.contribution + init * info.rate_of_return;
     nowAge++;
   }
