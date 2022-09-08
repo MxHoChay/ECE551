@@ -21,7 +21,7 @@ double myCalc(int nowAge, double init, retire_info info) {
 void retirement(int startAge, double initial, retire_info working, retire_info retired) {
   initial = myCalc(startAge, initial, working);
   startAge += working.months;
-  myCalc(startAge, initial, retired);
+  initial = myCalc(startAge, initial, retired);
 }
 
 int main() {
