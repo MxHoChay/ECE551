@@ -1,12 +1,6 @@
-Grading at 09/12/2022:19:05:41.189467
-For commit ID 76b95c0fb24a8cffb0ed73107288c1495c370dcf
-Grading at Mon Sep 12 03:05:41 PM EDT 2022
+Grading at 09/12/2022:19:12:12.729705
+For commit ID ca483b106468bef0a7f2790d75c16950f1ea363d
+Grading at Mon Sep 12 03:12:12 PM EDT 2022
 Reading your quiz answers from answers.txt
-You got 2 questions incorrect.
-You might want to review these concepts:
-------------
-The introduction to chapter 6
-The points of a debugger
-------------
 
-Overall Grade: FAILED
+Overall Grade: PASSED
