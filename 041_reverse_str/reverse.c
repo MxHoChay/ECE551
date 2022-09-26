@@ -3,13 +3,13 @@
 #include <string.h>
 
 void reverse(char * str) {
-  int len = 0;
+  long len = 0;
   char * sp = str;
   while (*sp != '\0') {
     len++;
     sp++;
   }
-  for (int i = 0; i < len / 2; i++) {
+  for (long i = 0; i < len / 2; i++) {
     char temp = str[i];
     str[i] = str[len - i - 1];
     str[len - i - 1] = temp;
