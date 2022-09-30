@@ -1,0 +1,14 @@
+Grading at 09/30/2022:20:32:52.268618
+For commit ID 9d7c2dd3e3f799faa287ae80373e39282eac2e2d
+Grading at Fri Sep 30 04:32:51 PM EDT 2022
+
+Compiling 
+rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
+gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printCountries.o -o printCountries
+gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printRunningAvg.o -o printRunningAvg
+gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printCumulative.o -o printCumulative
+gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printDailyMax.o -o printDailyMax
+Running your test cases
+Cannot proceed without testcases.txt
+
+Overall Grade: NO GRADE YET
