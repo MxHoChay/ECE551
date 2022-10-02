@@ -29,6 +29,10 @@ int main(int argc, char ** argv) {
       exit(EXIT_FAILURE);
     }
   }
+  if (fgetc(f) != EOF) {
+    fprintf(stderr, "Too many lines!");
+    exit(EXIT_FAILURE);
+  }
   fclose(f);
   for (int i = 0; i < 10; i++) {
     for (int j = 0; j < 10; j++) {
