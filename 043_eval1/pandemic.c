@@ -26,14 +26,10 @@ country_t parseLine(char * line) {
   ans.population = 0;
   line++;
   bool flag = false;
-  while (*line != '\n' && *line != '\0') {
-    if (*line == ' ') {
-      continue;
-    }
-    if (*line < '0' || *line > '9') {
-      fprintf(stderr, "Population error!");
-      exit(EXIT_FAILURE);
-    }
+  while (*line == " ") {
+    line++;
+  }
+  while (*line >= '0' && *line <= '9') {
     int dig = *line - '0';
     flag = true;
     if (ans.population > 1844674407370955161 ||
