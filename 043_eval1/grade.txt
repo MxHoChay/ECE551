@@ -1,10 +1,30 @@
-Grading at 10/03/2022:22:45:40.231615
-For commit ID 2fdc69db16d68804247d596b5ddda6d3f915a612
-Grading at Mon Oct  3 06:45:40 PM EDT 2022
+Grading at 10/03/2022:22:48:03.411479
+For commit ID 92f0fb6345cbedc7b5aa03c55967970360cc231e
+Grading at Mon Oct  3 06:48:00 PM EDT 2022
 
 Compiling 
 rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
 gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printCountries.o -o printCountries
-The code did not compile!
+gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printRunningAvg.o -o printRunningAvg
+gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printCumulative.o -o printCumulative
+gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printDailyMax.o -o printDailyMax
+Running your test cases
++-----------------------------------------------------------------------+
+Test case printCountries invalid.csv
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case printDailyMax population.csv
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case printCountries population.csv
+Line_1_did_not_match
+Your file did not match the expected ouput
++-----------------------------------------------------------------------+
+Test case printDailyMax population.csv daily_small.csv
+Line_1_did_not_match
+Your file did not match the expected ouput
+
+You have FAILED one or more of your test cases
+Keep debugging
 
 Overall Grade: NO GRADE YET
