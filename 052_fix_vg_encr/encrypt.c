@@ -41,11 +41,11 @@ int main(int argc, char ** argv) {
     return EXIT_FAILURE;
   }
   //outfileNAme is argv[2] + ".txt", so add 4 to its length.
-  char * outFileName = malloc((strlen(argv[2]) + 4) * sizeof(*outFileName));
+  char * outFileName = malloc((strlen(argv[2]) + 1) * sizeof(*outFileName));
   strcpy(outFileName, argv[2]);
+  outFileName = realloc(outFileName, (strlen(argv[2]) + 5) * sizeof(*outFileName));
   strcat(outFileName, ".enc");
   FILE * outFile = fopen(outFileName, "w");
-  free(outFileName);
   encrypt(f, key, outFile);
   if (fclose(outFile) != 0) {
     perror("Failed to close the input file!");
@@ -55,6 +55,6 @@ int main(int argc, char ** argv) {
     perror("Failed to close the input file!");
     return EXIT_FAILURE;
   }
-
+  free(outFileName);
   return EXIT_SUCCESS;
 }
