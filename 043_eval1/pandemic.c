@@ -26,7 +26,7 @@ country_t parseLine(char * line) {
   ans.population = 0;
   line++;
   bool flag = false;
-  while (*line == " ") {
+  while (*line == ' ') {
     line++;
   }
   while (*line >= '0' && *line <= '9') {
