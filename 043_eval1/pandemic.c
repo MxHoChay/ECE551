@@ -53,8 +53,8 @@ country_t parseLine(char * line) {
 
 void calcRunningAvg(unsigned * data, size_t n_days, double * avg) {
   double sum = 0;
-  if (n_days < 7) {
-    fprintf(stderr, "Need more data!");
+  if (data == NULL || n_days < 7 || avg == NULL) {
+    fprintf(stderr, "calcrunningavg error!");
     exit(EXIT_FAILURE);
   }
   for (size_t i = 0; i < 7; i++) {
@@ -68,11 +68,11 @@ void calcRunningAvg(unsigned * data, size_t n_days, double * avg) {
 }
 
 void calcCumulative(unsigned * data, size_t n_days, uint64_t pop, double * cum) {
-  double sum = 0;
-  if (pop == 0) {
-    fprintf(stderr, "Population is 0!");
+  if (data == NULL || cum == NULL || pop == 0 || n_days == 0) {
+    fprintf(stderr, "calccumulative error!");
     exit(EXIT_FAILURE);
   }
+  double sum = 0;
   for (size_t i = 0; i < n_days; i++) {
     sum += data[i];
     cum[i] = sum / pop * 100000;
@@ -83,6 +83,10 @@ void printCountryWithMax(country_t * countries,
                          size_t n_countries,
                          unsigned ** data,
                          size_t n_days) {
+  if (countries == NULL || n_countries == 0 || data == NULL || n_days == 0) {
+    fprintf(stderr, "printcountrywithmax error!");
+    exit(EXIT_FAILURE);
+  }
   unsigned max = 0;
   size_t country = 0;
   for (size_t i = 0; i < n_countries; i++) {
