@@ -1,6 +1,7 @@
 #error
 printCountries invalid.csv
 printDailyMax population.csv
+printCountries fail1.txt
 
 #success
 printCountries population.csv
