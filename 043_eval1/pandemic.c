@@ -6,6 +6,7 @@
 
 country_t parseLine(char * line) {
   country_t ans;
+  // To make sure the line is readable.
   if (line == NULL || *line == '\0' || *line == '\n') {
     fprintf(stderr, "Invalid line!");
     exit(EXIT_FAILURE);
@@ -18,6 +19,7 @@ country_t parseLine(char * line) {
     ans.name[i] = *line;
     line++;
   }
+  // If the country name is not followed by a comma, then exit with failure.
   if (*line == '\n' || *line == '\0' || *line != ',') {
     fprintf(stderr, "Name error!");
     exit(EXIT_FAILURE);
@@ -26,12 +28,18 @@ country_t parseLine(char * line) {
   ans.population = 0;
   line++;
   bool flag = false;
+  // Clear all the spaces in front of the number.
   while (*line == ' ') {
     line++;
   }
-  while (*line >= '0' && *line <= '9') {
+  while (*line != '\0' && *line != '\n') {
+    if (*line < '0' || *line > '9') {
+      fprintf(stderr, "Population error!");
+      exit(EXIT_FAILURE);
+    }
     int dig = *line - '0';
     flag = true;
+    // Make sure the population do not exceed uint64.
     if (ans.population > 1844674407370955161 ||
         (ans.population == 1844674407370955161 && dig > 5)) {
       fprintf(stderr, "Population too big!");
@@ -40,6 +48,7 @@ country_t parseLine(char * line) {
     ans.population = ans.population * 10 + dig;
     line++;
   }
+  // No number is detected.
   if (!flag) {
     fprintf(stderr, "No population!");
     exit(EXIT_FAILURE);
@@ -49,9 +58,12 @@ country_t parseLine(char * line) {
 
 void calcRunningAvg(unsigned * data, size_t n_days, double * avg) {
   double sum = 0;
-  if (data == NULL || n_days < 7 || avg == NULL) {
+  if (data == NULL || avg == NULL) {
     fprintf(stderr, "calcrunningavg error!");
     exit(EXIT_FAILURE);
+  }
+  if (n_days < 7) {
+    exit(EXIT_SUCCESS);
   }
   for (size_t i = 0; i < 7; i++) {
     sum += data[i];
