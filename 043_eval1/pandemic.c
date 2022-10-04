@@ -7,9 +7,12 @@
 country_t parseLine(char * line) {
   country_t ans;
   // To make sure the line is readable.
-  if (line == NULL || *line == '\0' || *line == '\n') {
+  if (line == NULL || *line == '\n') {
     fprintf(stderr, "Invalid line!");
     exit(EXIT_FAILURE);
+  }
+  if (*line == '\0') {
+    exit(EXIT_SUCCESS);
   }
   int i;
   for (i = 0; i < 63; i++) {
