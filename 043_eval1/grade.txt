@@ -1,6 +1,6 @@
-Grading at 10/04/2022:22:37:29.758401
-For commit ID 4a507d25ccd89d78480a4678d569c279d30ca2e0
-Grading at Tue Oct  4 06:37:26 PM EDT 2022
+Grading at 10/04/2022:22:39:08.253721
+For commit ID 99dab1879ff2fed1aedd29ba9ca1618d4c153f32
+Grading at Tue Oct  4 06:39:05 PM EDT 2022
 
 Compiling 
 rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
@@ -20,10 +20,12 @@ Test case printCountries fail1.txt
 Our printCountries does not consider this an error case
 +-----------------------------------------------------------------------+
 Test case printCountries population.csv
-Your file matched the expected output
+Line_1_did_not_match
+Your file did not match the expected ouput
 +-----------------------------------------------------------------------+
 Test case printDailyMax population.csv daily_small.csv
-Your file matched the expected output
+Line_1_did_not_match
+Your file did not match the expected ouput
 
 You have FAILED one or more of your test cases
 Keep debugging
