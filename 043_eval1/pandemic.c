@@ -79,7 +79,7 @@ void calcRunningAvg(unsigned * data, size_t n_days, double * avg) {
 }
 
 void calcCumulative(unsigned * data, size_t n_days, uint64_t pop, double * cum) {
-  if (data == NULL || cum == NULL || pop == 0 || n_days == 0) {
+  if (data == NULL || cum == NULL || pop == 0) {
     fprintf(stderr, "calccumulative error!");
     exit(EXIT_FAILURE);
   }
@@ -94,19 +94,19 @@ void printCountryWithMax(country_t * countries,
                          size_t n_countries,
                          unsigned ** data,
                          size_t n_days) {
-  if (countries == NULL || n_countries == 0 || data == NULL || n_days == 0) {
+  if (countries == NULL || data == NULL || n_countries == 0 || n_days == 0) {
     fprintf(stderr, "printcountrywithmax error!");
     exit(EXIT_FAILURE);
   }
   unsigned max = 0;
-  size_t country = 0;
+  size_t max_country = 0;
   for (size_t i = 0; i < n_countries; i++) {
     for (size_t j = 0; j < n_days; j++) {
       if (data[i][j] > max) {
         max = data[i][j];
-        country = i;
+        max_country = i;
       }
     }
   }
-  printf("%s has the most daily cases with %u\n", countries[country].name, max);
+  printf("%s has the most daily cases with %u\n", countries[max_country].name, max);
 }
