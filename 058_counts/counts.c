@@ -37,7 +37,6 @@ void printCounts(counts_t * c, FILE * outFile) {
   if (c->unknownum > 0) {
     fprintf(outFile, "<unknown> : %d\n", c->unknownum);
   }
-  fclose(outFile);
 }
 
 void freeCounts(counts_t * c) {

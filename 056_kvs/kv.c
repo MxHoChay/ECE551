@@ -6,6 +6,10 @@
 
 kvarray_t * readKVs(const char * fname) {
   FILE * f = fopen(fname, "r");
+  if (f == NULL) {
+    fprintf(stderr, "Invalid file name!");
+    exit(EXIT_FAILURE);
+  }
   kvarray_t * kvarr = malloc(sizeof(*kvarr));
   kvarr->arr = NULL;
   kvarr->len = 0;
