@@ -1,6 +1,6 @@
-Grading at 10/19/2022:20:19:17.730692
-For commit ID 7930d41ed209f8f2ec9f7c6ece9cf4054d92da0e
-Grading at Wed Oct 19 04:19:16 PM EDT 2022
+Grading at 10/19/2022:20:23:53.969305
+For commit ID 38926c3e29b99485fceb3104beebc454c190fa9e
+Grading at Wed Oct 19 04:23:51 PM EDT 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -41,23 +41,9 @@ Valgrind was clean
 
 2.2: Current test is story-step2 mytrickywords.txt
 -----------------------------
-It looks like you got different output from us on that case.
-Here is the diff (yours on left, ours on right):
-
-apple:								apple:
-  abc								  abc
-  								  
-:								  
-  								  
-							      )	:
-							      )	  
-							      >	  
-							      >	  
-							      >	  
-							      >	  abc
-  abc								  abc
-Your file did not match the expected ouput
-
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 
 Step 3
 Checking that story-step3 compiles
