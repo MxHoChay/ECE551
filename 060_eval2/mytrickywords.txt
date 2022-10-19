@@ -1,10 +1,4 @@
 apple:abc
 :
-:
-:
-:
 :abc
-:abc
-apple:
-apple:
 apple:
