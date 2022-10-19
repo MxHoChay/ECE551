@@ -1,11 +1,11 @@
-Grading at 10/19/2022:18:44:14.596733
-For commit ID 9b0100162c7b95d9ca468451c7ff8818535d55e6
-Grading at Wed Oct 19 02:44:13 PM EDT 2022
+Grading at 10/19/2022:20:14:32.760798
+For commit ID 7384235d35982bb49ff67417ca114653a13873bd
+Grading at Wed Oct 19 04:14:31 PM EDT 2022
 Doing some basic checking for your submission
 
 Step 1
 Checking that story-step1 compiles
-rm -f *~ story-step1  story-step1.o rand_story.o
+rm -f *~ story-step1 story-step2  story-step1.o story-step2.o rand_story.o
 gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
 gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step1.c
 gcc -o story-step1 story-step1.o rand_story.o provided.o
@@ -24,7 +24,24 @@ Valgrind was clean
 
 Step 2
 Checking that story-step2 compiles
-rm -f *~ story-step1  story-step1.o rand_story.o
+rm -f *~ story-step1 story-step2  story-step1.o story-step2.o rand_story.o
+gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
+gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step2.c
+gcc -o story-step2 story-step2.o rand_story.o provided.o
+rm story-step2.o
+The code compiled (good)
+Executable story-step2 exists (good)
+Now running YOUR tests for step 2
+
+2.1: Current test is story-step2 words.txt
+-----------------------------
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
+
+Step 3
+Checking that story-step3 compiles
+rm -f *~ story-step1 story-step2  story-step1.o story-step2.o rand_story.o
 The code did not compile!
 
 Overall Grade: NO GRADE YET
