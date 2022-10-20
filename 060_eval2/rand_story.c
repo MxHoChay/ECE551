@@ -39,29 +39,22 @@ const char * myChooseWord(char * category,
   if (haveUsedWord) {
     return chooseWord(category, cats);
   }
-  bool isNewWord = false;
-  const char * word = NULL;
-  // To prevent looping infinitely
-  size_t sum = 0;
-  while (sum < 100000) {
-    sum++;
-    word = chooseWord(category, cats);
-    isNewWord = true;
-    // Make sure the new word has not been used
-    for (size_t i = 0; i < preWord->n_words; i++) {
-      if (strcmp(word, preWord->words[i]) == 0) {
-        isNewWord = false;
-        break;
+  const char * word = chooseWord(category, cats);
+  for (size_t i = 0; i < cats->n; i++) {
+    if (strcmp(cats->arr[i].name, category) == 0) {
+      for (size_t j = 0; j < cats->arr[i].n_words; j++) {
+        if (strcmp(word, cats->arr[i].words[j]) == 0) {
+          free(cats->arr[i].words[j]);
+          for (size_t k = j; k < cats->arr[i].n_words - 1; k++) {
+            cats->arr[i].words[k] = cats->arr[i].words[k + 1];
+          }
+          cats->arr[i].n_words--;
+          return word;
+        }
       }
     }
-    if (isNewWord) {
-      return word;
-    }
   }
-  if (sum == 100000) {
-    exitErr("Maybe we cannot find a unused word!");
-  }
-  return "NoSuchWord";
+  return word;
 }
 
 void freeCat(catarray_t * cats) {
