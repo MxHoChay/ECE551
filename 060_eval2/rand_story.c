@@ -115,9 +115,7 @@ void parseStoryLine(char * line, catarray_t * cats, category_t * preWord, bool f
       }
       preWord->words =
           realloc(preWord->words, ++(preWord->n_words) * sizeof(*(preWord->words)));
-      preWord->words[preWord->n_words - 1] =
-          malloc((strlen(word) + 1) * sizeof(*(preWord->words[preWord->n_words - 1])));
-      strcpy(preWord->words[preWord->n_words - 1], word);
+      preWord->words[preWord->n_words - 1] = strdup(word);
       // Replace the blank with words and print
       printf("%s", word);
       free(category);
