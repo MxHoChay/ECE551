@@ -34,10 +34,13 @@ size_t convertToInt(char * str) {
 
 void deleteFromCat(catarray_t * cats, const char * category, const char * word) {
   for (size_t i = 0; i < cats->n; i++) {
+    // To find the category in cats
     if (strcmp(cats->arr[i].name, category) == 0) {
       for (size_t j = 0; j < cats->arr[i].n_words; j++) {
+        // To find if the word is still in the list
         if (strcmp(word, cats->arr[i].words[j]) == 0) {
           free(cats->arr[i].words[j]);
+          // Delete the word from the list
           for (size_t k = j; k < cats->arr[i].n_words - 1; k++) {
             cats->arr[i].words[k] = cats->arr[i].words[k + 1];
           }
@@ -101,6 +104,7 @@ void parseStoryLine(char * line,
       else {
         word = chooseWord(category, cats);
       }
+      // Save the word in a list to remeber words have been used
       preWord->words =
           realloc(preWord->words, ++(preWord->n_words) * sizeof(*(preWord->words)));
       preWord->words[preWord->n_words - 1] = strdup(word);
