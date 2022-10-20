@@ -18,11 +18,8 @@ FILE * myOpen(const char * filename);
 // Convert string to int
 size_t convertToInt(char * str);
 
-// Add the option to avoid reusing words
-const char * myChooseWord(char * category,
-                          catarray_t * cats,
-                          category_t * preWord,
-                          bool haveUsedWord);
+// Delete the used word from cats
+void deleteFromCat(catarray_t * cats, const char * category, const char * word);
 
 // Free the space allocated to cats
 void freeCat(catarray_t * cats);

@@ -32,14 +32,10 @@ size_t convertToInt(char * str) {
   return res;
 }
 
-const char * myChooseWord(char * category,
-                          catarray_t * cats,
-                          category_t * preWord,
-                          bool haveUsedWord) {
-  if (haveUsedWord) {
-    return chooseWord(category, cats);
+void deleteFromCat(catarray_t * cats, const char * category, const char * word) {
+  if (cats == NULL) {
+    return;
   }
-  const char * word = chooseWord(category, cats);
   for (size_t i = 0; i < cats->n; i++) {
     if (strcmp(cats->arr[i].name, category) == 0) {
       for (size_t j = 0; j < cats->arr[i].n_words; j++) {
@@ -49,12 +45,11 @@ const char * myChooseWord(char * category,
             cats->arr[i].words[k] = cats->arr[i].words[k + 1];
           }
           cats->arr[i].n_words--;
-          return word;
+          return;
         }
       }
     }
   }
-  return word;
 }
 
 void freeCat(catarray_t * cats) {
@@ -105,15 +100,19 @@ void parseStoryLine(char * line,
       // Make sure the integer is a valid one
       if (index > 0 && index <= preWord->n_words) {
         word = preWord->words[preWord->n_words - index];
+        cats = NULL;
       }
       else {
-        word = myChooseWord(category, cats, preWord, haveUsedWord);
+        word = chooseWord(category, cats);
       }
       preWord->words =
           realloc(preWord->words, ++(preWord->n_words) * sizeof(*(preWord->words)));
       preWord->words[preWord->n_words - 1] = strdup(word);
       // Replace the blank with words and print
       printf("%s", word);
+      if (!haveUsedWord) {
+        deleteFromCat(cats, category, word);
+      }
       free(category);
     }
     else {
