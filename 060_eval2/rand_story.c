@@ -138,7 +138,7 @@ void createStory(FILE * f, catarray_t * cats, bool flag) {
   char * line = NULL;
   size_t sz = 0;
   // Read each line of the story
-  while (getline(&line, &sz, f) > 1) {
+  while (getline(&line, &sz, f) > 0) {
     parseStoryLine(line, cats, preWord, flag);
   }
   for (size_t i = 0; i < preWord->n_words; i++) {
