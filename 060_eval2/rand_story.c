@@ -33,9 +33,6 @@ size_t convertToInt(char * str) {
 }
 
 void deleteFromCat(catarray_t * cats, const char * category, const char * word) {
-  if (cats == NULL) {
-    return;
-  }
   for (size_t i = 0; i < cats->n; i++) {
     if (strcmp(cats->arr[i].name, category) == 0) {
       for (size_t j = 0; j < cats->arr[i].n_words; j++) {
@@ -100,7 +97,6 @@ void parseStoryLine(char * line,
       // Make sure the integer is a valid one
       if (index > 0 && index <= preWord->n_words) {
         word = preWord->words[preWord->n_words - index];
-        cats = NULL;
       }
       else {
         word = chooseWord(category, cats);
