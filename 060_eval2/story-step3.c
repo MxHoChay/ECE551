@@ -14,7 +14,7 @@ int main(int argc, char ** argv) {
   catarray_t * cats = createCat(fcat);
 
   // Create the story in fstory
-  createStory(fstory, cats, false);
+  createStory(fstory, cats, true);
 
   fclose(fcat);
   fclose(fstory);

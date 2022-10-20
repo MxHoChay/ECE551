@@ -22,7 +22,7 @@ size_t convertToInt(char * str);
 const char * myChooseWord(char * category,
                           catarray_t * cats,
                           category_t * preWord,
-                          bool flag);
+                          bool haveUsedWord);
 
 // Free the space allocated to cats
 void freeCat(catarray_t * cats);
@@ -31,10 +31,13 @@ void freeCat(catarray_t * cats);
 char * findWord(char * line, char flag);
 
 // Parse each line in story, replace the blank with proper words and print
-void parseStoryLine(char * line, catarray_t * cats, category_t * preWord, bool flag);
+void parseStoryLine(char * line,
+                    catarray_t * cats,
+                    category_t * preWord,
+                    bool haveUsedWord);
 
 // Create the story by replacing words
-void createStory(FILE * f, catarray_t * cats, bool flag);
+void createStory(FILE * f, catarray_t * cats, bool haveUsedWord);
 
 // Parse categories and words on each line
 void parseCatLine(char * line, catarray_t * cats);

@@ -8,6 +8,6 @@ int main(int argc, char ** argv) {
     exitErr("Invalid input format!");
   }
   FILE * f = myOpen(argv[1]);
-  createStory(f, NULL, false);
+  createStory(f, NULL, true);
   fclose(f);
 }

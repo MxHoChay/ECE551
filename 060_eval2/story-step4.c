@@ -12,10 +12,10 @@ int main(int argc, char ** argv) {
   FILE * fstory = myOpen(argv[argc - 1]);
   catarray_t * cats = createCat(fword);
   if (argc == 4 && strcmp(argv[1], "-n") == 0) {
-    createStory(fstory, cats, true);
+    createStory(fstory, cats, false);
   }
   else {
-    createStory(fstory, cats, false);
+    createStory(fstory, cats, true);
   }
   fclose(fword);
   fclose(fstory);

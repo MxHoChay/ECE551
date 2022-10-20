@@ -35,8 +35,8 @@ size_t convertToInt(char * str) {
 const char * myChooseWord(char * category,
                           catarray_t * cats,
                           category_t * preWord,
-                          bool flag) {
-  if (!flag) {
+                          bool haveUsedWord) {
+  if (haveUsedWord) {
     return chooseWord(category, cats);
   }
   bool isNewWord = false;
@@ -96,7 +96,10 @@ char * getWord(char ** line, char flag) {
   return word;
 }
 
-void parseStoryLine(char * line, catarray_t * cats, category_t * preWord, bool flag) {
+void parseStoryLine(char * line,
+                    catarray_t * cats,
+                    category_t * preWord,
+                    bool haveUsedWord) {
   // Scan the line from the begin to the end
   while (*line != '\0') {
     // Check if there is a blank
@@ -111,7 +114,7 @@ void parseStoryLine(char * line, catarray_t * cats, category_t * preWord, bool f
         word = preWord->words[preWord->n_words - index];
       }
       else {
-        word = myChooseWord(category, cats, preWord, flag);
+        word = myChooseWord(category, cats, preWord, haveUsedWord);
       }
       preWord->words =
           realloc(preWord->words, ++(preWord->n_words) * sizeof(*(preWord->words)));
@@ -128,7 +131,7 @@ void parseStoryLine(char * line, catarray_t * cats, category_t * preWord, bool f
   }
 }
 
-void createStory(FILE * f, catarray_t * cats, bool flag) {
+void createStory(FILE * f, catarray_t * cats, bool haveUsedWord) {
   category_t * preWord = malloc(sizeof(*preWord));
   preWord->name = NULL;
   preWord->words = NULL;
@@ -137,7 +140,7 @@ void createStory(FILE * f, catarray_t * cats, bool flag) {
   size_t sz = 0;
   // Read each line of the story
   while (getline(&line, &sz, f) > 0) {
-    parseStoryLine(line, cats, preWord, flag);
+    parseStoryLine(line, cats, preWord, haveUsedWord);
   }
   for (size_t i = 0; i < preWord->n_words; i++) {
     free(preWord->words[i]);
