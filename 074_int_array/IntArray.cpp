@@ -4,29 +4,27 @@
 
 #include <ostream>
 
-IntArray::IntArray() {
-  numElements = 0;
-  data = NULL;
-}
-IntArray::IntArray(int n) {
-  numElements = n;
-  data = (int *)malloc(n * sizeof(*data));
+IntArray::IntArray() : data(NULL), numElements(0) {
 }
 
-IntArray::IntArray(const IntArray & rhs) {
-  numElements = rhs.numElements;
-  data = (int *)malloc(numElements * sizeof(*data));
+IntArray::IntArray(int n) : data(new int[n]), numElements(n) {
+}
+
+IntArray::IntArray(const IntArray & rhs) :
+    data(new int[rhs.numElements]), numElements(rhs.numElements) {
   for (int i = 0; i < numElements; i++) {
     data[i] = rhs.data[i];
   }
 }
+
 IntArray::~IntArray() {
-  free(data);
+  delete[] data;
 }
 
 IntArray & IntArray::operator=(const IntArray & rhs) {
   numElements = rhs.numElements;
-  data = (int *)realloc(data, numElements * sizeof(*data));
+  delete[] data;
+  data = new int[rhs.numElements];
   for (int i = 0; i < numElements; i++) {
     data[i] = rhs.data[i];
   }
@@ -63,13 +61,13 @@ bool IntArray::operator!=(const IntArray & rhs) const {
 }
 
 std::ostream & operator<<(std::ostream & s, const IntArray & rhs) {
-  if (rhs.numElements <= 0) {
+  if (rhs.size() <= 0) {
     s << "{}" << std::endl;
     return s;
   }
-  s << "{" << rhs.data[0];
-  for (int i = 1; i < rhs.numElements; i++) {
-    s << "," << rhs.data[i];
+  s << "{" << rhs[0];
+  for (int i = 1; i < rhs.size(); i++) {
+    s << "," << rhs[i];
   }
   s << "}" << std::endl;
   return s;
