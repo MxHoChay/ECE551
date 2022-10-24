@@ -4,10 +4,11 @@
 #include <ostream>
 
 class IntArray {
-private:
+ private:
   int * data;
   int numElements;
-public:
+
+ public:
   IntArray();
   IntArray(int n);
   IntArray(const IntArray & rhs);
@@ -15,11 +16,9 @@ public:
   int & operator[](int index);
   const int & operator[](int index) const;
   int size() const;
-  bool operator==(const IntArray& rhs) const;
-  bool operator!=(const IntArray& rhs) const;
+  bool operator==(const IntArray & rhs) const;
+  bool operator!=(const IntArray & rhs) const;
   ~IntArray();
+  friend std::ostream & operator<<(std::ostream & s, const IntArray & rhs);
 };
-
-std::ostream & operator<<(std::ostream & s, const IntArray & rhs);
-
 #endif
