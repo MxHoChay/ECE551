@@ -64,6 +64,7 @@ bool IntArray::operator!=(const IntArray & rhs) const {
 
 std::ostream & operator<<(std::ostream & s, const IntArray & rhs) {
   if (rhs.numElements <= 0) {
+    s << "{}" << std::endl;
     return s;
   }
   s << "{" << rhs.data[0];
