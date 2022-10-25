@@ -44,6 +44,14 @@ int IntArray::size() const {
   return numElements;
 }
 
+IntArray IntArray::operator+(const IntArray & rhs) const {
+  IntArray sum(*this);
+  for (int i = 0; i < numElements; i++) {
+    sum.data[i] += rhs.data[i];
+  }
+  return sum;
+}
+
 bool IntArray::operator==(const IntArray & rhs) const {
   if (numElements != rhs.numElements) {
     return false;
