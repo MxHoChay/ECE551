@@ -70,9 +70,7 @@ IntMatrix IntMatrix::operator+(const IntMatrix & rhs) const {
   assert(numRows == rhs.numRows && numColumns == rhs.numColumns);
   IntMatrix sum(*this);
   for (int i = 0; i < numRows; i++) {
-    for (int j = 0; j < numColumns; j++) {
-      *(sum.rows[i]) = *(sum.rows[i]) + *(rhs.rows[i]);
-    }
+    *(sum.rows[i]) = *(sum.rows[i]) + *(rhs.rows[i]);
   }
   return sum;
 }
