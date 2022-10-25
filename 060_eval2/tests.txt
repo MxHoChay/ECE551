@@ -7,3 +7,4 @@ story-step4 -n words.txt story2.txt
 story-step4 -n mywords.txt mystory.txt
 story-step4 -p mywords.txt mystory.txt
 story-step4 mywords.txt mystory.txt
+story-step4 mytrickywords.txt mystory.txt
