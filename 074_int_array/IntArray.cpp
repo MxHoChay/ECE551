@@ -70,13 +70,13 @@ bool IntArray::operator!=(const IntArray & rhs) const {
 
 std::ostream & operator<<(std::ostream & s, const IntArray & rhs) {
   if (rhs.size() <= 0) {
-    s << "{}" << std::endl;
+    s << "{}";
     return s;
   }
   s << "{" << rhs[0];
   for (int i = 1; i < rhs.size(); i++) {
     s << "," << rhs[i];
   }
-  s << "}" << std::endl;
+  s << "}";
   return s;
 }
