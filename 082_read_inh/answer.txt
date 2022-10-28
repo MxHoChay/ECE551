@@ -6,7 +6,7 @@ Aslan roars.
 Fluffy purrs.
 Leon roars.
 Aslan roars.
-Don't forget your destructions!
+Don't forget your destructors!
 ~Lion(Aslan)
 Aslan roars.
 ~Cat(Aslan)
