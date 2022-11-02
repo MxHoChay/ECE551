@@ -5,7 +5,3 @@ C
 B
 A
 C
-A
-D
-B
-C
