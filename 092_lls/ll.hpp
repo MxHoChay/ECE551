@@ -44,11 +44,12 @@ class LinkedList {
     head = new Node();
     tail = new Node();
     size = rhs.size;
-    head->nexy = tail;
+    head->next = tail;
     tail->prev = head;
     for (Node * i = rhs.head->next; i != rhs.tail; i = i->next) {
       addBack(i->data);
     }
+    return *this;
   }
 
   ~LinkedList() { myclear(); }
