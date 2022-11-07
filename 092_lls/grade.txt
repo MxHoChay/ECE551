@@ -1,0 +1,53 @@
+Grading at 11/07/2022:02:04:02.551507
+For commit ID 5b1d752b53dcd3b96a39b403d2a2bcb8a7c743ba
+Grading at Sun Nov  6 09:04:02 PM EST 2022
+-----------------------------------------------
+testcase 1 : Testing with LinkedList<int>
+...compiling...
+In file included from tester.cpp:1:
+ll.hpp: In instantiation of ‘LinkedList<T>& LinkedList<T>::operator=(const LinkedList<T>&) [with T = int]’:
+tester.cpp:94:11:   required from here
+ll.hpp:47:11: error: ‘class LinkedList<int>::Node’ has no member named ‘nexy’; did you mean ‘next’?
+   47 |     head->nexy = tail;
+      |     ~~~~~~^~~~
+      |     next
+ll.hpp: In member function ‘LinkedList<T>& LinkedList<T>::operator=(const LinkedList<T>&) [with T = int]’:
+ll.hpp:52:3: error: control reaches end of non-void function [-Werror=return-type]
+   52 |   }
+      |   ^
+cc1plus: all warnings being treated as errors
+The code did not compile.  This test failed.
+-----------------------------------------------
+testcase 2 : Testing with LinkedList<std::string>
+...compiling...
+In file included from tester.cpp:1:
+ll.hpp: In instantiation of ‘LinkedList<T>& LinkedList<T>::operator=(const LinkedList<T>&) [with T = std::__cxx11::basic_string<char>]’:
+tester.cpp:94:11:   required from here
+ll.hpp:47:11: error: ‘class LinkedList<std::__cxx11::basic_string<char> >::Node’ has no member named ‘nexy’; did you mean ‘next’?
+   47 |     head->nexy = tail;
+      |     ~~~~~~^~~~
+      |     next
+ll.hpp: In member function ‘LinkedList<T>& LinkedList<T>::operator=(const LinkedList<T>&) [with T = std::__cxx11::basic_string<char>]’:
+ll.hpp:52:3: error: control reaches end of non-void function [-Werror=return-type]
+   52 |   }
+      |   ^
+cc1plus: all warnings being treated as errors
+The code did not compile.  This test failed.
+-----------------------------------------------
+testcase 3 : Testing with LinkedList<(a custom class we wrote)>
+...compiling...
+In file included from tester.cpp:1:
+ll.hpp: In instantiation of ‘LinkedList<T>& LinkedList<T>::operator=(const LinkedList<T>&) [with T = Tester]’:
+tester.cpp:94:11:   required from here
+ll.hpp:47:11: error: ‘class LinkedList<Tester>::Node’ has no member named ‘nexy’; did you mean ‘next’?
+   47 |     head->nexy = tail;
+      |     ~~~~~~^~~~
+      |     next
+ll.hpp: In member function ‘LinkedList<T>& LinkedList<T>::operator=(const LinkedList<T>&) [with T = Tester]’:
+ll.hpp:52:3: error: control reaches end of non-void function [-Werror=return-type]
+   52 |   }
+      |   ^
+cc1plus: all warnings being treated as errors
+The code did not compile.  This test failed.
+
+Overall Grade: F
