@@ -27,8 +27,7 @@ class LinkedList {
     tail->prev = head;
   }
 
-  LinkedList(const LinkedList & rhs) :
-      head(new Node()), tail(new Node()), size(rhs.size) {
+  LinkedList(const LinkedList & rhs) : head(new Node()), tail(new Node()), size(0) {
     head->next = tail;
     tail->prev = head;
     for (Node * i = rhs.head->next; i != rhs.tail; i = i->next) {
@@ -43,7 +42,7 @@ class LinkedList {
     myclear();
     head = new Node();
     tail = new Node();
-    size = rhs.size;
+    size = 0;
     head->next = tail;
     tail->prev = head;
     for (Node * i = rhs.head->next; i != rhs.tail; i = i->next) {
@@ -125,7 +124,12 @@ class LinkedList {
     return -1;
   }
 
-  int getSize() const { return size; }
+  int getSize() const {
+    assert(size >= 0);
+    return size;
+  }
+
+  friend class Tester;
 };
 
 #endif
