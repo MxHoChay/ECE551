@@ -1,115 +1,81 @@
-Grading at 11/08/2022:05:56:19.233826
-For commit ID 5b93105d72493cd47c730c2fabc668c8e566cf2b
-Grading at Tue Nov  8 12:56:16 AM EST 2022
+Grading at 11/08/2022:05:58:01.912004
+For commit ID c946f6618d97c22616f74c4698a48e8702526cab
+Grading at Tue Nov  8 12:57:59 AM EST 2022
 -----------------------------------------------
 testcase 1 : Testing with BstMap<int,int>
 ...compiling...
 The code compiled.
   - Valgrind reported errors
 Valgrind reported errors (test failed).
-==1087395== Memcheck, a memory error detector
-==1087395== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==1087395== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==1087395== Command: ./test.1
-==1087395== Parent PID: 1087394
-==1087395== 
-==1087395== Invalid read of size 8
-==1087395==    at 0x10BAFE: BstMap<int, int>::myclear(BstMap<int, int>::Node*) (in /home/ece551db/graderbase/work/jc977.098_bst_map.0dMORA/test.1)
-==1087395==    by 0x10B87F: BstMap<int, int>::~BstMap() (in /home/ece551db/graderbase/work/jc977.098_bst_map.0dMORA/test.1)
-==1087395==    by 0x10B8CE: BstMap<int, int>::~BstMap() (in /home/ece551db/graderbase/work/jc977.098_bst_map.0dMORA/test.1)
-==1087395==    by 0x10AFEE: main (in /home/ece551db/graderbase/work/jc977.098_bst_map.0dMORA/test.1)
-==1087395==  Address 0x4de13d8 is 8 bytes inside a block of size 24 free'd
-==1087395==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==1087395==    by 0x10BB40: BstMap<int, int>::myclear(BstMap<int, int>::Node*) (in /home/ece551db/graderbase/work/jc977.098_bst_map.0dMORA/test.1)
-==1087395==    by 0x10B87F: BstMap<int, int>::~BstMap() (in /home/ece551db/graderbase/work/jc977.098_bst_map.0dMORA/test.1)
-==1087395==    by 0x10B8CE: BstMap<int, int>::~BstMap() (in /home/ece551db/graderbase/work/jc977.098_bst_map.0dMORA/test.1)
-==1087395==    by 0x10AFD6: main (in /home/ece551db/graderbase/work/jc977.098_bst_map.0dMORA/test.1)
-==1087395==  Block was alloc'd at
-==1087395==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==1087395==    by 0x10B776: BstMap<int, int>::BstMap() (in /home/ece551db/graderbase/work/jc977.098_bst_map.0dMORA/test.1)
-==1087395==    by 0x10AE05: main (in /home/ece551db/graderbase/work/jc977.098_bst_map.0dMORA/test.1)
-==1087395== 
-==1087395== Invalid read of size 8
-==1087395==    at 0x10BB15: BstMap<int, int>::myclear(BstMap<int, int>::Node*) (in /home/ece551db/graderbase/work/jc977.098_bst_map.0dMORA/test.1)
-==1087395==    by 0x10B87F: BstMap<int, int>::~BstMap() (in /home/ece551db/graderbase/work/jc977.098_bst_map.0dMORA/test.1)
-==1087395==    by 0x10B8CE: BstMap<int, int>::~BstMap() (in /home/ece551db/graderbase/work/jc977.098_bst_map.0dMORA/test.1)
-==1087395==    by 0x10AFEE: main (in /home/ece551db/graderbase/work/jc977.098_bst_map.0dMORA/test.1)
-==1087395==  Address 0x4de13e0 is 16 bytes inside a block of size 24 free'd
-==1087395==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==1087395==    by 0x10BB40: BstMap<int, int>::myclear(BstMap<int, int>::Node*) (in /home/ece551db/graderbase/work/jc977.098_bst_map.0dMORA/test.1)
-==1087395==    by 0x10B87F: BstMap<int, int>::~BstMap() (in /home/ece551db/graderbase/work/jc977.098_bst_map.0dMORA/test.1)
-==1087395==    by 0x10B8CE: BstMap<int, int>::~BstMap() (in /home/ece551db/graderbase/work/jc977.098_bst_map.0dMORA/test.1)
-==1087395==    by 0x10AFD6: main (in /home/ece551db/graderbase/work/jc977.098_bst_map.0dMORA/test.1)
-==1087395==  Block was alloc'd at
-==1087395==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==1087395==    by 0x10B776: BstMap<int, int>::BstMap() (in /home/ece551db/graderbase/work/jc977.098_bst_map.0dMORA/test.1)
-==1087395==    by 0x10AE05: main (in /home/ece551db/graderbase/work/jc977.098_bst_map.0dMORA/test.1)
-==1087395== 
-==1087395== Invalid free() / delete / delete[] / realloc()
-==1087395==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==1087395==    by 0x10BB40: BstMap<int, int>::myclear(BstMap<int, int>::Node*) (in /home/ece551db/graderbase/work/jc977.098_bst_map.0dMORA/test.1)
-==1087395==    by 0x10B87F: BstMap<int, int>::~BstMap() (in /home/ece551db/graderbase/work/jc977.098_bst_map.0dMORA/test.1)
-==1087395==    by 0x10B8CE: BstMap<int, int>::~BstMap() (in /home/ece551db/graderbase/work/jc977.098_bst_map.0dMORA/test.1)
-==1087395==    by 0x10AFEE: main (in /home/ece551db/graderbase/work/jc977.098_bst_map.0dMORA/test.1)
-==1087395==  Address 0x4de13d0 is 0 bytes inside a block of size 24 free'd
-==1087395==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==1087395==    by 0x10BB40: BstMap<int, int>::myclear(BstMap<int, int>::Node*) (in /home/ece551db/graderbase/work/jc977.098_bst_map.0dMORA/test.1)
-==1087395==    by 0x10B87F: BstMap<int, int>::~BstMap() (in /home/ece551db/graderbase/work/jc977.098_bst_map.0dMORA/test.1)
-==1087395==    by 0x10B8CE: BstMap<int, int>::~BstMap() (in /home/ece551db/graderbase/work/jc977.098_bst_map.0dMORA/test.1)
-==1087395==    by 0x10AFD6: main (in /home/ece551db/graderbase/work/jc977.098_bst_map.0dMORA/test.1)
-==1087395==  Block was alloc'd at
-==1087395==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==1087395==    by 0x10B776: BstMap<int, int>::BstMap() (in /home/ece551db/graderbase/work/jc977.098_bst_map.0dMORA/test.1)
-==1087395==    by 0x10AE05: main (in /home/ece551db/graderbase/work/jc977.098_bst_map.0dMORA/test.1)
-==1087395== 
-==1087395== 
-==1087395== HEAP SUMMARY:
-==1087395==     in use at exit: 0 bytes in 0 blocks
-==1087395==   total heap usage: 397 allocs, 398 frees, 112,191 bytes allocated
-==1087395== 
-==1087395== All heap blocks were freed -- no leaks are possible
-==1087395== 
-==1087395== For lists of detected and suppressed errors, rerun with: -s
-==1087395== ERROR SUMMARY: 3 errors from 3 contexts (suppressed: 0 from 0)
+==1088037== Memcheck, a memory error detector
+==1088037== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1088037== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1088037== Command: ./test.1
+==1088037== Parent PID: 1088036
+==1088037== 
+==1088037== Invalid free() / delete / delete[] / realloc()
+==1088037==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1088037==    by 0x10B885: BstMap<int, int>::~BstMap() (in /home/ece551db/graderbase/work/jc977.098_bst_map.RE0d1s/test.1)
+==1088037==    by 0x10B8B5: BstMap<int, int>::~BstMap() (in /home/ece551db/graderbase/work/jc977.098_bst_map.RE0d1s/test.1)
+==1088037==    by 0x10AFEE: main (in /home/ece551db/graderbase/work/jc977.098_bst_map.RE0d1s/test.1)
+==1088037==  Address 0x4de13d0 is 0 bytes inside a block of size 24 free'd
+==1088037==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1088037==    by 0x10B885: BstMap<int, int>::~BstMap() (in /home/ece551db/graderbase/work/jc977.098_bst_map.RE0d1s/test.1)
+==1088037==    by 0x10B8B5: BstMap<int, int>::~BstMap() (in /home/ece551db/graderbase/work/jc977.098_bst_map.RE0d1s/test.1)
+==1088037==    by 0x10AFD6: main (in /home/ece551db/graderbase/work/jc977.098_bst_map.RE0d1s/test.1)
+==1088037==  Block was alloc'd at
+==1088037==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1088037==    by 0x10B776: BstMap<int, int>::BstMap() (in /home/ece551db/graderbase/work/jc977.098_bst_map.RE0d1s/test.1)
+==1088037==    by 0x10AE05: main (in /home/ece551db/graderbase/work/jc977.098_bst_map.RE0d1s/test.1)
+==1088037== 
+==1088037== 
+==1088037== HEAP SUMMARY:
+==1088037==     in use at exit: 0 bytes in 0 blocks
+==1088037==   total heap usage: 397 allocs, 398 frees, 112,191 bytes allocated
+==1088037== 
+==1088037== All heap blocks were freed -- no leaks are possible
+==1088037== 
+==1088037== For lists of detected and suppressed errors, rerun with: -s
+==1088037== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
 -----------------------------------------------
 testcase 2 : Testing with BstMap<int,std::string>
 ...compiling...
 In file included from 89-tester.cpp:1:
 bstmap.h: In instantiation of ‘void BstMap<K, V>::add(const K&, const V&) [with K = int; V = std::__cxx11::basic_string<char>]’:
-bstmap.h:101:16:   required from here
-bstmap.h:102:13: error: no match for ‘operator||’ (operand types are ‘const int’ and ‘const std::__cxx11::basic_string<char>’)
-  102 |     if (key || value) {
+bstmap.h:103:16:   required from here
+bstmap.h:104:13: error: no match for ‘operator||’ (operand types are ‘const int’ and ‘const std::__cxx11::basic_string<char>’)
+  104 |     if (key || value) {
       |         ~~~~^~~~~~~~
-bstmap.h:102:13: note: candidate: ‘operator||(bool, bool)’ (built-in)
-bstmap.h:102:13: note:   no known conversion for argument 2 from ‘const std::__cxx11::basic_string<char>’ to ‘bool’
+bstmap.h:104:13: note: candidate: ‘operator||(bool, bool)’ (built-in)
+bstmap.h:104:13: note:   no known conversion for argument 2 from ‘const std::__cxx11::basic_string<char>’ to ‘bool’
 The code did not compile.  This test failed.
 -----------------------------------------------
 testcase 3 : Testing with BstMap<int,(a custom class we wrote)>
 ...compiling...
 In file included from 89-tester.cpp:1:
 bstmap.h: In instantiation of ‘void BstMap<K, V>::add(const K&, const V&) [with K = int; V = Tester]’:
-bstmap.h:101:16:   required from here
-bstmap.h:102:13: error: no match for ‘operator||’ (operand types are ‘const int’ and ‘const Tester’)
-  102 |     if (key || value) {
+bstmap.h:103:16:   required from here
+bstmap.h:104:13: error: no match for ‘operator||’ (operand types are ‘const int’ and ‘const Tester’)
+  104 |     if (key || value) {
       |         ~~~~^~~~~~~~
-bstmap.h:102:13: note: candidate: ‘operator||(bool, bool)’ (built-in)
-bstmap.h:102:13: note:   no known conversion for argument 2 from ‘const Tester’ to ‘bool’
+bstmap.h:104:13: note: candidate: ‘operator||(bool, bool)’ (built-in)
+bstmap.h:104:13: note:   no known conversion for argument 2 from ‘const Tester’ to ‘bool’
 The code did not compile.  This test failed.
 -----------------------------------------------
 testcase 4 : Testing with BstMap<std::string,int>
 ...compiling...
 In file included from 89-tester.cpp:1:
 bstmap.h: In instantiation of ‘void BstMap<K, V>::add(const K&, const V&) [with K = std::__cxx11::basic_string<char>; V = int]’:
-bstmap.h:101:16:   required from here
-bstmap.h:102:13: error: no match for ‘operator||’ (operand types are ‘const std::__cxx11::basic_string<char>’ and ‘const int’)
-  102 |     if (key || value) {
+bstmap.h:103:16:   required from here
+bstmap.h:104:13: error: no match for ‘operator||’ (operand types are ‘const std::__cxx11::basic_string<char>’ and ‘const int’)
+  104 |     if (key || value) {
       |         ~~~~^~~~~~~~
-bstmap.h:102:13: note: candidate: ‘operator||(bool, bool)’ (built-in)
-bstmap.h:102:13: note:   no known conversion for argument 1 from ‘const std::__cxx11::basic_string<char>’ to ‘bool’
+bstmap.h:104:13: note: candidate: ‘operator||(bool, bool)’ (built-in)
+bstmap.h:104:13: note:   no known conversion for argument 1 from ‘const std::__cxx11::basic_string<char>’ to ‘bool’
 bstmap.h: In instantiation of ‘void BstMap<K, V>::remove(const K&) [with K = std::__cxx11::basic_string<char>; V = int]’:
-bstmap.h:112:16:   required from here
-bstmap.h:113:5: error: could not convert ‘key’ from ‘const std::__cxx11::basic_string<char>’ to ‘bool’
-  113 |     if (key) {
+bstmap.h:114:16:   required from here
+bstmap.h:115:5: error: could not convert ‘key’ from ‘const std::__cxx11::basic_string<char>’ to ‘bool’
+  115 |     if (key) {
       |     ^~
       |     |
       |     const std::__cxx11::basic_string<char>
@@ -119,16 +85,16 @@ testcase 5 : Testing with BstMap<std::string,std::string>
 ...compiling...
 In file included from 89-tester.cpp:1:
 bstmap.h: In instantiation of ‘void BstMap<K, V>::add(const K&, const V&) [with K = std::__cxx11::basic_string<char>; V = std::__cxx11::basic_string<char>]’:
-bstmap.h:101:16:   required from here
-bstmap.h:102:13: error: no match for ‘operator||’ (operand types are ‘const std::__cxx11::basic_string<char>’ and ‘const std::__cxx11::basic_string<char>’)
-  102 |     if (key || value) {
+bstmap.h:103:16:   required from here
+bstmap.h:104:13: error: no match for ‘operator||’ (operand types are ‘const std::__cxx11::basic_string<char>’ and ‘const std::__cxx11::basic_string<char>’)
+  104 |     if (key || value) {
       |         ~~~~^~~~~~~~
-bstmap.h:102:13: note: candidate: ‘operator||(bool, bool)’ (built-in)
-bstmap.h:102:13: note:   no known conversion for argument 2 from ‘const std::__cxx11::basic_string<char>’ to ‘bool’
+bstmap.h:104:13: note: candidate: ‘operator||(bool, bool)’ (built-in)
+bstmap.h:104:13: note:   no known conversion for argument 2 from ‘const std::__cxx11::basic_string<char>’ to ‘bool’
 bstmap.h: In instantiation of ‘void BstMap<K, V>::remove(const K&) [with K = std::__cxx11::basic_string<char>; V = std::__cxx11::basic_string<char>]’:
-bstmap.h:112:16:   required from here
-bstmap.h:113:5: error: could not convert ‘key’ from ‘const std::__cxx11::basic_string<char>’ to ‘bool’
-  113 |     if (key) {
+bstmap.h:114:16:   required from here
+bstmap.h:115:5: error: could not convert ‘key’ from ‘const std::__cxx11::basic_string<char>’ to ‘bool’
+  115 |     if (key) {
       |     ^~
       |     |
       |     const std::__cxx11::basic_string<char>
@@ -138,16 +104,16 @@ testcase 6 : Testing with BstMap<std::string,(a custom class we wrote)>
 ...compiling...
 In file included from 89-tester.cpp:1:
 bstmap.h: In instantiation of ‘void BstMap<K, V>::add(const K&, const V&) [with K = std::__cxx11::basic_string<char>; V = Tester]’:
-bstmap.h:101:16:   required from here
-bstmap.h:102:13: error: no match for ‘operator||’ (operand types are ‘const std::__cxx11::basic_string<char>’ and ‘const Tester’)
-  102 |     if (key || value) {
+bstmap.h:103:16:   required from here
+bstmap.h:104:13: error: no match for ‘operator||’ (operand types are ‘const std::__cxx11::basic_string<char>’ and ‘const Tester’)
+  104 |     if (key || value) {
       |         ~~~~^~~~~~~~
-bstmap.h:102:13: note: candidate: ‘operator||(bool, bool)’ (built-in)
-bstmap.h:102:13: note:   no known conversion for argument 2 from ‘const Tester’ to ‘bool’
+bstmap.h:104:13: note: candidate: ‘operator||(bool, bool)’ (built-in)
+bstmap.h:104:13: note:   no known conversion for argument 2 from ‘const Tester’ to ‘bool’
 bstmap.h: In instantiation of ‘void BstMap<K, V>::remove(const K&) [with K = std::__cxx11::basic_string<char>; V = Tester]’:
-bstmap.h:112:16:   required from here
-bstmap.h:113:5: error: could not convert ‘key’ from ‘const std::__cxx11::basic_string<char>’ to ‘bool’
-  113 |     if (key) {
+bstmap.h:114:16:   required from here
+bstmap.h:115:5: error: could not convert ‘key’ from ‘const std::__cxx11::basic_string<char>’ to ‘bool’
+  115 |     if (key) {
       |     ^~
       |     |
       |     const std::__cxx11::basic_string<char>
@@ -157,16 +123,16 @@ testcase 7 : Testing with BstMap<(a custom class we wrote),int>
 ...compiling...
 In file included from 89-tester.cpp:1:
 bstmap.h: In instantiation of ‘void BstMap<K, V>::add(const K&, const V&) [with K = Tester; V = int]’:
-bstmap.h:101:16:   required from here
-bstmap.h:102:13: error: no match for ‘operator||’ (operand types are ‘const Tester’ and ‘const int’)
-  102 |     if (key || value) {
+bstmap.h:103:16:   required from here
+bstmap.h:104:13: error: no match for ‘operator||’ (operand types are ‘const Tester’ and ‘const int’)
+  104 |     if (key || value) {
       |         ~~~~^~~~~~~~
-bstmap.h:102:13: note: candidate: ‘operator||(bool, bool)’ (built-in)
-bstmap.h:102:13: note:   no known conversion for argument 1 from ‘const Tester’ to ‘bool’
+bstmap.h:104:13: note: candidate: ‘operator||(bool, bool)’ (built-in)
+bstmap.h:104:13: note:   no known conversion for argument 1 from ‘const Tester’ to ‘bool’
 bstmap.h: In instantiation of ‘void BstMap<K, V>::remove(const K&) [with K = Tester; V = int]’:
-bstmap.h:112:16:   required from here
-bstmap.h:113:5: error: could not convert ‘key’ from ‘const Tester’ to ‘bool’
-  113 |     if (key) {
+bstmap.h:114:16:   required from here
+bstmap.h:115:5: error: could not convert ‘key’ from ‘const Tester’ to ‘bool’
+  115 |     if (key) {
       |     ^~
       |     |
       |     const Tester
@@ -176,16 +142,16 @@ testcase 8 : Testing with BstMap<(a custom class we wrote),std::string>
 ...compiling...
 In file included from 89-tester.cpp:1:
 bstmap.h: In instantiation of ‘void BstMap<K, V>::add(const K&, const V&) [with K = Tester; V = std::__cxx11::basic_string<char>]’:
-bstmap.h:101:16:   required from here
-bstmap.h:102:13: error: no match for ‘operator||’ (operand types are ‘const Tester’ and ‘const std::__cxx11::basic_string<char>’)
-  102 |     if (key || value) {
+bstmap.h:103:16:   required from here
+bstmap.h:104:13: error: no match for ‘operator||’ (operand types are ‘const Tester’ and ‘const std::__cxx11::basic_string<char>’)
+  104 |     if (key || value) {
       |         ~~~~^~~~~~~~
-bstmap.h:102:13: note: candidate: ‘operator||(bool, bool)’ (built-in)
-bstmap.h:102:13: note:   no known conversion for argument 2 from ‘const std::__cxx11::basic_string<char>’ to ‘bool’
+bstmap.h:104:13: note: candidate: ‘operator||(bool, bool)’ (built-in)
+bstmap.h:104:13: note:   no known conversion for argument 2 from ‘const std::__cxx11::basic_string<char>’ to ‘bool’
 bstmap.h: In instantiation of ‘void BstMap<K, V>::remove(const K&) [with K = Tester; V = std::__cxx11::basic_string<char>]’:
-bstmap.h:112:16:   required from here
-bstmap.h:113:5: error: could not convert ‘key’ from ‘const Tester’ to ‘bool’
-  113 |     if (key) {
+bstmap.h:114:16:   required from here
+bstmap.h:115:5: error: could not convert ‘key’ from ‘const Tester’ to ‘bool’
+  115 |     if (key) {
       |     ^~
       |     |
       |     const Tester
@@ -195,16 +161,16 @@ testcase 9 : Testing with BstMap<(a custom class we wrote),(a custom class we wr
 ...compiling...
 In file included from 89-tester.cpp:1:
 bstmap.h: In instantiation of ‘void BstMap<K, V>::add(const K&, const V&) [with K = Tester; V = Tester]’:
-bstmap.h:101:16:   required from here
-bstmap.h:102:13: error: no match for ‘operator||’ (operand types are ‘const Tester’ and ‘const Tester’)
-  102 |     if (key || value) {
+bstmap.h:103:16:   required from here
+bstmap.h:104:13: error: no match for ‘operator||’ (operand types are ‘const Tester’ and ‘const Tester’)
+  104 |     if (key || value) {
       |         ~~~~^~~~~~~~
-bstmap.h:102:13: note: candidate: ‘operator||(bool, bool)’ (built-in)
-bstmap.h:102:13: note:   no known conversion for argument 2 from ‘const Tester’ to ‘bool’
+bstmap.h:104:13: note: candidate: ‘operator||(bool, bool)’ (built-in)
+bstmap.h:104:13: note:   no known conversion for argument 2 from ‘const Tester’ to ‘bool’
 bstmap.h: In instantiation of ‘void BstMap<K, V>::remove(const K&) [with K = Tester; V = Tester]’:
-bstmap.h:112:16:   required from here
-bstmap.h:113:5: error: could not convert ‘key’ from ‘const Tester’ to ‘bool’
-  113 |     if (key) {
+bstmap.h:114:16:   required from here
+bstmap.h:115:5: error: could not convert ‘key’ from ‘const Tester’ to ‘bool’
+  115 |     if (key) {
       |     ^~
       |     |
       |     const Tester
