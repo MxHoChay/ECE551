@@ -27,7 +27,7 @@ class BstSet : public Set<T> {
 
   virtual void add(const T & key) { set->add(key, 0); }
 
-  virtual bool contains(const T & key) {
+  virtual bool contains(const T & key) const {
     try {
       set->lookup(key);
     }
