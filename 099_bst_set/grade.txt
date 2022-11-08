@@ -1,51 +1,15 @@
-Grading at 11/08/2022:20:59:36.450401
-For commit ID 10577600e58d258ba3209906d535f38233d410b5
-Grading at Tue Nov  8 03:59:35 PM EST 2022
+Grading at 11/08/2022:21:00:37.356934
+For commit ID 53c3d9dc6168928638248ce82a7be53c04939b6d
+Grading at Tue Nov  8 04:00:36 PM EST 2022
 -----------------------------------------------
 testcase 1 : Testing with BstSet<int>
 ...compiling...
-In file included from 90-tester.cpp:1:
-bstset.h: In instantiation of ‘BstSet<T>::BstSet(const BstSet<T>&) [with T = int]’:
-90-tester.cpp:92:36:   required from here
-bstset.h:18:11: error: no matching function for call to ‘BstMap<int, int>::BstMap(BstMap<int, int>* const&)’
-   18 |     set = new BstMap<T, int>(rhs.set);
-      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from bstset.h:7,
-                 from 90-tester.cpp:1:
-bstmap.h:113:3: note: candidate: ‘BstMap<K, V>::BstMap(const BstMap<K, V>&) [with K = int; V = int]’
-  113 |   BstMap(const BstMap & rhs) : root(new Node()) { root->right = mycopy(rhs.root->right); }
-      |   ^~~~~~
-bstmap.h:113:25: note:   no known conversion for argument 1 from ‘BstMap<int, int>* const’ to ‘const BstMap<int, int>&’
-  113 |   BstMap(const BstMap & rhs) : root(new Node()) { root->right = mycopy(rhs.root->right); }
-      |          ~~~~~~~~~~~~~~~^~~
-bstmap.h:111:3: note: candidate: ‘BstMap<K, V>::BstMap() [with K = int; V = int]’
-  111 |   BstMap() : root(new Node()) {}
-      |   ^~~~~~
-bstmap.h:111:3: note:   candidate expects 0 arguments, 1 provided
 In file included from 90-tester.cpp:1:
 bstset.h: In instantiation of ‘bool BstSet<T>::contains(const T&) const [with T = int]’:
 90-tester.cpp:113:26:   required from here
 bstset.h:34:17: error: catching polymorphic type ‘class std::invalid_argument’ by value [-Werror=catch-value=]
    34 |     catch (std::invalid_argument) {
       |                 ^~~~~~~~~~~~~~~~
-bstset.h: In instantiation of ‘BstSet<T>& BstSet<T>::operator=(const BstSet<T>&) [with T = int]’:
-90-tester.cpp:122:10:   required from here
-bstset.h:25:11: error: no matching function for call to ‘BstMap<int, int>::BstMap(BstMap<int, int>* const&)’
-   25 |     set = new BstMap<T, int>(rhs.set);
-      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from bstset.h:7,
-                 from 90-tester.cpp:1:
-bstmap.h:113:3: note: candidate: ‘BstMap<K, V>::BstMap(const BstMap<K, V>&) [with K = int; V = int]’
-  113 |   BstMap(const BstMap & rhs) : root(new Node()) { root->right = mycopy(rhs.root->right); }
-      |   ^~~~~~
-bstmap.h:113:25: note:   no known conversion for argument 1 from ‘BstMap<int, int>* const’ to ‘const BstMap<int, int>&’
-  113 |   BstMap(const BstMap & rhs) : root(new Node()) { root->right = mycopy(rhs.root->right); }
-      |          ~~~~~~~~~~~~~~~^~~
-bstmap.h:111:3: note: candidate: ‘BstMap<K, V>::BstMap() [with K = int; V = int]’
-  111 |   BstMap() : root(new Node()) {}
-      |   ^~~~~~
-bstmap.h:111:3: note:   candidate expects 0 arguments, 1 provided
-In file included from 90-tester.cpp:1:
 bstset.h: In member function ‘BstSet<T>& BstSet<T>::operator=(const BstSet<T>&) [with T = int]’:
 bstset.h:26:3: error: control reaches end of non-void function [-Werror=return-type]
    26 |   }
@@ -56,47 +20,11 @@ The code did not compile.  This test failed.
 testcase 2 : Testing with BstSet<std::string>
 ...compiling...
 In file included from 90-tester.cpp:1:
-bstset.h: In instantiation of ‘BstSet<T>::BstSet(const BstSet<T>&) [with T = std::__cxx11::basic_string<char>]’:
-90-tester.cpp:92:36:   required from here
-bstset.h:18:11: error: no matching function for call to ‘BstMap<std::__cxx11::basic_string<char>, int>::BstMap(BstMap<std::__cxx11::basic_string<char>, int>* const&)’
-   18 |     set = new BstMap<T, int>(rhs.set);
-      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from bstset.h:7,
-                 from 90-tester.cpp:1:
-bstmap.h:113:3: note: candidate: ‘BstMap<K, V>::BstMap(const BstMap<K, V>&) [with K = std::__cxx11::basic_string<char>; V = int]’
-  113 |   BstMap(const BstMap & rhs) : root(new Node()) { root->right = mycopy(rhs.root->right); }
-      |   ^~~~~~
-bstmap.h:113:25: note:   no known conversion for argument 1 from ‘BstMap<std::__cxx11::basic_string<char>, int>* const’ to ‘const BstMap<std::__cxx11::basic_string<char>, int>&’
-  113 |   BstMap(const BstMap & rhs) : root(new Node()) { root->right = mycopy(rhs.root->right); }
-      |          ~~~~~~~~~~~~~~~^~~
-bstmap.h:111:3: note: candidate: ‘BstMap<K, V>::BstMap() [with K = std::__cxx11::basic_string<char>; V = int]’
-  111 |   BstMap() : root(new Node()) {}
-      |   ^~~~~~
-bstmap.h:111:3: note:   candidate expects 0 arguments, 1 provided
-In file included from 90-tester.cpp:1:
 bstset.h: In instantiation of ‘bool BstSet<T>::contains(const T&) const [with T = std::__cxx11::basic_string<char>]’:
 90-tester.cpp:113:26:   required from here
 bstset.h:34:17: error: catching polymorphic type ‘class std::invalid_argument’ by value [-Werror=catch-value=]
    34 |     catch (std::invalid_argument) {
       |                 ^~~~~~~~~~~~~~~~
-bstset.h: In instantiation of ‘BstSet<T>& BstSet<T>::operator=(const BstSet<T>&) [with T = std::__cxx11::basic_string<char>]’:
-90-tester.cpp:122:10:   required from here
-bstset.h:25:11: error: no matching function for call to ‘BstMap<std::__cxx11::basic_string<char>, int>::BstMap(BstMap<std::__cxx11::basic_string<char>, int>* const&)’
-   25 |     set = new BstMap<T, int>(rhs.set);
-      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from bstset.h:7,
-                 from 90-tester.cpp:1:
-bstmap.h:113:3: note: candidate: ‘BstMap<K, V>::BstMap(const BstMap<K, V>&) [with K = std::__cxx11::basic_string<char>; V = int]’
-  113 |   BstMap(const BstMap & rhs) : root(new Node()) { root->right = mycopy(rhs.root->right); }
-      |   ^~~~~~
-bstmap.h:113:25: note:   no known conversion for argument 1 from ‘BstMap<std::__cxx11::basic_string<char>, int>* const’ to ‘const BstMap<std::__cxx11::basic_string<char>, int>&’
-  113 |   BstMap(const BstMap & rhs) : root(new Node()) { root->right = mycopy(rhs.root->right); }
-      |          ~~~~~~~~~~~~~~~^~~
-bstmap.h:111:3: note: candidate: ‘BstMap<K, V>::BstMap() [with K = std::__cxx11::basic_string<char>; V = int]’
-  111 |   BstMap() : root(new Node()) {}
-      |   ^~~~~~
-bstmap.h:111:3: note:   candidate expects 0 arguments, 1 provided
-In file included from 90-tester.cpp:1:
 bstset.h: In member function ‘BstSet<T>& BstSet<T>::operator=(const BstSet<T>&) [with T = std::__cxx11::basic_string<char>]’:
 bstset.h:26:3: error: control reaches end of non-void function [-Werror=return-type]
    26 |   }
@@ -107,47 +35,11 @@ The code did not compile.  This test failed.
 testcase 3 : Testing with BstSet<(a custom class we wrote)>
 ...compiling...
 In file included from 90-tester.cpp:1:
-bstset.h: In instantiation of ‘BstSet<T>::BstSet(const BstSet<T>&) [with T = Tester]’:
-90-tester.cpp:92:36:   required from here
-bstset.h:18:11: error: no matching function for call to ‘BstMap<Tester, int>::BstMap(BstMap<Tester, int>* const&)’
-   18 |     set = new BstMap<T, int>(rhs.set);
-      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from bstset.h:7,
-                 from 90-tester.cpp:1:
-bstmap.h:113:3: note: candidate: ‘BstMap<K, V>::BstMap(const BstMap<K, V>&) [with K = Tester; V = int]’
-  113 |   BstMap(const BstMap & rhs) : root(new Node()) { root->right = mycopy(rhs.root->right); }
-      |   ^~~~~~
-bstmap.h:113:25: note:   no known conversion for argument 1 from ‘BstMap<Tester, int>* const’ to ‘const BstMap<Tester, int>&’
-  113 |   BstMap(const BstMap & rhs) : root(new Node()) { root->right = mycopy(rhs.root->right); }
-      |          ~~~~~~~~~~~~~~~^~~
-bstmap.h:111:3: note: candidate: ‘BstMap<K, V>::BstMap() [with K = Tester; V = int]’
-  111 |   BstMap() : root(new Node()) {}
-      |   ^~~~~~
-bstmap.h:111:3: note:   candidate expects 0 arguments, 1 provided
-In file included from 90-tester.cpp:1:
 bstset.h: In instantiation of ‘bool BstSet<T>::contains(const T&) const [with T = Tester]’:
 90-tester.cpp:113:26:   required from here
 bstset.h:34:17: error: catching polymorphic type ‘class std::invalid_argument’ by value [-Werror=catch-value=]
    34 |     catch (std::invalid_argument) {
       |                 ^~~~~~~~~~~~~~~~
-bstset.h: In instantiation of ‘BstSet<T>& BstSet<T>::operator=(const BstSet<T>&) [with T = Tester]’:
-90-tester.cpp:122:10:   required from here
-bstset.h:25:11: error: no matching function for call to ‘BstMap<Tester, int>::BstMap(BstMap<Tester, int>* const&)’
-   25 |     set = new BstMap<T, int>(rhs.set);
-      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from bstset.h:7,
-                 from 90-tester.cpp:1:
-bstmap.h:113:3: note: candidate: ‘BstMap<K, V>::BstMap(const BstMap<K, V>&) [with K = Tester; V = int]’
-  113 |   BstMap(const BstMap & rhs) : root(new Node()) { root->right = mycopy(rhs.root->right); }
-      |   ^~~~~~
-bstmap.h:113:25: note:   no known conversion for argument 1 from ‘BstMap<Tester, int>* const’ to ‘const BstMap<Tester, int>&’
-  113 |   BstMap(const BstMap & rhs) : root(new Node()) { root->right = mycopy(rhs.root->right); }
-      |          ~~~~~~~~~~~~~~~^~~
-bstmap.h:111:3: note: candidate: ‘BstMap<K, V>::BstMap() [with K = Tester; V = int]’
-  111 |   BstMap() : root(new Node()) {}
-      |   ^~~~~~
-bstmap.h:111:3: note:   candidate expects 0 arguments, 1 provided
-In file included from 90-tester.cpp:1:
 bstset.h: In member function ‘BstSet<T>& BstSet<T>::operator=(const BstSet<T>&) [with T = Tester]’:
 bstset.h:26:3: error: control reaches end of non-void function [-Werror=return-type]
    26 |   }
