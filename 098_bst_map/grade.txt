@@ -1,53 +1,146 @@
-Grading at 11/08/2022:05:58:01.912004
-For commit ID c946f6618d97c22616f74c4698a48e8702526cab
-Grading at Tue Nov  8 12:57:59 AM EST 2022
+Grading at 11/08/2022:06:04:14.492838
+For commit ID 4a53cfa412b3a69a233fa126367c77f345f7f155
+Grading at Tue Nov  8 01:04:12 AM EST 2022
 -----------------------------------------------
 testcase 1 : Testing with BstMap<int,int>
 ...compiling...
 The code compiled.
   - Valgrind reported errors
 Valgrind reported errors (test failed).
-==1088037== Memcheck, a memory error detector
-==1088037== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==1088037== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==1088037== Command: ./test.1
-==1088037== Parent PID: 1088036
-==1088037== 
-==1088037== Invalid free() / delete / delete[] / realloc()
-==1088037==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==1088037==    by 0x10B885: BstMap<int, int>::~BstMap() (in /home/ece551db/graderbase/work/jc977.098_bst_map.RE0d1s/test.1)
-==1088037==    by 0x10B8B5: BstMap<int, int>::~BstMap() (in /home/ece551db/graderbase/work/jc977.098_bst_map.RE0d1s/test.1)
-==1088037==    by 0x10AFEE: main (in /home/ece551db/graderbase/work/jc977.098_bst_map.RE0d1s/test.1)
-==1088037==  Address 0x4de13d0 is 0 bytes inside a block of size 24 free'd
-==1088037==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==1088037==    by 0x10B885: BstMap<int, int>::~BstMap() (in /home/ece551db/graderbase/work/jc977.098_bst_map.RE0d1s/test.1)
-==1088037==    by 0x10B8B5: BstMap<int, int>::~BstMap() (in /home/ece551db/graderbase/work/jc977.098_bst_map.RE0d1s/test.1)
-==1088037==    by 0x10AFD6: main (in /home/ece551db/graderbase/work/jc977.098_bst_map.RE0d1s/test.1)
-==1088037==  Block was alloc'd at
-==1088037==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==1088037==    by 0x10B776: BstMap<int, int>::BstMap() (in /home/ece551db/graderbase/work/jc977.098_bst_map.RE0d1s/test.1)
-==1088037==    by 0x10AE05: main (in /home/ece551db/graderbase/work/jc977.098_bst_map.RE0d1s/test.1)
-==1088037== 
-==1088037== 
-==1088037== HEAP SUMMARY:
-==1088037==     in use at exit: 0 bytes in 0 blocks
-==1088037==   total heap usage: 397 allocs, 398 frees, 112,191 bytes allocated
-==1088037== 
-==1088037== All heap blocks were freed -- no leaks are possible
-==1088037== 
-==1088037== For lists of detected and suppressed errors, rerun with: -s
-==1088037== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==1089927== Memcheck, a memory error detector
+==1089927== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1089927== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1089927== Command: ./test.1
+==1089927== Parent PID: 1089926
+==1089927== 
+==1089927== 
+==1089927== HEAP SUMMARY:
+==1089927==     in use at exit: 48 bytes in 2 blocks
+==1089927==   total heap usage: 397 allocs, 395 frees, 112,191 bytes allocated
+==1089927== 
+==1089927== 24 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==1089927==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1089927==    by 0x10B776: BstMap<int, int>::BstMap() (in /home/ece551db/graderbase/work/jc977.098_bst_map.fRywZH/test.1)
+==1089927==    by 0x10A694: main (in /home/ece551db/graderbase/work/jc977.098_bst_map.fRywZH/test.1)
+==1089927== 
+==1089927== 24 bytes in 1 blocks are definitely lost in loss record 2 of 2
+==1089927==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1089927==    by 0x10B776: BstMap<int, int>::BstMap() (in /home/ece551db/graderbase/work/jc977.098_bst_map.fRywZH/test.1)
+==1089927==    by 0x10AE05: main (in /home/ece551db/graderbase/work/jc977.098_bst_map.fRywZH/test.1)
+==1089927== 
+==1089927== LEAK SUMMARY:
+==1089927==    definitely lost: 48 bytes in 2 blocks
+==1089927==    indirectly lost: 0 bytes in 0 blocks
+==1089927==      possibly lost: 0 bytes in 0 blocks
+==1089927==    still reachable: 0 bytes in 0 blocks
+==1089927==         suppressed: 0 bytes in 0 blocks
+==1089927== 
+==1089927== For lists of detected and suppressed errors, rerun with: -s
+==1089927== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
 -----------------------------------------------
 testcase 2 : Testing with BstMap<int,std::string>
 ...compiling...
 In file included from 89-tester.cpp:1:
 bstmap.h: In instantiation of ‘void BstMap<K, V>::add(const K&, const V&) [with K = int; V = std::__cxx11::basic_string<char>]’:
 bstmap.h:103:16:   required from here
-bstmap.h:104:13: error: no match for ‘operator||’ (operand types are ‘const int’ and ‘const std::__cxx11::basic_string<char>’)
-  104 |     if (key || value) {
-      |         ~~~~^~~~~~~~
-bstmap.h:104:13: note: candidate: ‘operator||(bool, bool)’ (built-in)
-bstmap.h:104:13: note:   no known conversion for argument 2 from ‘const std::__cxx11::basic_string<char>’ to ‘bool’
+bstmap.h:104:13: error: no match for ‘operator+’ (operand types are ‘const int’ and ‘const std::__cxx11::basic_string<char>’)
+  104 |     if (key + value) {
+      |         ~~~~^~~~~~~
+In file included from /usr/include/c++/11/bits/stl_algobase.h:67,
+                 from /usr/include/c++/11/bits/char_traits.h:39,
+                 from /usr/include/c++/11/string:40,
+                 from /usr/include/c++/11/stdexcept:39,
+                 from map.h:3,
+                 from bstmap.h:4,
+                 from 89-tester.cpp:1:
+/usr/include/c++/11/bits/stl_iterator.h:1242:5: note: candidate: ‘template<class _Iterator, class _Container> __gnu_cxx::__normal_iterator<_Iterator, _Container> __gnu_cxx::operator+(typename __gnu_cxx::__normal_iterator<_Iterator, _Container>::difference_type, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)’
+ 1242 |     operator+(typename __normal_iterator<_Iterator, _Container>::difference_type
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/stl_iterator.h:1242:5: note:   template argument deduction/substitution failed:
+In file included from 89-tester.cpp:1:
+bstmap.h:104:13: note:   ‘const std::__cxx11::basic_string<char>’ is not derived from ‘const __gnu_cxx::__normal_iterator<_Iterator, _Container>’
+  104 |     if (key + value) {
+      |         ~~~~^~~~~~~
+In file included from /usr/include/c++/11/bits/stl_algobase.h:67,
+                 from /usr/include/c++/11/bits/char_traits.h:39,
+                 from /usr/include/c++/11/string:40,
+                 from /usr/include/c++/11/stdexcept:39,
+                 from map.h:3,
+                 from bstmap.h:4,
+                 from 89-tester.cpp:1:
+/usr/include/c++/11/bits/stl_iterator.h:568:5: note: candidate: ‘template<class _Iterator> std::reverse_iterator<_Iterator> std::operator+(typename std::reverse_iterator<_Iterator>::difference_type, const std::reverse_iterator<_Iterator>&)’
+  568 |     operator+(typename reverse_iterator<_Iterator>::difference_type __n,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/stl_iterator.h:568:5: note:   template argument deduction/substitution failed:
+In file included from 89-tester.cpp:1:
+bstmap.h:104:13: note:   ‘const std::__cxx11::basic_string<char>’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+  104 |     if (key + value) {
+      |         ~~~~^~~~~~~
+In file included from /usr/include/c++/11/string:55,
+                 from /usr/include/c++/11/stdexcept:39,
+                 from map.h:3,
+                 from bstmap.h:4,
+                 from 89-tester.cpp:1:
+/usr/include/c++/11/bits/basic_string.h:6095:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)’
+ 6095 |     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/basic_string.h:6095:5: note:   template argument deduction/substitution failed:
+In file included from 89-tester.cpp:1:
+bstmap.h:104:13: note:   mismatched types ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’ and ‘const int’
+  104 |     if (key + value) {
+      |         ~~~~^~~~~~~
+In file included from /usr/include/c++/11/string:56,
+                 from /usr/include/c++/11/stdexcept:39,
+                 from map.h:3,
+                 from bstmap.h:4,
+                 from 89-tester.cpp:1:
+/usr/include/c++/11/bits/basic_string.tcc:1169:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)’
+ 1169 |     operator+(const _CharT* __lhs,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/basic_string.tcc:1169:5: note:   template argument deduction/substitution failed:
+In file included from 89-tester.cpp:1:
+bstmap.h:104:13: note:   mismatched types ‘const _CharT*’ and ‘int’
+  104 |     if (key + value) {
+      |         ~~~~^~~~~~~
+In file included from /usr/include/c++/11/string:56,
+                 from /usr/include/c++/11/stdexcept:39,
+                 from map.h:3,
+                 from bstmap.h:4,
+                 from 89-tester.cpp:1:
+/usr/include/c++/11/bits/basic_string.tcc:1189:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(_CharT, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)’
+ 1189 |     operator+(_CharT __lhs, const basic_string<_CharT, _Traits, _Alloc>& __rhs)
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/basic_string.tcc:1189:5: note:   template argument deduction/substitution failed:
+In file included from 89-tester.cpp:1:
+bstmap.h:104:13: note:   deduced conflicting types for parameter ‘_CharT’ (‘int’ and ‘char’)
+  104 |     if (key + value) {
+      |         ~~~~^~~~~~~
+In file included from /usr/include/c++/11/string:55,
+                 from /usr/include/c++/11/stdexcept:39,
+                 from map.h:3,
+                 from bstmap.h:4,
+                 from 89-tester.cpp:1:
+/usr/include/c++/11/bits/basic_string.h:6132:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)’
+ 6132 |     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/basic_string.h:6132:5: note:   template argument deduction/substitution failed:
+In file included from 89-tester.cpp:1:
+bstmap.h:104:13: note:   mismatched types ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’ and ‘const int’
+  104 |     if (key + value) {
+      |         ~~~~^~~~~~~
+In file included from /usr/include/c++/11/string:55,
+                 from /usr/include/c++/11/stdexcept:39,
+                 from map.h:3,
+                 from bstmap.h:4,
+                 from 89-tester.cpp:1:
+/usr/include/c++/11/bits/basic_string.h:6148:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, _CharT)’
+ 6148 |     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs, _CharT __rhs)
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/basic_string.h:6148:5: note:   template argument deduction/substitution failed:
+In file included from 89-tester.cpp:1:
+bstmap.h:104:13: note:   mismatched types ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’ and ‘const int’
+  104 |     if (key + value) {
+      |         ~~~~^~~~~~~
 The code did not compile.  This test failed.
 -----------------------------------------------
 testcase 3 : Testing with BstMap<int,(a custom class we wrote)>
@@ -55,11 +148,9 @@ testcase 3 : Testing with BstMap<int,(a custom class we wrote)>
 In file included from 89-tester.cpp:1:
 bstmap.h: In instantiation of ‘void BstMap<K, V>::add(const K&, const V&) [with K = int; V = Tester]’:
 bstmap.h:103:16:   required from here
-bstmap.h:104:13: error: no match for ‘operator||’ (operand types are ‘const int’ and ‘const Tester’)
-  104 |     if (key || value) {
-      |         ~~~~^~~~~~~~
-bstmap.h:104:13: note: candidate: ‘operator||(bool, bool)’ (built-in)
-bstmap.h:104:13: note:   no known conversion for argument 2 from ‘const Tester’ to ‘bool’
+bstmap.h:104:13: error: no match for ‘operator+’ (operand types are ‘const int’ and ‘const Tester’)
+  104 |     if (key + value) {
+      |         ~~~~^~~~~~~
 The code did not compile.  This test failed.
 -----------------------------------------------
 testcase 4 : Testing with BstMap<std::string,int>
@@ -67,11 +158,104 @@ testcase 4 : Testing with BstMap<std::string,int>
 In file included from 89-tester.cpp:1:
 bstmap.h: In instantiation of ‘void BstMap<K, V>::add(const K&, const V&) [with K = std::__cxx11::basic_string<char>; V = int]’:
 bstmap.h:103:16:   required from here
-bstmap.h:104:13: error: no match for ‘operator||’ (operand types are ‘const std::__cxx11::basic_string<char>’ and ‘const int’)
-  104 |     if (key || value) {
-      |         ~~~~^~~~~~~~
-bstmap.h:104:13: note: candidate: ‘operator||(bool, bool)’ (built-in)
-bstmap.h:104:13: note:   no known conversion for argument 1 from ‘const std::__cxx11::basic_string<char>’ to ‘bool’
+bstmap.h:104:13: error: no match for ‘operator+’ (operand types are ‘const std::__cxx11::basic_string<char>’ and ‘const int’)
+  104 |     if (key + value) {
+      |         ~~~~^~~~~~~
+In file included from /usr/include/c++/11/bits/stl_algobase.h:67,
+                 from /usr/include/c++/11/bits/char_traits.h:39,
+                 from /usr/include/c++/11/string:40,
+                 from /usr/include/c++/11/stdexcept:39,
+                 from map.h:3,
+                 from bstmap.h:4,
+                 from 89-tester.cpp:1:
+/usr/include/c++/11/bits/stl_iterator.h:1242:5: note: candidate: ‘template<class _Iterator, class _Container> __gnu_cxx::__normal_iterator<_Iterator, _Container> __gnu_cxx::operator+(typename __gnu_cxx::__normal_iterator<_Iterator, _Container>::difference_type, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)’
+ 1242 |     operator+(typename __normal_iterator<_Iterator, _Container>::difference_type
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/stl_iterator.h:1242:5: note:   template argument deduction/substitution failed:
+In file included from 89-tester.cpp:1:
+bstmap.h:104:13: note:   mismatched types ‘const __gnu_cxx::__normal_iterator<_Iterator, _Container>’ and ‘const int’
+  104 |     if (key + value) {
+      |         ~~~~^~~~~~~
+In file included from /usr/include/c++/11/bits/stl_algobase.h:67,
+                 from /usr/include/c++/11/bits/char_traits.h:39,
+                 from /usr/include/c++/11/string:40,
+                 from /usr/include/c++/11/stdexcept:39,
+                 from map.h:3,
+                 from bstmap.h:4,
+                 from 89-tester.cpp:1:
+/usr/include/c++/11/bits/stl_iterator.h:568:5: note: candidate: ‘template<class _Iterator> std::reverse_iterator<_Iterator> std::operator+(typename std::reverse_iterator<_Iterator>::difference_type, const std::reverse_iterator<_Iterator>&)’
+  568 |     operator+(typename reverse_iterator<_Iterator>::difference_type __n,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/stl_iterator.h:568:5: note:   template argument deduction/substitution failed:
+In file included from 89-tester.cpp:1:
+bstmap.h:104:13: note:   mismatched types ‘const std::reverse_iterator<_Iterator>’ and ‘const int’
+  104 |     if (key + value) {
+      |         ~~~~^~~~~~~
+In file included from /usr/include/c++/11/string:55,
+                 from /usr/include/c++/11/stdexcept:39,
+                 from map.h:3,
+                 from bstmap.h:4,
+                 from 89-tester.cpp:1:
+/usr/include/c++/11/bits/basic_string.h:6095:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)’
+ 6095 |     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/basic_string.h:6095:5: note:   template argument deduction/substitution failed:
+In file included from 89-tester.cpp:1:
+bstmap.h:104:13: note:   mismatched types ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’ and ‘const int’
+  104 |     if (key + value) {
+      |         ~~~~^~~~~~~
+In file included from /usr/include/c++/11/string:56,
+                 from /usr/include/c++/11/stdexcept:39,
+                 from map.h:3,
+                 from bstmap.h:4,
+                 from 89-tester.cpp:1:
+/usr/include/c++/11/bits/basic_string.tcc:1169:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)’
+ 1169 |     operator+(const _CharT* __lhs,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/basic_string.tcc:1169:5: note:   template argument deduction/substitution failed:
+In file included from 89-tester.cpp:1:
+bstmap.h:104:13: note:   mismatched types ‘const _CharT*’ and ‘std::__cxx11::basic_string<char>’
+  104 |     if (key + value) {
+      |         ~~~~^~~~~~~
+In file included from /usr/include/c++/11/string:56,
+                 from /usr/include/c++/11/stdexcept:39,
+                 from map.h:3,
+                 from bstmap.h:4,
+                 from 89-tester.cpp:1:
+/usr/include/c++/11/bits/basic_string.tcc:1189:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(_CharT, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)’
+ 1189 |     operator+(_CharT __lhs, const basic_string<_CharT, _Traits, _Alloc>& __rhs)
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/basic_string.tcc:1189:5: note:   template argument deduction/substitution failed:
+In file included from 89-tester.cpp:1:
+bstmap.h:104:13: note:   mismatched types ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’ and ‘const int’
+  104 |     if (key + value) {
+      |         ~~~~^~~~~~~
+In file included from /usr/include/c++/11/string:55,
+                 from /usr/include/c++/11/stdexcept:39,
+                 from map.h:3,
+                 from bstmap.h:4,
+                 from 89-tester.cpp:1:
+/usr/include/c++/11/bits/basic_string.h:6132:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)’
+ 6132 |     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/basic_string.h:6132:5: note:   template argument deduction/substitution failed:
+In file included from 89-tester.cpp:1:
+bstmap.h:104:13: note:   mismatched types ‘const _CharT*’ and ‘int’
+  104 |     if (key + value) {
+      |         ~~~~^~~~~~~
+In file included from /usr/include/c++/11/string:55,
+                 from /usr/include/c++/11/stdexcept:39,
+                 from map.h:3,
+                 from bstmap.h:4,
+                 from 89-tester.cpp:1:
+/usr/include/c++/11/bits/basic_string.h:6148:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, _CharT)’
+ 6148 |     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs, _CharT __rhs)
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/basic_string.h:6148:5: note:   template argument deduction/substitution failed:
+In file included from 89-tester.cpp:1:
+bstmap.h:104:13: note:   deduced conflicting types for parameter ‘_CharT’ (‘char’ and ‘int’)
+  104 |     if (key + value) {
+      |         ~~~~^~~~~~~
 bstmap.h: In instantiation of ‘void BstMap<K, V>::remove(const K&) [with K = std::__cxx11::basic_string<char>; V = int]’:
 bstmap.h:114:16:   required from here
 bstmap.h:115:5: error: could not convert ‘key’ from ‘const std::__cxx11::basic_string<char>’ to ‘bool’
@@ -86,11 +270,11 @@ testcase 5 : Testing with BstMap<std::string,std::string>
 In file included from 89-tester.cpp:1:
 bstmap.h: In instantiation of ‘void BstMap<K, V>::add(const K&, const V&) [with K = std::__cxx11::basic_string<char>; V = std::__cxx11::basic_string<char>]’:
 bstmap.h:103:16:   required from here
-bstmap.h:104:13: error: no match for ‘operator||’ (operand types are ‘const std::__cxx11::basic_string<char>’ and ‘const std::__cxx11::basic_string<char>’)
-  104 |     if (key || value) {
-      |         ~~~~^~~~~~~~
-bstmap.h:104:13: note: candidate: ‘operator||(bool, bool)’ (built-in)
-bstmap.h:104:13: note:   no known conversion for argument 2 from ‘const std::__cxx11::basic_string<char>’ to ‘bool’
+bstmap.h:104:5: error: could not convert ‘std::operator+(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]((* & value))’ from ‘std::__cxx11::basic_string<char>’ to ‘bool’
+  104 |     if (key + value) {
+      |     ^~
+      |     |
+      |     std::__cxx11::basic_string<char>
 bstmap.h: In instantiation of ‘void BstMap<K, V>::remove(const K&) [with K = std::__cxx11::basic_string<char>; V = std::__cxx11::basic_string<char>]’:
 bstmap.h:114:16:   required from here
 bstmap.h:115:5: error: could not convert ‘key’ from ‘const std::__cxx11::basic_string<char>’ to ‘bool’
@@ -105,11 +289,104 @@ testcase 6 : Testing with BstMap<std::string,(a custom class we wrote)>
 In file included from 89-tester.cpp:1:
 bstmap.h: In instantiation of ‘void BstMap<K, V>::add(const K&, const V&) [with K = std::__cxx11::basic_string<char>; V = Tester]’:
 bstmap.h:103:16:   required from here
-bstmap.h:104:13: error: no match for ‘operator||’ (operand types are ‘const std::__cxx11::basic_string<char>’ and ‘const Tester’)
-  104 |     if (key || value) {
-      |         ~~~~^~~~~~~~
-bstmap.h:104:13: note: candidate: ‘operator||(bool, bool)’ (built-in)
-bstmap.h:104:13: note:   no known conversion for argument 2 from ‘const Tester’ to ‘bool’
+bstmap.h:104:13: error: no match for ‘operator+’ (operand types are ‘const std::__cxx11::basic_string<char>’ and ‘const Tester’)
+  104 |     if (key + value) {
+      |         ~~~~^~~~~~~
+In file included from /usr/include/c++/11/bits/stl_algobase.h:67,
+                 from /usr/include/c++/11/bits/char_traits.h:39,
+                 from /usr/include/c++/11/string:40,
+                 from /usr/include/c++/11/stdexcept:39,
+                 from map.h:3,
+                 from bstmap.h:4,
+                 from 89-tester.cpp:1:
+/usr/include/c++/11/bits/stl_iterator.h:1242:5: note: candidate: ‘template<class _Iterator, class _Container> __gnu_cxx::__normal_iterator<_Iterator, _Container> __gnu_cxx::operator+(typename __gnu_cxx::__normal_iterator<_Iterator, _Container>::difference_type, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)’
+ 1242 |     operator+(typename __normal_iterator<_Iterator, _Container>::difference_type
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/stl_iterator.h:1242:5: note:   template argument deduction/substitution failed:
+In file included from 89-tester.cpp:1:
+bstmap.h:104:13: note:   ‘const Tester’ is not derived from ‘const __gnu_cxx::__normal_iterator<_Iterator, _Container>’
+  104 |     if (key + value) {
+      |         ~~~~^~~~~~~
+In file included from /usr/include/c++/11/bits/stl_algobase.h:67,
+                 from /usr/include/c++/11/bits/char_traits.h:39,
+                 from /usr/include/c++/11/string:40,
+                 from /usr/include/c++/11/stdexcept:39,
+                 from map.h:3,
+                 from bstmap.h:4,
+                 from 89-tester.cpp:1:
+/usr/include/c++/11/bits/stl_iterator.h:568:5: note: candidate: ‘template<class _Iterator> std::reverse_iterator<_Iterator> std::operator+(typename std::reverse_iterator<_Iterator>::difference_type, const std::reverse_iterator<_Iterator>&)’
+  568 |     operator+(typename reverse_iterator<_Iterator>::difference_type __n,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/stl_iterator.h:568:5: note:   template argument deduction/substitution failed:
+In file included from 89-tester.cpp:1:
+bstmap.h:104:13: note:   ‘const Tester’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+  104 |     if (key + value) {
+      |         ~~~~^~~~~~~
+In file included from /usr/include/c++/11/string:55,
+                 from /usr/include/c++/11/stdexcept:39,
+                 from map.h:3,
+                 from bstmap.h:4,
+                 from 89-tester.cpp:1:
+/usr/include/c++/11/bits/basic_string.h:6095:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)’
+ 6095 |     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/basic_string.h:6095:5: note:   template argument deduction/substitution failed:
+In file included from 89-tester.cpp:1:
+bstmap.h:104:13: note:   ‘const Tester’ is not derived from ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
+  104 |     if (key + value) {
+      |         ~~~~^~~~~~~
+In file included from /usr/include/c++/11/string:56,
+                 from /usr/include/c++/11/stdexcept:39,
+                 from map.h:3,
+                 from bstmap.h:4,
+                 from 89-tester.cpp:1:
+/usr/include/c++/11/bits/basic_string.tcc:1169:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)’
+ 1169 |     operator+(const _CharT* __lhs,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/basic_string.tcc:1169:5: note:   template argument deduction/substitution failed:
+In file included from 89-tester.cpp:1:
+bstmap.h:104:13: note:   mismatched types ‘const _CharT*’ and ‘std::__cxx11::basic_string<char>’
+  104 |     if (key + value) {
+      |         ~~~~^~~~~~~
+In file included from /usr/include/c++/11/string:56,
+                 from /usr/include/c++/11/stdexcept:39,
+                 from map.h:3,
+                 from bstmap.h:4,
+                 from 89-tester.cpp:1:
+/usr/include/c++/11/bits/basic_string.tcc:1189:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(_CharT, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)’
+ 1189 |     operator+(_CharT __lhs, const basic_string<_CharT, _Traits, _Alloc>& __rhs)
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/basic_string.tcc:1189:5: note:   template argument deduction/substitution failed:
+In file included from 89-tester.cpp:1:
+bstmap.h:104:13: note:   ‘const Tester’ is not derived from ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
+  104 |     if (key + value) {
+      |         ~~~~^~~~~~~
+In file included from /usr/include/c++/11/string:55,
+                 from /usr/include/c++/11/stdexcept:39,
+                 from map.h:3,
+                 from bstmap.h:4,
+                 from 89-tester.cpp:1:
+/usr/include/c++/11/bits/basic_string.h:6132:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)’
+ 6132 |     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/basic_string.h:6132:5: note:   template argument deduction/substitution failed:
+In file included from 89-tester.cpp:1:
+bstmap.h:104:13: note:   mismatched types ‘const _CharT*’ and ‘Tester’
+  104 |     if (key + value) {
+      |         ~~~~^~~~~~~
+In file included from /usr/include/c++/11/string:55,
+                 from /usr/include/c++/11/stdexcept:39,
+                 from map.h:3,
+                 from bstmap.h:4,
+                 from 89-tester.cpp:1:
+/usr/include/c++/11/bits/basic_string.h:6148:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, _CharT)’
+ 6148 |     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs, _CharT __rhs)
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/basic_string.h:6148:5: note:   template argument deduction/substitution failed:
+In file included from 89-tester.cpp:1:
+bstmap.h:104:13: note:   deduced conflicting types for parameter ‘_CharT’ (‘char’ and ‘Tester’)
+  104 |     if (key + value) {
+      |         ~~~~^~~~~~~
 bstmap.h: In instantiation of ‘void BstMap<K, V>::remove(const K&) [with K = std::__cxx11::basic_string<char>; V = Tester]’:
 bstmap.h:114:16:   required from here
 bstmap.h:115:5: error: could not convert ‘key’ from ‘const std::__cxx11::basic_string<char>’ to ‘bool’
@@ -124,11 +401,16 @@ testcase 7 : Testing with BstMap<(a custom class we wrote),int>
 In file included from 89-tester.cpp:1:
 bstmap.h: In instantiation of ‘void BstMap<K, V>::add(const K&, const V&) [with K = Tester; V = int]’:
 bstmap.h:103:16:   required from here
-bstmap.h:104:13: error: no match for ‘operator||’ (operand types are ‘const Tester’ and ‘const int’)
-  104 |     if (key || value) {
-      |         ~~~~^~~~~~~~
-bstmap.h:104:13: note: candidate: ‘operator||(bool, bool)’ (built-in)
-bstmap.h:104:13: note:   no known conversion for argument 1 from ‘const Tester’ to ‘bool’
+bstmap.h:104:13: error: no match for ‘operator+’ (operand types are ‘const Tester’ and ‘const int’)
+  104 |     if (key + value) {
+      |         ~~~~^~~~~~~
+89-tester.cpp:28:10: note: candidate: ‘Tester Tester::operator+(const Tester&) const’
+   28 |   Tester operator+(const Tester & rhs) const{
+      |          ^~~~~~~~
+89-tester.cpp:28:35: note:   no known conversion for argument 1 from ‘const int’ to ‘const Tester&’
+   28 |   Tester operator+(const Tester & rhs) const{
+      |                    ~~~~~~~~~~~~~~~^~~
+In file included from 89-tester.cpp:1:
 bstmap.h: In instantiation of ‘void BstMap<K, V>::remove(const K&) [with K = Tester; V = int]’:
 bstmap.h:114:16:   required from here
 bstmap.h:115:5: error: could not convert ‘key’ from ‘const Tester’ to ‘bool’
@@ -143,11 +425,110 @@ testcase 8 : Testing with BstMap<(a custom class we wrote),std::string>
 In file included from 89-tester.cpp:1:
 bstmap.h: In instantiation of ‘void BstMap<K, V>::add(const K&, const V&) [with K = Tester; V = std::__cxx11::basic_string<char>]’:
 bstmap.h:103:16:   required from here
-bstmap.h:104:13: error: no match for ‘operator||’ (operand types are ‘const Tester’ and ‘const std::__cxx11::basic_string<char>’)
-  104 |     if (key || value) {
-      |         ~~~~^~~~~~~~
-bstmap.h:104:13: note: candidate: ‘operator||(bool, bool)’ (built-in)
-bstmap.h:104:13: note:   no known conversion for argument 2 from ‘const std::__cxx11::basic_string<char>’ to ‘bool’
+bstmap.h:104:13: error: no match for ‘operator+’ (operand types are ‘const Tester’ and ‘const std::__cxx11::basic_string<char>’)
+  104 |     if (key + value) {
+      |         ~~~~^~~~~~~
+89-tester.cpp:28:10: note: candidate: ‘Tester Tester::operator+(const Tester&) const’
+   28 |   Tester operator+(const Tester & rhs) const{
+      |          ^~~~~~~~
+89-tester.cpp:28:35: note:   no known conversion for argument 1 from ‘const std::__cxx11::basic_string<char>’ to ‘const Tester&’
+   28 |   Tester operator+(const Tester & rhs) const{
+      |                    ~~~~~~~~~~~~~~~^~~
+In file included from /usr/include/c++/11/bits/stl_algobase.h:67,
+                 from /usr/include/c++/11/bits/char_traits.h:39,
+                 from /usr/include/c++/11/string:40,
+                 from /usr/include/c++/11/stdexcept:39,
+                 from map.h:3,
+                 from bstmap.h:4,
+                 from 89-tester.cpp:1:
+/usr/include/c++/11/bits/stl_iterator.h:1242:5: note: candidate: ‘template<class _Iterator, class _Container> __gnu_cxx::__normal_iterator<_Iterator, _Container> __gnu_cxx::operator+(typename __gnu_cxx::__normal_iterator<_Iterator, _Container>::difference_type, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)’
+ 1242 |     operator+(typename __normal_iterator<_Iterator, _Container>::difference_type
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/stl_iterator.h:1242:5: note:   template argument deduction/substitution failed:
+In file included from 89-tester.cpp:1:
+bstmap.h:104:13: note:   ‘const std::__cxx11::basic_string<char>’ is not derived from ‘const __gnu_cxx::__normal_iterator<_Iterator, _Container>’
+  104 |     if (key + value) {
+      |         ~~~~^~~~~~~
+In file included from /usr/include/c++/11/bits/stl_algobase.h:67,
+                 from /usr/include/c++/11/bits/char_traits.h:39,
+                 from /usr/include/c++/11/string:40,
+                 from /usr/include/c++/11/stdexcept:39,
+                 from map.h:3,
+                 from bstmap.h:4,
+                 from 89-tester.cpp:1:
+/usr/include/c++/11/bits/stl_iterator.h:568:5: note: candidate: ‘template<class _Iterator> std::reverse_iterator<_Iterator> std::operator+(typename std::reverse_iterator<_Iterator>::difference_type, const std::reverse_iterator<_Iterator>&)’
+  568 |     operator+(typename reverse_iterator<_Iterator>::difference_type __n,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/stl_iterator.h:568:5: note:   template argument deduction/substitution failed:
+In file included from 89-tester.cpp:1:
+bstmap.h:104:13: note:   ‘const std::__cxx11::basic_string<char>’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+  104 |     if (key + value) {
+      |         ~~~~^~~~~~~
+In file included from /usr/include/c++/11/string:55,
+                 from /usr/include/c++/11/stdexcept:39,
+                 from map.h:3,
+                 from bstmap.h:4,
+                 from 89-tester.cpp:1:
+/usr/include/c++/11/bits/basic_string.h:6095:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)’
+ 6095 |     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/basic_string.h:6095:5: note:   template argument deduction/substitution failed:
+In file included from 89-tester.cpp:1:
+bstmap.h:104:13: note:   ‘const Tester’ is not derived from ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
+  104 |     if (key + value) {
+      |         ~~~~^~~~~~~
+In file included from /usr/include/c++/11/string:56,
+                 from /usr/include/c++/11/stdexcept:39,
+                 from map.h:3,
+                 from bstmap.h:4,
+                 from 89-tester.cpp:1:
+/usr/include/c++/11/bits/basic_string.tcc:1169:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)’
+ 1169 |     operator+(const _CharT* __lhs,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/basic_string.tcc:1169:5: note:   template argument deduction/substitution failed:
+In file included from 89-tester.cpp:1:
+bstmap.h:104:13: note:   mismatched types ‘const _CharT*’ and ‘Tester’
+  104 |     if (key + value) {
+      |         ~~~~^~~~~~~
+In file included from /usr/include/c++/11/string:56,
+                 from /usr/include/c++/11/stdexcept:39,
+                 from map.h:3,
+                 from bstmap.h:4,
+                 from 89-tester.cpp:1:
+/usr/include/c++/11/bits/basic_string.tcc:1189:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(_CharT, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)’
+ 1189 |     operator+(_CharT __lhs, const basic_string<_CharT, _Traits, _Alloc>& __rhs)
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/basic_string.tcc:1189:5: note:   template argument deduction/substitution failed:
+In file included from 89-tester.cpp:1:
+bstmap.h:104:13: note:   deduced conflicting types for parameter ‘_CharT’ (‘Tester’ and ‘char’)
+  104 |     if (key + value) {
+      |         ~~~~^~~~~~~
+In file included from /usr/include/c++/11/string:55,
+                 from /usr/include/c++/11/stdexcept:39,
+                 from map.h:3,
+                 from bstmap.h:4,
+                 from 89-tester.cpp:1:
+/usr/include/c++/11/bits/basic_string.h:6132:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)’
+ 6132 |     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/basic_string.h:6132:5: note:   template argument deduction/substitution failed:
+In file included from 89-tester.cpp:1:
+bstmap.h:104:13: note:   ‘const Tester’ is not derived from ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
+  104 |     if (key + value) {
+      |         ~~~~^~~~~~~
+In file included from /usr/include/c++/11/string:55,
+                 from /usr/include/c++/11/stdexcept:39,
+                 from map.h:3,
+                 from bstmap.h:4,
+                 from 89-tester.cpp:1:
+/usr/include/c++/11/bits/basic_string.h:6148:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, _CharT)’
+ 6148 |     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs, _CharT __rhs)
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/basic_string.h:6148:5: note:   template argument deduction/substitution failed:
+In file included from 89-tester.cpp:1:
+bstmap.h:104:13: note:   ‘const Tester’ is not derived from ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
+  104 |     if (key + value) {
+      |         ~~~~^~~~~~~
 bstmap.h: In instantiation of ‘void BstMap<K, V>::remove(const K&) [with K = Tester; V = std::__cxx11::basic_string<char>]’:
 bstmap.h:114:16:   required from here
 bstmap.h:115:5: error: could not convert ‘key’ from ‘const Tester’ to ‘bool’
@@ -162,11 +543,11 @@ testcase 9 : Testing with BstMap<(a custom class we wrote),(a custom class we wr
 In file included from 89-tester.cpp:1:
 bstmap.h: In instantiation of ‘void BstMap<K, V>::add(const K&, const V&) [with K = Tester; V = Tester]’:
 bstmap.h:103:16:   required from here
-bstmap.h:104:13: error: no match for ‘operator||’ (operand types are ‘const Tester’ and ‘const Tester’)
-  104 |     if (key || value) {
-      |         ~~~~^~~~~~~~
-bstmap.h:104:13: note: candidate: ‘operator||(bool, bool)’ (built-in)
-bstmap.h:104:13: note:   no known conversion for argument 2 from ‘const Tester’ to ‘bool’
+bstmap.h:104:5: error: could not convert ‘Tester::operator+(const Tester&) const((* & value))’ from ‘Tester’ to ‘bool’
+  104 |     if (key + value) {
+      |     ^~
+      |     |
+      |     Tester
 bstmap.h: In instantiation of ‘void BstMap<K, V>::remove(const K&) [with K = Tester; V = Tester]’:
 bstmap.h:114:16:   required from here
 bstmap.h:115:5: error: could not convert ‘key’ from ‘const Tester’ to ‘bool’
