@@ -1,106 +1,379 @@
-Grading at 11/08/2022:20:48:23.384690
-For commit ID e920d2df67f932bc5b4b1e780c4f6c3c9fcd9ee9
-Grading at Tue Nov  8 03:48:22 PM EST 2022
+Grading at 11/08/2022:20:51:44.132576
+For commit ID 4759aa790b8799c5ed140d0b40daca68c4c75412
+Grading at Tue Nov  8 03:51:43 PM EST 2022
 -----------------------------------------------
 testcase 1 : Testing with BstSet<int>
 ...compiling...
+In file included from 90-tester.cpp:1:
+bstset.h:11:26: error: expected template-name before ‘<’ token
+   11 | class BstSet : public Set<T> {
+      |                          ^
+bstset.h:11:26: error: expected ‘{’ before ‘<’ token
+bstset.h:39:2: error: extra ‘;’ [-Werror=pedantic]
+   39 | };
+      |  ^
+90-tester.cpp:55:9: error: ‘Set’ does not name a type
+   55 | typedef Set<KEYTYPE> SetTy;
+      |         ^~~
 90-tester.cpp: In function ‘int main()’:
-90-tester.cpp:70:33: error: invalid new-expression of abstract class type ‘BstSet<int>’
+90-tester.cpp:70:33: error: invalid use of incomplete type ‘BSTSetTy’ {aka ‘class BstSet<int>’}
    70 |   BSTSetTy * bmt = new BSTSetTy();
       |                                 ^
 In file included from 90-tester.cpp:1:
-bstset.h:8:7: note:   because the following virtual functions are pure within ‘BstSet<int>’:
-    8 | class BstSet : public Set<T> {
+bstset.h:11:7: note: declaration of ‘BSTSetTy’ {aka ‘class BstSet<int>’}
+   11 | class BstSet : public Set<T> {
       |       ^~~~~~
-In file included from bstset.h:5,
-                 from 90-tester.cpp:1:
-set.h:9:16: note:     ‘bool Set<T>::contains(const T&) const [with T = int]’
-    9 |   virtual bool contains(const T& key) const = 0;
-      |                ^~~~~~~~
-90-tester.cpp:92:36: error: invalid new-expression of abstract class type ‘BstSet<int>’
+90-tester.cpp:71:3: error: ‘SetTy’ was not declared in this scope
+   71 |   SetTy * m = bmt;
+      |   ^~~~~
+90-tester.cpp:71:11: error: ‘m’ was not declared in this scope; did you mean ‘tm’?
+   71 |   SetTy * m = bmt;
+      |           ^
+      |           tm
+90-tester.cpp:92:36: error: invalid use of incomplete type ‘BSTSetTy’ {aka ‘class BstSet<int>’}
    92 |   BSTSetTy * m2 = new BSTSetTy(*bmt);
       |                                    ^
-90-tester.cpp:151:26: error: invalid new-expression of abstract class type ‘BstSet<int>’
+In file included from 90-tester.cpp:1:
+bstset.h:11:7: note: declaration of ‘BSTSetTy’ {aka ‘class BstSet<int>’}
+   11 | class BstSet : public Set<T> {
+      |       ^~~~~~
+90-tester.cpp:96:14: error: ‘ptr’ was not declared in this scope
+   96 |       SetTy* ptr = (((i+j)&1)==0)? m : m2;
+      |              ^~~
+90-tester.cpp:113:23: error: invalid use of incomplete type ‘BSTSetTy’ {aka ‘class BstSet<int>’}
+  113 |         VALTYPE v = m2->contains(k);
+      |                       ^~
+In file included from 90-tester.cpp:1:
+bstset.h:11:7: note: declaration of ‘BSTSetTy’ {aka ‘class BstSet<int>’}
+   11 | class BstSet : public Set<T> {
+      |       ^~~~~~
+90-tester.cpp:122:3: error: invalid use of incomplete type ‘BSTSetTy’ {aka ‘class BstSet<int>’}
+  122 |   *m2 = *bmt;
+      |   ^~~
+In file included from 90-tester.cpp:1:
+bstset.h:11:7: note: declaration of ‘BSTSetTy’ {aka ‘class BstSet<int>’}
+   11 | class BstSet : public Set<T> {
+      |       ^~~~~~
+90-tester.cpp:125:14: error: ‘ptr’ was not declared in this scope
+  125 |       SetTy* ptr = (((i+j)&1)==0)? m : m2;
+      |              ^~~
+90-tester.cpp:140:23: error: invalid use of incomplete type ‘BSTSetTy’ {aka ‘class BstSet<int>’}
+  140 |         VALTYPE v = m2->contains(k);
+      |                       ^~
+In file included from 90-tester.cpp:1:
+bstset.h:11:7: note: declaration of ‘BSTSetTy’ {aka ‘class BstSet<int>’}
+   11 | class BstSet : public Set<T> {
+      |       ^~~~~~
+90-tester.cpp:149:3: error: possible problem detected in invocation of ‘operator delete’ [-Werror=delete-incomplete]
+  149 |   delete bmt;
+      |   ^~~~~~~~~~
+90-tester.cpp:70:14: error: ‘bmt’ has incomplete type [-Werror]
+   70 |   BSTSetTy * bmt = new BSTSetTy();
+      |              ^~~
+In file included from 90-tester.cpp:1:
+bstset.h:11:7: note: declaration of ‘class BstSet<int>’
+   11 | class BstSet : public Set<T> {
+      |       ^~~~~~
+90-tester.cpp:149:3: note: neither the destructor nor the class-specific ‘operator delete’ will be called, even if they are declared when the class is defined
+  149 |   delete bmt;
+      |   ^~~~~~~~~~
+90-tester.cpp:151:26: error: invalid use of incomplete type ‘BSTSetTy’ {aka ‘class BstSet<int>’}
   151 |   m = bmt = new BSTSetTy();
       |                          ^
 In file included from 90-tester.cpp:1:
-bstset.h: In instantiation of ‘bool BstSet<T>::contains(const T&) [with T = int]’:
-90-tester.cpp:113:26:   required from here
-bstset.h:27:17: error: catching polymorphic type ‘class std::invalid_argument’ by value [-Werror=catch-value=]
-   27 |     catch (std::invalid_argument) {
-      |                 ^~~~~~~~~~~~~~~~
-bstset.h: In member function ‘BstSet<T>& BstSet<T>::operator=(const BstSet<T>&) [with T = int]’:
-bstset.h:19:3: error: control reaches end of non-void function [-Werror=return-type]
-   19 |   }
-      |   ^
+bstset.h:11:7: note: declaration of ‘BSTSetTy’ {aka ‘class BstSet<int>’}
+   11 | class BstSet : public Set<T> {
+      |       ^~~~~~
+90-tester.cpp:152:3: error: invalid use of incomplete type ‘BSTSetTy’ {aka ‘class BstSet<int>’}
+  152 |   *m2 = *bmt;
+      |   ^~~
+In file included from 90-tester.cpp:1:
+bstset.h:11:7: note: declaration of ‘BSTSetTy’ {aka ‘class BstSet<int>’}
+   11 | class BstSet : public Set<T> {
+      |       ^~~~~~
+90-tester.cpp:164:23: error: invalid use of incomplete type ‘BSTSetTy’ {aka ‘class BstSet<int>’}
+  164 |         VALTYPE v = m2->contains(k);
+      |                       ^~
+In file included from 90-tester.cpp:1:
+bstset.h:11:7: note: declaration of ‘BSTSetTy’ {aka ‘class BstSet<int>’}
+   11 | class BstSet : public Set<T> {
+      |       ^~~~~~
+90-tester.cpp:173:3: error: possible problem detected in invocation of ‘operator delete’ [-Werror=delete-incomplete]
+  173 |   delete bmt;
+      |   ^~~~~~~~~~
+90-tester.cpp:70:14: error: ‘bmt’ has incomplete type [-Werror]
+   70 |   BSTSetTy * bmt = new BSTSetTy();
+      |              ^~~
+In file included from 90-tester.cpp:1:
+bstset.h:11:7: note: declaration of ‘class BstSet<int>’
+   11 | class BstSet : public Set<T> {
+      |       ^~~~~~
+90-tester.cpp:173:3: note: neither the destructor nor the class-specific ‘operator delete’ will be called, even if they are declared when the class is defined
+  173 |   delete bmt;
+      |   ^~~~~~~~~~
+90-tester.cpp:174:3: error: possible problem detected in invocation of ‘operator delete’ [-Werror=delete-incomplete]
+  174 |   delete m2;
+      |   ^~~~~~~~~
+90-tester.cpp:92:14: error: ‘m2’ has incomplete type [-Werror]
+   92 |   BSTSetTy * m2 = new BSTSetTy(*bmt);
+      |              ^~
+In file included from 90-tester.cpp:1:
+bstset.h:11:7: note: declaration of ‘class BstSet<int>’
+   11 | class BstSet : public Set<T> {
+      |       ^~~~~~
+90-tester.cpp:174:3: note: neither the destructor nor the class-specific ‘operator delete’ will be called, even if they are declared when the class is defined
+  174 |   delete m2;
+      |   ^~~~~~~~~
 cc1plus: all warnings being treated as errors
 The code did not compile.  This test failed.
 -----------------------------------------------
 testcase 2 : Testing with BstSet<std::string>
 ...compiling...
+In file included from 90-tester.cpp:1:
+bstset.h:11:26: error: expected template-name before ‘<’ token
+   11 | class BstSet : public Set<T> {
+      |                          ^
+bstset.h:11:26: error: expected ‘{’ before ‘<’ token
+bstset.h:39:2: error: extra ‘;’ [-Werror=pedantic]
+   39 | };
+      |  ^
+90-tester.cpp:55:9: error: ‘Set’ does not name a type
+   55 | typedef Set<KEYTYPE> SetTy;
+      |         ^~~
 90-tester.cpp: In function ‘int main()’:
-90-tester.cpp:70:33: error: invalid new-expression of abstract class type ‘BstSet<std::__cxx11::basic_string<char> >’
+90-tester.cpp:70:33: error: invalid use of incomplete type ‘BSTSetTy’ {aka ‘class BstSet<std::__cxx11::basic_string<char> >’}
    70 |   BSTSetTy * bmt = new BSTSetTy();
       |                                 ^
 In file included from 90-tester.cpp:1:
-bstset.h:8:7: note:   because the following virtual functions are pure within ‘BstSet<std::__cxx11::basic_string<char> >’:
-    8 | class BstSet : public Set<T> {
+bstset.h:11:7: note: declaration of ‘BSTSetTy’ {aka ‘class BstSet<std::__cxx11::basic_string<char> >’}
+   11 | class BstSet : public Set<T> {
       |       ^~~~~~
-In file included from bstset.h:5,
-                 from 90-tester.cpp:1:
-set.h:9:16: note:     ‘bool Set<T>::contains(const T&) const [with T = std::__cxx11::basic_string<char>]’
-    9 |   virtual bool contains(const T& key) const = 0;
-      |                ^~~~~~~~
-90-tester.cpp:92:36: error: invalid new-expression of abstract class type ‘BstSet<std::__cxx11::basic_string<char> >’
+90-tester.cpp:71:3: error: ‘SetTy’ was not declared in this scope
+   71 |   SetTy * m = bmt;
+      |   ^~~~~
+90-tester.cpp:71:11: error: ‘m’ was not declared in this scope; did you mean ‘tm’?
+   71 |   SetTy * m = bmt;
+      |           ^
+      |           tm
+90-tester.cpp:92:36: error: invalid use of incomplete type ‘BSTSetTy’ {aka ‘class BstSet<std::__cxx11::basic_string<char> >’}
    92 |   BSTSetTy * m2 = new BSTSetTy(*bmt);
       |                                    ^
-90-tester.cpp:151:26: error: invalid new-expression of abstract class type ‘BstSet<std::__cxx11::basic_string<char> >’
+In file included from 90-tester.cpp:1:
+bstset.h:11:7: note: declaration of ‘BSTSetTy’ {aka ‘class BstSet<std::__cxx11::basic_string<char> >’}
+   11 | class BstSet : public Set<T> {
+      |       ^~~~~~
+90-tester.cpp:96:14: error: ‘ptr’ was not declared in this scope
+   96 |       SetTy* ptr = (((i+j)&1)==0)? m : m2;
+      |              ^~~
+90-tester.cpp:113:23: error: invalid use of incomplete type ‘BSTSetTy’ {aka ‘class BstSet<std::__cxx11::basic_string<char> >’}
+  113 |         VALTYPE v = m2->contains(k);
+      |                       ^~
+In file included from 90-tester.cpp:1:
+bstset.h:11:7: note: declaration of ‘BSTSetTy’ {aka ‘class BstSet<std::__cxx11::basic_string<char> >’}
+   11 | class BstSet : public Set<T> {
+      |       ^~~~~~
+90-tester.cpp:122:3: error: invalid use of incomplete type ‘BSTSetTy’ {aka ‘class BstSet<std::__cxx11::basic_string<char> >’}
+  122 |   *m2 = *bmt;
+      |   ^~~
+In file included from 90-tester.cpp:1:
+bstset.h:11:7: note: declaration of ‘BSTSetTy’ {aka ‘class BstSet<std::__cxx11::basic_string<char> >’}
+   11 | class BstSet : public Set<T> {
+      |       ^~~~~~
+90-tester.cpp:125:14: error: ‘ptr’ was not declared in this scope
+  125 |       SetTy* ptr = (((i+j)&1)==0)? m : m2;
+      |              ^~~
+90-tester.cpp:140:23: error: invalid use of incomplete type ‘BSTSetTy’ {aka ‘class BstSet<std::__cxx11::basic_string<char> >’}
+  140 |         VALTYPE v = m2->contains(k);
+      |                       ^~
+In file included from 90-tester.cpp:1:
+bstset.h:11:7: note: declaration of ‘BSTSetTy’ {aka ‘class BstSet<std::__cxx11::basic_string<char> >’}
+   11 | class BstSet : public Set<T> {
+      |       ^~~~~~
+90-tester.cpp:149:3: error: possible problem detected in invocation of ‘operator delete’ [-Werror=delete-incomplete]
+  149 |   delete bmt;
+      |   ^~~~~~~~~~
+90-tester.cpp:70:14: error: ‘bmt’ has incomplete type [-Werror]
+   70 |   BSTSetTy * bmt = new BSTSetTy();
+      |              ^~~
+In file included from 90-tester.cpp:1:
+bstset.h:11:7: note: declaration of ‘class BstSet<std::__cxx11::basic_string<char> >’
+   11 | class BstSet : public Set<T> {
+      |       ^~~~~~
+90-tester.cpp:149:3: note: neither the destructor nor the class-specific ‘operator delete’ will be called, even if they are declared when the class is defined
+  149 |   delete bmt;
+      |   ^~~~~~~~~~
+90-tester.cpp:151:26: error: invalid use of incomplete type ‘BSTSetTy’ {aka ‘class BstSet<std::__cxx11::basic_string<char> >’}
   151 |   m = bmt = new BSTSetTy();
       |                          ^
 In file included from 90-tester.cpp:1:
-bstset.h: In instantiation of ‘bool BstSet<T>::contains(const T&) [with T = std::__cxx11::basic_string<char>]’:
-90-tester.cpp:113:26:   required from here
-bstset.h:27:17: error: catching polymorphic type ‘class std::invalid_argument’ by value [-Werror=catch-value=]
-   27 |     catch (std::invalid_argument) {
-      |                 ^~~~~~~~~~~~~~~~
-bstset.h: In member function ‘BstSet<T>& BstSet<T>::operator=(const BstSet<T>&) [with T = std::__cxx11::basic_string<char>]’:
-bstset.h:19:3: error: control reaches end of non-void function [-Werror=return-type]
-   19 |   }
-      |   ^
+bstset.h:11:7: note: declaration of ‘BSTSetTy’ {aka ‘class BstSet<std::__cxx11::basic_string<char> >’}
+   11 | class BstSet : public Set<T> {
+      |       ^~~~~~
+90-tester.cpp:152:3: error: invalid use of incomplete type ‘BSTSetTy’ {aka ‘class BstSet<std::__cxx11::basic_string<char> >’}
+  152 |   *m2 = *bmt;
+      |   ^~~
+In file included from 90-tester.cpp:1:
+bstset.h:11:7: note: declaration of ‘BSTSetTy’ {aka ‘class BstSet<std::__cxx11::basic_string<char> >’}
+   11 | class BstSet : public Set<T> {
+      |       ^~~~~~
+90-tester.cpp:164:23: error: invalid use of incomplete type ‘BSTSetTy’ {aka ‘class BstSet<std::__cxx11::basic_string<char> >’}
+  164 |         VALTYPE v = m2->contains(k);
+      |                       ^~
+In file included from 90-tester.cpp:1:
+bstset.h:11:7: note: declaration of ‘BSTSetTy’ {aka ‘class BstSet<std::__cxx11::basic_string<char> >’}
+   11 | class BstSet : public Set<T> {
+      |       ^~~~~~
+90-tester.cpp:173:3: error: possible problem detected in invocation of ‘operator delete’ [-Werror=delete-incomplete]
+  173 |   delete bmt;
+      |   ^~~~~~~~~~
+90-tester.cpp:70:14: error: ‘bmt’ has incomplete type [-Werror]
+   70 |   BSTSetTy * bmt = new BSTSetTy();
+      |              ^~~
+In file included from 90-tester.cpp:1:
+bstset.h:11:7: note: declaration of ‘class BstSet<std::__cxx11::basic_string<char> >’
+   11 | class BstSet : public Set<T> {
+      |       ^~~~~~
+90-tester.cpp:173:3: note: neither the destructor nor the class-specific ‘operator delete’ will be called, even if they are declared when the class is defined
+  173 |   delete bmt;
+      |   ^~~~~~~~~~
+90-tester.cpp:174:3: error: possible problem detected in invocation of ‘operator delete’ [-Werror=delete-incomplete]
+  174 |   delete m2;
+      |   ^~~~~~~~~
+90-tester.cpp:92:14: error: ‘m2’ has incomplete type [-Werror]
+   92 |   BSTSetTy * m2 = new BSTSetTy(*bmt);
+      |              ^~
+In file included from 90-tester.cpp:1:
+bstset.h:11:7: note: declaration of ‘class BstSet<std::__cxx11::basic_string<char> >’
+   11 | class BstSet : public Set<T> {
+      |       ^~~~~~
+90-tester.cpp:174:3: note: neither the destructor nor the class-specific ‘operator delete’ will be called, even if they are declared when the class is defined
+  174 |   delete m2;
+      |   ^~~~~~~~~
 cc1plus: all warnings being treated as errors
 The code did not compile.  This test failed.
 -----------------------------------------------
 testcase 3 : Testing with BstSet<(a custom class we wrote)>
 ...compiling...
+In file included from 90-tester.cpp:1:
+bstset.h:11:26: error: expected template-name before ‘<’ token
+   11 | class BstSet : public Set<T> {
+      |                          ^
+bstset.h:11:26: error: expected ‘{’ before ‘<’ token
+bstset.h:39:2: error: extra ‘;’ [-Werror=pedantic]
+   39 | };
+      |  ^
+90-tester.cpp:55:9: error: ‘Set’ does not name a type
+   55 | typedef Set<KEYTYPE> SetTy;
+      |         ^~~
 90-tester.cpp: In function ‘int main()’:
-90-tester.cpp:70:33: error: invalid new-expression of abstract class type ‘BstSet<Tester>’
+90-tester.cpp:70:33: error: invalid use of incomplete type ‘BSTSetTy’ {aka ‘class BstSet<Tester>’}
    70 |   BSTSetTy * bmt = new BSTSetTy();
       |                                 ^
 In file included from 90-tester.cpp:1:
-bstset.h:8:7: note:   because the following virtual functions are pure within ‘BstSet<Tester>’:
-    8 | class BstSet : public Set<T> {
+bstset.h:11:7: note: declaration of ‘BSTSetTy’ {aka ‘class BstSet<Tester>’}
+   11 | class BstSet : public Set<T> {
       |       ^~~~~~
-In file included from bstset.h:5,
-                 from 90-tester.cpp:1:
-set.h:9:16: note:     ‘bool Set<T>::contains(const T&) const [with T = Tester]’
-    9 |   virtual bool contains(const T& key) const = 0;
-      |                ^~~~~~~~
-90-tester.cpp:92:36: error: invalid new-expression of abstract class type ‘BstSet<Tester>’
+90-tester.cpp:71:3: error: ‘SetTy’ was not declared in this scope
+   71 |   SetTy * m = bmt;
+      |   ^~~~~
+90-tester.cpp:71:11: error: ‘m’ was not declared in this scope; did you mean ‘tm’?
+   71 |   SetTy * m = bmt;
+      |           ^
+      |           tm
+90-tester.cpp:92:36: error: invalid use of incomplete type ‘BSTSetTy’ {aka ‘class BstSet<Tester>’}
    92 |   BSTSetTy * m2 = new BSTSetTy(*bmt);
       |                                    ^
-90-tester.cpp:151:26: error: invalid new-expression of abstract class type ‘BstSet<Tester>’
+In file included from 90-tester.cpp:1:
+bstset.h:11:7: note: declaration of ‘BSTSetTy’ {aka ‘class BstSet<Tester>’}
+   11 | class BstSet : public Set<T> {
+      |       ^~~~~~
+90-tester.cpp:96:14: error: ‘ptr’ was not declared in this scope
+   96 |       SetTy* ptr = (((i+j)&1)==0)? m : m2;
+      |              ^~~
+90-tester.cpp:113:23: error: invalid use of incomplete type ‘BSTSetTy’ {aka ‘class BstSet<Tester>’}
+  113 |         VALTYPE v = m2->contains(k);
+      |                       ^~
+In file included from 90-tester.cpp:1:
+bstset.h:11:7: note: declaration of ‘BSTSetTy’ {aka ‘class BstSet<Tester>’}
+   11 | class BstSet : public Set<T> {
+      |       ^~~~~~
+90-tester.cpp:122:3: error: invalid use of incomplete type ‘BSTSetTy’ {aka ‘class BstSet<Tester>’}
+  122 |   *m2 = *bmt;
+      |   ^~~
+In file included from 90-tester.cpp:1:
+bstset.h:11:7: note: declaration of ‘BSTSetTy’ {aka ‘class BstSet<Tester>’}
+   11 | class BstSet : public Set<T> {
+      |       ^~~~~~
+90-tester.cpp:125:14: error: ‘ptr’ was not declared in this scope
+  125 |       SetTy* ptr = (((i+j)&1)==0)? m : m2;
+      |              ^~~
+90-tester.cpp:140:23: error: invalid use of incomplete type ‘BSTSetTy’ {aka ‘class BstSet<Tester>’}
+  140 |         VALTYPE v = m2->contains(k);
+      |                       ^~
+In file included from 90-tester.cpp:1:
+bstset.h:11:7: note: declaration of ‘BSTSetTy’ {aka ‘class BstSet<Tester>’}
+   11 | class BstSet : public Set<T> {
+      |       ^~~~~~
+90-tester.cpp:149:3: error: possible problem detected in invocation of ‘operator delete’ [-Werror=delete-incomplete]
+  149 |   delete bmt;
+      |   ^~~~~~~~~~
+90-tester.cpp:70:14: error: ‘bmt’ has incomplete type [-Werror]
+   70 |   BSTSetTy * bmt = new BSTSetTy();
+      |              ^~~
+In file included from 90-tester.cpp:1:
+bstset.h:11:7: note: declaration of ‘class BstSet<Tester>’
+   11 | class BstSet : public Set<T> {
+      |       ^~~~~~
+90-tester.cpp:149:3: note: neither the destructor nor the class-specific ‘operator delete’ will be called, even if they are declared when the class is defined
+  149 |   delete bmt;
+      |   ^~~~~~~~~~
+90-tester.cpp:151:26: error: invalid use of incomplete type ‘BSTSetTy’ {aka ‘class BstSet<Tester>’}
   151 |   m = bmt = new BSTSetTy();
       |                          ^
 In file included from 90-tester.cpp:1:
-bstset.h: In instantiation of ‘bool BstSet<T>::contains(const T&) [with T = Tester]’:
-90-tester.cpp:113:26:   required from here
-bstset.h:27:17: error: catching polymorphic type ‘class std::invalid_argument’ by value [-Werror=catch-value=]
-   27 |     catch (std::invalid_argument) {
-      |                 ^~~~~~~~~~~~~~~~
-bstset.h: In member function ‘BstSet<T>& BstSet<T>::operator=(const BstSet<T>&) [with T = Tester]’:
-bstset.h:19:3: error: control reaches end of non-void function [-Werror=return-type]
-   19 |   }
-      |   ^
+bstset.h:11:7: note: declaration of ‘BSTSetTy’ {aka ‘class BstSet<Tester>’}
+   11 | class BstSet : public Set<T> {
+      |       ^~~~~~
+90-tester.cpp:152:3: error: invalid use of incomplete type ‘BSTSetTy’ {aka ‘class BstSet<Tester>’}
+  152 |   *m2 = *bmt;
+      |   ^~~
+In file included from 90-tester.cpp:1:
+bstset.h:11:7: note: declaration of ‘BSTSetTy’ {aka ‘class BstSet<Tester>’}
+   11 | class BstSet : public Set<T> {
+      |       ^~~~~~
+90-tester.cpp:164:23: error: invalid use of incomplete type ‘BSTSetTy’ {aka ‘class BstSet<Tester>’}
+  164 |         VALTYPE v = m2->contains(k);
+      |                       ^~
+In file included from 90-tester.cpp:1:
+bstset.h:11:7: note: declaration of ‘BSTSetTy’ {aka ‘class BstSet<Tester>’}
+   11 | class BstSet : public Set<T> {
+      |       ^~~~~~
+90-tester.cpp:173:3: error: possible problem detected in invocation of ‘operator delete’ [-Werror=delete-incomplete]
+  173 |   delete bmt;
+      |   ^~~~~~~~~~
+90-tester.cpp:70:14: error: ‘bmt’ has incomplete type [-Werror]
+   70 |   BSTSetTy * bmt = new BSTSetTy();
+      |              ^~~
+In file included from 90-tester.cpp:1:
+bstset.h:11:7: note: declaration of ‘class BstSet<Tester>’
+   11 | class BstSet : public Set<T> {
+      |       ^~~~~~
+90-tester.cpp:173:3: note: neither the destructor nor the class-specific ‘operator delete’ will be called, even if they are declared when the class is defined
+  173 |   delete bmt;
+      |   ^~~~~~~~~~
+90-tester.cpp:174:3: error: possible problem detected in invocation of ‘operator delete’ [-Werror=delete-incomplete]
+  174 |   delete m2;
+      |   ^~~~~~~~~
+90-tester.cpp:92:14: error: ‘m2’ has incomplete type [-Werror]
+   92 |   BSTSetTy * m2 = new BSTSetTy(*bmt);
+      |              ^~
+In file included from 90-tester.cpp:1:
+bstset.h:11:7: note: declaration of ‘class BstSet<Tester>’
+   11 | class BstSet : public Set<T> {
+      |       ^~~~~~
+90-tester.cpp:174:3: note: neither the destructor nor the class-specific ‘operator delete’ will be called, even if they are declared when the class is defined
+  174 |   delete m2;
+      |   ^~~~~~~~~
 cc1plus: all warnings being treated as errors
 The code did not compile.  This test failed.
 
