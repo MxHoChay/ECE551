@@ -1,0 +1,846 @@
+Welcome to the Emacs shell
+
+~/ece551 $ cd 094_ch22_rq/
+~/ece551/094_ch22_rq $ git add .
+~/ece551/094_ch22_rq $ git commit -m "assignment 094 1st try"
+[master dc23b96] assignment 094 1st try
+ 1 file changed, 8 insertions(+)
+ create mode 100644 094_ch22_rq/answers.txt
+~/ece551/094_ch22_rq $ git push
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 351 bytes | 351.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+To /usr/local/assignments/jc977/ece551
+   cd69830..dc23b96  master -> master
+~/ece551/094_ch22_rq $ grade
+Checking 'git status'....
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Checking HEAD commit ID....
+Commit ID to grade: dc23b96ade9bb98b6c636623a962aef94dd6db4e
+
+Grading this assignment requires 1 rq tokens
+You have 3 rq remaining
+Do you wish to continue? y
+Grading happening now
+~/ece551/094_ch22_rq $ git pull
+Already up to date.
+~/ece551/094_ch22_rq $ git pull
+Already up to date.
+~/ece551/094_ch22_rq $ git pull
+Already up to date.
+~/ece551/094_ch22_rq $ git pull
+remote: Enumerating objects: 6, done.        
+remote: Counting objects: 100% (6/6), done.        
+remote: Compressing objects: 100% (4/4), done.        
+remote: Total 4 (delta 1), reused 0 (delta 0), pack-reused 0        
+Unpacking objects: 100% (4/4), 520 bytes | 260.00 KiB/s, done.
+From /usr/local/assignments/jc977/ece551
+   dc23b96..bfef16c  master     -> origin/master
+Updating dc23b96..bfef16c
+Fast-forward
+ 094_ch22_rq/grade.txt | 7 +++++++
+ 1 file changed, 7 insertions(+)
+ create mode 100644 094_ch22_rq/grade.txt
+~/ece551/094_ch22_rq $ git add .
+~/ece551/094_ch22_rq $ git commit -m "assignment 094 2nd try"
+[master e1cd669] assignment 094 2nd try
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+~/ece551/094_ch22_rq $ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 378 bytes | 378.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+To /usr/local/assignments/jc977/ece551
+   bfef16c..e1cd669  master -> master
+~/ece551/094_ch22_rq $ grade
+Checking 'git status'....
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Checking HEAD commit ID....
+Commit ID to grade: e1cd6690d7ac568a84cc48c02bc455c3305130a2
+
+Grading this assignment requires 1 rq tokens
+You have 2 rq remaining
+Do you wish to continue? y
+Grading happening now
+~/ece551/094_ch22_rq $ git pull
+Already up to date.
+~/ece551/094_ch22_rq $ git pull
+Already up to date.
+~/ece551/094_ch22_rq $ git pull
+Already up to date.
+~/ece551/094_ch22_rq $ git pull
+Already up to date.
+~/ece551/094_ch22_rq $ git pull
+remote: Enumerating objects: 7, done.        
+remote: Counting objects: 100% (7/7), done.        
+remote: Compressing objects: 100% (4/4), done.        
+remote: Total 4 (delta 2), reused 0 (delta 0), pack-reused 0        
+Unpacking objects: 100% (4/4), 443 bytes | 110.00 KiB/s, done.
+From /usr/local/assignments/jc977/ece551
+   e1cd669..9c77954  master     -> origin/master
+Updating e1cd669..9c77954
+Fast-forward
+ 094_ch22_rq/grade.txt | 9 ++++-----
+ 1 file changed, 4 insertions(+), 5 deletions(-)
+~/ece551/094_ch22_rq $ git pull
+remote: Enumerating objects: 6, done.        
+remote: Counting objects: 100% (6/6), done.        
+remote: Compressing objects: 100% (4/4), done.        
+remote: Total 5 (delta 1), reused 0 (delta 0), pack-reused 0        
+Unpacking objects: 100% (5/5), 920 bytes | 230.00 KiB/s, done.
+From /usr/local/assignments/jc977/ece551
+   9c77954..38de4cc  master     -> origin/master
+Updating 9c77954..38de4cc
+Fast-forward
+ 095_traversals/README      | 27 +++++++++++++++++++++++++++
+ 095_traversals/answer1.txt |  3 +++
+ 095_traversals/answer2.txt |  3 +++
+ 095_traversals/answer3.txt |  3 +++
+ 4 files changed, 36 insertions(+)
+ create mode 100644 095_traversals/README
+ create mode 100644 095_traversals/answer1.txt
+ create mode 100644 095_traversals/answer2.txt
+ create mode 100644 095_traversals/answer3.txt
+~/ece551/094_ch22_rq $ cd ../095_traversals/
+~/ece551/095_traversals $ git add .
+~/ece551/095_traversals $ git commit -m "assignment 095 1st try"
+[master bb6f984] assignment 095 1st try
+ 3 files changed, 9 insertions(+), 9 deletions(-)
+~/ece551/095_traversals $ git push
+Enumerating objects: 11, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 610 bytes | 610.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0
+To /usr/local/assignments/jc977/ece551
+   38de4cc..bb6f984  master -> master
+~/ece551/095_traversals $ grade
+Checking 'git status'....
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Checking HEAD commit ID....
+Commit ID to grade: bb6f9843b07f8574733701319caf55af18bd5303
+
+Grading this assignment requires 5 cpp tokens
+You have 100 cpp remaining
+Do you wish to continue? y
+Grading happening now
+~/ece551/095_traversals $ git pull
+remote: Enumerating objects: 6, done.        
+remote: Counting objects: 100% (6/6), done.        
+remote: Compressing objects: 100% (4/4), done.        
+remote: Total 4 (delta 2), reused 0 (delta 0), pack-reused 0        
+Unpacking objects: 100% (4/4), 614 bytes | 307.00 KiB/s, done.
+From /usr/local/assignments/jc977/ece551
+   bb6f984..ba5f4f9  master     -> origin/master
+Updating bb6f984..ba5f4f9
+Fast-forward
+ 095_traversals/grade.txt | 20 ++++++++++++++++++++
+ 1 file changed, 20 insertions(+)
+ create mode 100644 095_traversals/grade.txt
+~/ece551/095_traversals $ git pull
+remote: Enumerating objects: 8, done.        
+remote: Counting objects: 100% (8/8), done.        
+remote: Compressing objects: 100% (7/7), done.        
+remote: Total 7 (delta 1), reused 0 (delta 0), pack-reused 0        
+Unpacking objects: 100% (7/7), 2.70 KiB | 552.00 KiB/s, done.
+From /usr/local/assignments/jc977/ece551
+   ba5f4f9..455edc0  master     -> origin/master
+Updating ba5f4f9..455edc0
+Fast-forward
+ 096_tests_binsrch/README      | 69 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 096_tests_binsrch/function.h  |  9 +++++++++
+ 096_tests_binsrch/next-README | 37 +++++++++++++++++++++++++++++++++++++
+ 096_tests_binsrch/run_all.sh  | 36 ++++++++++++++++++++++++++++++++++++
+ 4 files changed, 151 insertions(+)
+ create mode 100644 096_tests_binsrch/README
+ create mode 100644 096_tests_binsrch/function.h
+ create mode 100644 096_tests_binsrch/next-README
+ create mode 100755 096_tests_binsrch/run_all.sh
+~/ece551/095_traversals $ cd ../096_tests_binsrch/
+~/ece551/096_tests_binsrch $ ls
+README  function.h  next-README  run_all.sh
+~/ece551/096_tests_binsrch $ cd ../097_binsrch/
+~/ece551/097_binsrch $ ls
+README  function.h
+~/ece551/097_binsrch $ status
+No gradings in progress
+===========================================
+The following items are queued for release:
+===========================================
+093_eval3 to be done Mon Nov 14 03:00:00 2022
+
+===========================================
+Assignments that are due in the near future
+ (but you have not yet passed) 
+============================================
+943_eval1_late Due: Mon Oct 24 17:00:00 2022
+ **HARD DEADLINE**
+   -> requires 1
+960_eval2_late Due: Sat Nov 12 17:00:00 2022
+ **HARD DEADLINE**
+   -> requires 1
+~/ece551/097_binsrch $ status 14
+No gradings in progress
+===========================================
+The following items are queued for release:
+===========================================
+093_eval3 to be done Mon Nov 14 03:00:00 2022
+
+===========================================
+Assignments that are due in the near future
+ (but you have not yet passed) 
+============================================
+098_bst_map Due: Fri Nov 18 17:00:00 2022
+
+   -> requires 10
+099_bst_set Due: Fri Nov 18 17:00:00 2022
+
+   -> requires 10
+100_ch23_rq Due: Fri Nov 18 17:00:00 2022
+
+   -> requires 1
+101_ch24_rq Due: Mon Nov 21 17:00:00 2022
+
+   -> requires 1
+943_eval1_late Due: Mon Oct 24 17:00:00 2022
+ **HARD DEADLINE**
+   -> requires 1
+960_eval2_late Due: Sat Nov 12 17:00:00 2022
+ **HARD DEADLINE**
+   -> requires 1
+~/ece551/097_binsrch $ cd ../098_bst_map/
+~/ece551/098_bst_map $ git add .
+~/ece551/098_bst_map $ git commit -m "test"
+[master 90990ff] test
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+~/ece551/098_bst_map $ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 349 bytes | 349.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0), pack-reused 0
+To /usr/local/assignments/jc977/ece551
+   6cbea86..90990ff  master -> master
+~/ece551/098_bst_map $ grade
+Checking 'git status'....
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Checking HEAD commit ID....
+Commit ID to grade: f2d69aae04f4ed19b502af5fdf1de6da309c3041
+
+Grading this assignment requires 10 cpp tokens
+You have 20 cpp remaining
+Do you wish to continue? y
+Grading happening now
+~/ece551/098_bst_map $ git pull
+Already up to date.
+~/ece551/098_bst_map $ git pull
+Already up to date.
+~/ece551/098_bst_map $ git pull
+Already up to date.
+~/ece551/098_bst_map $ git pull
+Already up to date.
+~/ece551/098_bst_map $ git pull
+Already up to date.
+~/ece551/098_bst_map $ git pull
+Already up to date.
+~/ece551/098_bst_map $ git pull
+remote: Enumerating objects: 7, done.        
+remote: Counting objects: 100% (7/7), done.        
+remote: Compressing objects: 100% (4/4), done.        
+remote: Total 4 (delta 3), reused 0 (delta 0), pack-reused 0        
+Unpacking objects: 100% (4/4), 2.20 KiB | 375.00 KiB/s, done.
+From /usr/local/assignments/jc977/ece551
+   f2d69aa..1367309  master     -> origin/master
+Updating f2d69aa..1367309
+Fast-forward
+ 098_bst_map/grade.txt | 1602 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++---------------------------------------------------------------------
+ 1 file changed, 801 insertions(+), 801 deletions(-)
+~/ece551/098_bst_map $ git add .
+~/ece551/098_bst_map $ git commit -m "test"
+[master 6070133] test
+ 1 file changed, 3 insertions(+)
+~/ece551/098_bst_map $ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 437 bytes | 437.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+To /usr/local/assignments/jc977/ece551
+   1367309..6070133  master -> master
+~/ece551/098_bst_map $ grade
+Checking 'git status'....
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Checking HEAD commit ID....
+Commit ID to grade: 60701335c1b8701aa469a376eb4636f9c486a11b
+
+Grading this assignment requires 10 cpp tokens
+You have 10 cpp remaining
+Do you wish to continue? y
+Grading happening now
+~/ece551/098_bst_map $ git pull
+Already up to date.
+~/ece551/098_bst_map $ git pull
+Already up to date.
+~/ece551/098_bst_map $ git pull
+Already up to date.
+~/ece551/098_bst_map $ git pull
+Already up to date.
+~/ece551/098_bst_map $ git pull
+Already up to date.
+~/ece551/098_bst_map $ git pull
+Already up to date.
+~/ece551/098_bst_map $ git pull
+Already up to date.
+~/ece551/098_bst_map $ git pull
+Already up to date.
+~/ece551/098_bst_map $ git pull
+remote: Enumerating objects: 7, done.        
+remote: Counting objects: 100% (7/7), done.        
+remote: Compressing objects: 100% (4/4), done.        
+remote: Total 4 (delta 3), reused 0 (delta 0), pack-reused 0        
+Unpacking objects: 100% (4/4), 2.33 KiB | 596.00 KiB/s, done.
+From /usr/local/assignments/jc977/ece551
+   6070133..e03b278  master     -> origin/master
+Updating 6070133..e03b278
+Fast-forward
+ 098_bst_map/grade.txt | 1602 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++---------------------------------------------------------------------
+ 1 file changed, 801 insertions(+), 801 deletions(-)
+~/ece551/098_bst_map $ git add .
+~/ece551/098_bst_map $ git commit -m "test"
+[master 358cd4c] test
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+~/ece551/098_bst_map $ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 431 bytes | 431.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+To /usr/local/assignments/jc977/ece551
+   e03b278..358cd4c  master -> master
+~/ece551/098_bst_map $ grade
+Checking 'git status'....
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Checking HEAD commit ID....
+Commit ID to grade: 358cd4c203999067a08ccbf2d0e12e3aa7d48b2f
+
+Grading this assignment requires 10 cpp tokens
+You have 0 cpp remaining
+You do not have enough tokens to proceed.
+~/ece551/098_bst_map $ g++ -o test -std=gnu++98 -ggdb3 test.cpp
+~/ece551/098_bst_map $ valgrind ./test 
+==1100241== Memcheck, a memory error detector
+==1100241== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1100241== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1100241== Command: ./test
+==1100241== 
+(:0()(3:0()()))
+(:0()(3:0(1:1()())()))
+(:0()(3:0(1:1()())(4:2()())))
+(:0()(3:0()(4:2()())))
+(:0()(3:0()(4:2()(5:4()()))))
+(:0()(3:0()(4:2()(5:4()(9:5()())))))
+(:0()(3:0(2:6()())(4:2()(5:4()(9:5()())))))
+(:0()(3:0(2:6()())(4:2()(5:4()(9:5(6:7()())())))))
+(:0()(3:0(2:6()())(4:2()(9:5(6:7()())()))))
+(:0()(2:6()(4:2()(9:5(6:7()())()))))
+(:0()(2:6()(4:2()(9:5(6:7(5:10()())())()))))
+(:0()(2:6()(4:2()(9:5(6:7(5:10()())(8:11()()))()))))
+(:0()(2:6()(4:2()(6:7(5:10()())(8:11()())))))
+(:0()(2:6()(4:2()(6:7(5:10()())(8:11(7:13()())())))))
+(:0()(2:6()(4:2()(6:7(5:10()())(8:11(7:13()())(9:14()()))))))
+(:0()(2:6()(4:2(3:15()())(6:7(5:10()())(8:11(7:13()())(9:14()()))))))
+(:0()(4:2(3:15()())(6:7(5:10()())(8:11(7:13()())(9:14()())))))
+(:0()(4:2()(6:7(5:10()())(8:11(7:13()())(9:14()())))))
+(:0()(4:2()(6:7(5:10()())(7:13()(9:14()())))))
+(:0()(6:7(5:10()())(7:13()(9:14()()))))
+(:0()(5:10()(7:13()(9:14()()))))
+(:0()(5:10(2:21()())(7:13()(9:14()()))))
+(:0()(5:10(2:21()())(7:13(6:22()())(9:14()()))))
+(:0()(5:10(2:21()(4:23()()))(7:13(6:22()())(9:14()()))))
+(:0()(5:10(2:21()(4:23(3:24()())()))(7:13(6:22()())(9:14()()))))
+(:0()(5:10(2:21()(4:23()()))(7:13(6:22()())(9:14()()))))
+(:0()(5:10(2:21()(4:23()()))(7:13(6:22()())(9:14(8:26()())()))))
+(:0()(5:10(2:21()(4:23(3:27()())()))(7:13(6:22()())(9:14(8:26()())()))))
+(:0()(5:10(4:23(3:27()())())(7:13(6:22()())(9:14(8:26()())()))))
+(:0()(5:10(4:23(3:27()())())(6:22()(9:14(8:26()())()))))
+(:0()(5:10(4:23(3:27()())())(6:22()(8:26()()))))
+(:0()(4:23(3:27()())(6:22()(8:26()()))))
+(:0()(4:23(3:27(0:32()())())(6:22()(8:26()()))))
+(:0()(4:23(3:27(0:32()(2:33()()))())(6:22()(8:26()()))))
+(:0()(4:23(3:27(0:32()(2:33()()))())(6:22()())))
+(:0()(4:23(3:27(0:32()(2:33()()))())(6:22()(8:35()()))))
+(:0()(3:27(0:32()(2:33()()))(6:22()(8:35()()))))
+(:0()(3:27(0:32()(2:33(1:37()())()))(6:22()(8:35()()))))
+(:0()(3:27(0:32()(2:33(1:37()())()))(6:22()(8:35()(9:38()())))))
+(:0()(3:27(0:32()(2:33(1:37()())()))(6:22()(8:35(7:39()())(9:38()())))))
+(:0()(3:27(0:32()(2:33()()))(6:22()(8:35(7:39()())(9:38()())))))
+(:0()(3:27(0:32()(2:33()()))(8:35(7:39()())(9:38()()))))
+(:0()(3:27(0:32()(2:33()()))(8:35(7:39()())())))
+yeah, No such key!...
+(:0()(3:27(0:32()(2:33()()))(8:35(7:39()())())))
+==1100241== Invalid read of size 8
+==1100241==    at 0x10AFF6: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:26)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A855: main (test.cpp:59)
+==1100241==  Address 0x4dd2ca8 is 40 bytes inside a block of size 56 free'd
+==1100241==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10B03F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:29)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10B70C: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A841: main (test.cpp:56)
+==1100241==  Block was alloc'd at
+==1100241==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10ACB8: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::BstMap() (bstmap.h:104)
+==1100241==    by 0x10AB2D: TestBstMap::TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A58D: main (test.cpp:28)
+==1100241== 
+==1100241== Invalid read of size 8
+==1100241==    at 0x10B00D: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A855: main (test.cpp:59)
+==1100241==  Address 0x4dd2cb0 is 48 bytes inside a block of size 56 free'd
+==1100241==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10B03F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:29)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10B70C: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A841: main (test.cpp:56)
+==1100241==  Block was alloc'd at
+==1100241==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10ACB8: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::BstMap() (bstmap.h:104)
+==1100241==    by 0x10AB2D: TestBstMap::TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A58D: main (test.cpp:28)
+==1100241== 
+==1100241== Invalid read of size 8
+==1100241==    at 0x10AFF6: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:26)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A855: main (test.cpp:59)
+==1100241==  Address 0x4dd3468 is 40 bytes inside a block of size 56 free'd
+==1100241==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10B03F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:29)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10B70C: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A841: main (test.cpp:56)
+==1100241==  Block was alloc'd at
+==1100241==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10AE54: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&) (bstmap.h:107)
+==1100241==    by 0x10A68C: main (test.cpp:40)
+==1100241== 
+==1100241== Invalid read of size 8
+==1100241==    at 0x10AFF6: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:26)
+==1100241==    by 0x10B008: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:26)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A855: main (test.cpp:59)
+==1100241==  Address 0x4dd3a68 is 40 bytes inside a block of size 56 free'd
+==1100241==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10B03F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:29)
+==1100241==    by 0x10B008: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:26)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10B70C: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A841: main (test.cpp:56)
+==1100241==  Block was alloc'd at
+==1100241==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10AE54: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&) (bstmap.h:107)
+==1100241==    by 0x10A68C: main (test.cpp:40)
+==1100241== 
+==1100241== Invalid read of size 8
+==1100241==    at 0x10B00D: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10B008: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:26)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A855: main (test.cpp:59)
+==1100241==  Address 0x4dd3a70 is 48 bytes inside a block of size 56 free'd
+==1100241==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10B03F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:29)
+==1100241==    by 0x10B008: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:26)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10B70C: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A841: main (test.cpp:56)
+==1100241==  Block was alloc'd at
+==1100241==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10AE54: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&) (bstmap.h:107)
+==1100241==    by 0x10A68C: main (test.cpp:40)
+==1100241== 
+==1100241== Invalid read of size 8
+==1100241==    at 0x10AFF6: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:26)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10B008: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:26)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A855: main (test.cpp:59)
+==1100241==  Address 0x4dd3ae8 is 40 bytes inside a block of size 56 free'd
+==1100241==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10B03F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:29)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10B008: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:26)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10B70C: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A841: main (test.cpp:56)
+==1100241==  Block was alloc'd at
+==1100241==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10AE54: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&) (bstmap.h:107)
+==1100241==    by 0x10A68C: main (test.cpp:40)
+==1100241== 
+==1100241== Invalid read of size 8
+==1100241==    at 0x10B00D: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10B008: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:26)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A855: main (test.cpp:59)
+==1100241==  Address 0x4dd3af0 is 48 bytes inside a block of size 56 free'd
+==1100241==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10B03F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:29)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10B008: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:26)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10B70C: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A841: main (test.cpp:56)
+==1100241==  Block was alloc'd at
+==1100241==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10AE54: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&) (bstmap.h:107)
+==1100241==    by 0x10A68C: main (test.cpp:40)
+==1100241== 
+==1100241== Invalid read of size 8
+==1100241==    at 0x49AF1F4: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==1100241==    by 0x10B5DB: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node::~Node() (bstmap.h:17)
+==1100241==    by 0x10B037: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:29)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10B008: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:26)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A855: main (test.cpp:59)
+==1100241==  Address 0x4dd3ac0 is 0 bytes inside a block of size 56 free'd
+==1100241==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10B03F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:29)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10B008: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:26)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10B70C: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A841: main (test.cpp:56)
+==1100241==  Block was alloc'd at
+==1100241==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10AE54: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&) (bstmap.h:107)
+==1100241==    by 0x10A68C: main (test.cpp:40)
+==1100241== 
+==1100241== Invalid free() / delete / delete[] / realloc()
+==1100241==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10B03F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:29)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10B008: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:26)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A855: main (test.cpp:59)
+==1100241==  Address 0x4dd3ac0 is 0 bytes inside a block of size 56 free'd
+==1100241==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10B03F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:29)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10B008: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:26)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10B70C: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A841: main (test.cpp:56)
+==1100241==  Block was alloc'd at
+==1100241==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10AE54: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&) (bstmap.h:107)
+==1100241==    by 0x10A68C: main (test.cpp:40)
+==1100241== 
+==1100241== Invalid read of size 8
+==1100241==    at 0x49AF1F4: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==1100241==    by 0x10B5DB: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node::~Node() (bstmap.h:17)
+==1100241==    by 0x10B037: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:29)
+==1100241==    by 0x10B008: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:26)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A855: main (test.cpp:59)
+==1100241==  Address 0x4dd3a40 is 0 bytes inside a block of size 56 free'd
+==1100241==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10B03F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:29)
+==1100241==    by 0x10B008: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:26)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10B70C: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A841: main (test.cpp:56)
+==1100241==  Block was alloc'd at
+==1100241==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10AE54: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&) (bstmap.h:107)
+==1100241==    by 0x10A68C: main (test.cpp:40)
+==1100241== 
+==1100241== Invalid free() / delete / delete[] / realloc()
+==1100241==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10B03F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:29)
+==1100241==    by 0x10B008: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:26)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A855: main (test.cpp:59)
+==1100241==  Address 0x4dd3a40 is 0 bytes inside a block of size 56 free'd
+==1100241==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10B03F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:29)
+==1100241==    by 0x10B008: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:26)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10B70C: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A841: main (test.cpp:56)
+==1100241==  Block was alloc'd at
+==1100241==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10AE54: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&) (bstmap.h:107)
+==1100241==    by 0x10A68C: main (test.cpp:40)
+==1100241== 
+==1100241== Invalid read of size 8
+==1100241==    at 0x10B00D: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A855: main (test.cpp:59)
+==1100241==  Address 0x4dd3470 is 48 bytes inside a block of size 56 free'd
+==1100241==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10B03F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:29)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10B70C: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A841: main (test.cpp:56)
+==1100241==  Block was alloc'd at
+==1100241==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10AE54: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&) (bstmap.h:107)
+==1100241==    by 0x10A68C: main (test.cpp:40)
+==1100241== 
+==1100241== Invalid read of size 8
+==1100241==    at 0x10AFF6: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:26)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A855: main (test.cpp:59)
+==1100241==  Address 0x4dd3b68 is 40 bytes inside a block of size 56 free'd
+==1100241==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10B03F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:29)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10B70C: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A841: main (test.cpp:56)
+==1100241==  Block was alloc'd at
+==1100241==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10AE54: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&) (bstmap.h:107)
+==1100241==    by 0x10A68C: main (test.cpp:40)
+==1100241== 
+==1100241== Invalid read of size 8
+==1100241==    at 0x10AFF6: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:26)
+==1100241==    by 0x10B008: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:26)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A855: main (test.cpp:59)
+==1100241==  Address 0x4dd3ce8 is 40 bytes inside a block of size 56 free'd
+==1100241==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10B03F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:29)
+==1100241==    by 0x10B008: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:26)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10B70C: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A841: main (test.cpp:56)
+==1100241==  Block was alloc'd at
+==1100241==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10AE54: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&) (bstmap.h:107)
+==1100241==    by 0x10A68C: main (test.cpp:40)
+==1100241== 
+==1100241== Invalid read of size 8
+==1100241==    at 0x10B00D: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10B008: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:26)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A855: main (test.cpp:59)
+==1100241==  Address 0x4dd3cf0 is 48 bytes inside a block of size 56 free'd
+==1100241==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10B03F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:29)
+==1100241==    by 0x10B008: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:26)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10B70C: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A841: main (test.cpp:56)
+==1100241==  Block was alloc'd at
+==1100241==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10AE54: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&) (bstmap.h:107)
+==1100241==    by 0x10A68C: main (test.cpp:40)
+==1100241== 
+==1100241== Invalid read of size 8
+==1100241==    at 0x10B00D: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A855: main (test.cpp:59)
+==1100241==  Address 0x4dd3b70 is 48 bytes inside a block of size 56 free'd
+==1100241==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10B03F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:29)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10B70C: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A841: main (test.cpp:56)
+==1100241==  Block was alloc'd at
+==1100241==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10AE54: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&) (bstmap.h:107)
+==1100241==    by 0x10A68C: main (test.cpp:40)
+==1100241== 
+==1100241== Invalid free() / delete / delete[] / realloc()
+==1100241==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10B03F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:29)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A855: main (test.cpp:59)
+==1100241==  Address 0x4dd3b40 is 0 bytes inside a block of size 56 free'd
+==1100241==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10B03F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:29)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10B70C: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A841: main (test.cpp:56)
+==1100241==  Block was alloc'd at
+==1100241==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10AE54: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&) (bstmap.h:107)
+==1100241==    by 0x10A68C: main (test.cpp:40)
+==1100241== 
+==1100241== Invalid free() / delete / delete[] / realloc()
+==1100241==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10B03F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:29)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A855: main (test.cpp:59)
+==1100241==  Address 0x4dd3440 is 0 bytes inside a block of size 56 free'd
+==1100241==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10B03F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:29)
+==1100241==    by 0x10B01F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:27)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10B70C: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A841: main (test.cpp:56)
+==1100241==  Block was alloc'd at
+==1100241==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10AE54: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::add(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&) (bstmap.h:107)
+==1100241==    by 0x10A68C: main (test.cpp:40)
+==1100241== 
+==1100241== Invalid read of size 8
+==1100241==    at 0x49AF1F4: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==1100241==    by 0x10B5DB: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node::~Node() (bstmap.h:17)
+==1100241==    by 0x10B037: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:29)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A855: main (test.cpp:59)
+==1100241==  Address 0x4dd2c80 is 0 bytes inside a block of size 56 free'd
+==1100241==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10B03F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:29)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10B70C: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A841: main (test.cpp:56)
+==1100241==  Block was alloc'd at
+==1100241==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10ACB8: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::BstMap() (bstmap.h:104)
+==1100241==    by 0x10AB2D: TestBstMap::TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A58D: main (test.cpp:28)
+==1100241== 
+==1100241== Invalid free() / delete / delete[] / realloc()
+==1100241==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10B03F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:29)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A855: main (test.cpp:59)
+==1100241==  Address 0x4dd2c80 is 0 bytes inside a block of size 56 free'd
+==1100241==    at 0x484B8AF: operator delete(void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10B03F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::myclear(BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::Node*) (bstmap.h:29)
+==1100241==    by 0x10AD3F: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::~BstMap() (bstmap.h:117)
+==1100241==    by 0x10B6EB: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10B70C: TestBstMap::~TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A841: main (test.cpp:56)
+==1100241==  Block was alloc'd at
+==1100241==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1100241==    by 0x10ACB8: BstMap<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>::BstMap() (bstmap.h:104)
+==1100241==    by 0x10AB2D: TestBstMap::TestBstMap() (test.cpp:7)
+==1100241==    by 0x10A58D: main (test.cpp:28)
+==1100241== 
+==1100241== 
+==1100241== HEAP SUMMARY:
+==1100241==     in use at exit: 0 bytes in 0 blocks
+==1100241==   total heap usage: 30 allocs, 36 frees, 75,325 bytes allocated
+==1100241== 
+==1100241== All heap blocks were freed -- no leaks are possible
+==1100241== 
+==1100241== For lists of detected and suppressed errors, rerun with: -s
+==1100241== ERROR SUMMARY: 24 errors from 20 contexts (suppressed: 0 from 0)
+~/ece551/098_bst_map $ valgrind ./count input1.txt input2.txt 
+valgrind: ./count: No such file or directory
+~/ece551/098_bst_map $ 
+~/ece551/098_bst_map $ 
+~/ece551/098_bst_map $ 
