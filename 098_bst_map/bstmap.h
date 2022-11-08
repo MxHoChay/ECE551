@@ -117,8 +117,8 @@ class BstMap : public Map<K, V> {
     //root->right = myremove(root->right, key);
   }
 
-  virtual ~BstMap() {
-    //delete root;
+  virtual ~BstMap<K, V>() {
+    delete root;
     //myclear(root);
   }
 };
