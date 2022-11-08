@@ -9,8 +9,8 @@ class BstSet : public Set<T> {
   BstMap<T, int> set;
 
  public:
-  BstSet() : set(BstMap<T, int>()) {}
-  BstSet(const BstSet & rhs) { set = BstMap<T, int>(rhs.set); }
+  BstSet<T>() : set(BstMap<T, int>()) {}
+  BstSet<T>(const BstSet & rhs) { set = BstMap<T, int>(rhs.set); }
   BstSet & operator=(const BstSet & rhs) {
     if (this == &rhs) {
       return *this;
@@ -32,5 +32,5 @@ class BstSet : public Set<T> {
 
   virtual void remove(const T & key) { set.remove(key); }
 
-  virtual ~BstSet() {}
+  virtual ~BstSet<T>() {}
 };
