@@ -16,13 +16,14 @@ class BstMap : public Map<K, V> {
     ~Node() {}
   };
   Node * root;
+
   void clear(Node * node) {
     if (node == NULL) {
       return;
     }
     clear(node->left);
     clear(node->right);
-    delete (node);
+    delete node;
   }
 
   Node * myadd(Node * r, Node * newnode) {
@@ -107,7 +108,7 @@ class BstMap : public Map<K, V> {
 
   virtual void remove(const K & key) { root->right = myremove(root->right, key); }
 
-  virtual ~BstMap() { clear(root); }
+  virtual ~BstMap() { clear(root->right); }
 };
 
 #endif
