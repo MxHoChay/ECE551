@@ -9,29 +9,28 @@
 
 template<typename T>
 class BstSet : public Set<T> {
-  BstMap<T, int> * set;
+  BstMap<T, int> set;
 
  public:
-  BstSet<T>() : set(new BstMap<T, int>()) {}
-  BstSet<T>(const BstSet & rhs) {
-    delete set;
-    set = new BstMap<T, int>(*rhs.set);
+  BstSet<T>() : set(BstMap<T, int>()) {}
+  BstSet<T>(const BstSet & rhs) : set(BstMap<T, int>(rhs.set)) {
+    //set = new BstMap<T, int>(*rhs.set);
   }
 
   BstSet & operator=(const BstSet & rhs) {
     if (this == &rhs) {
       return *this;
     }
-    delete set;
-    set = new BstMap<T, int>(*rhs.set);
+    //delete set;
+    set = BstMap<T, int>(rhs.set);
     return *this;
   }
 
-  virtual void add(const T & key) { set->add(key, 0); }
+  virtual void add(const T & key) { set.add(key, 0); }
 
   virtual bool contains(const T & key) const {
     try {
-      set->lookup(key);
+      set.lookup(key);
     }
     catch (std::invalid_argument & e) {
       return false;
@@ -39,9 +38,11 @@ class BstSet : public Set<T> {
     return true;
   }
 
-  virtual void remove(const T & key) { set->remove(key); }
+  virtual void remove(const T & key) { set.remove(key); }
 
-  virtual ~BstSet<T>() { delete set; }
+  virtual ~BstSet<T>() {
+    //delete set;
+  }
 };
 
 #endif
