@@ -1,22 +1,24 @@
 #ifndef __BST_H__
 #define __BST_H__
 
+#include <stdlib.h>
+
 #include "map.h"
 
 template<typename K, typename V>
 class BstMap : public Map<K, V> {
- public:
   class Node {
    public:
     K key;
     V value;
     Node * left;
     Node * right;
+    Node() : left(NULL), right(NULL) {}
     Node(K k, V v) : key(k), value(v), left(NULL), right(NULL) {}
     ~Node() {}
   };
 
-  Node ** root;
+  Node * root;
 
   void myclear(Node * node) {
     if (node == NULL) {
@@ -95,27 +97,43 @@ class BstMap : public Map<K, V> {
     return node;
   }
 
+  Node * mycopy(Node * node) {
+    if (node == NULL) {
+      return NULL;
+    }
+    Node * newnode = new Node(node->key, node->value);
+    newnode->left = mycopy(node->left);
+    newnode->right = mycopy(node->right);
+    return newnode;
+  }
+
  public:
-  BstMap() : root(NULL) {
-    root = (Node **)malloc(sizeof(*root));
-    *root = NULL;
+  BstMap() : root(new Node()) {}
+
+  BstMap(const BstMap & rhs) : root(new Node()) { root->right = mycopy(rhs.root->right); }
+
+  BstMap & operator=(const BstMap & rhs) {
+    if (this == &rhs) {
+      return *this;
+    }
+    myclear(root);
+    root = new Node();
+    root->right = mycopy(rhs.root->right);
+    return *this;
   }
 
   virtual void add(const K & key, const V & value) {
     Node * node = new Node(key, value);
-    *root = myadd(*root, node);
+    root->right = myadd(root->right, node);
   }
 
   virtual const V & lookup(const K & key) const throw(std::invalid_argument) {
-    return mylookup(*root, key);
+    return mylookup(root->right, key);
   }
 
-  virtual void remove(const K & key) { *root = myremove(*root, key); }
+  virtual void remove(const K & key) { root->right = myremove(root->right, key); }
 
-  virtual ~BstMap<K, V>() {
-    myclear(*root);
-    free(root);
-  }
+  virtual ~BstMap<K, V>() { myclear(root); }
 };
 
 #endif
