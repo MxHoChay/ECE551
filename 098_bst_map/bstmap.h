@@ -96,7 +96,10 @@ class BstMap : public Map<K, V> {
   }
 
  public:
-  BstMap() : root(malloc(sizeof(*root))) { *root = NULL; }
+  BstMap() : root(NULL) {
+    root = (Node **)malloc(sizeof(*root));
+    *root = NULL;
+  }
 
   virtual void add(const K & key, const V & value) {
     Node * node = new Node(key, value);
