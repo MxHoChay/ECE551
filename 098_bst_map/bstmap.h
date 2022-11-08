@@ -25,6 +25,7 @@ class BstMap : public Map<K, V> {
     myclear(node->left);
     myclear(node->right);
     delete node;
+    node = NULL;
   }
 
   Node * myadd(Node * r, Node * newnode) {
@@ -67,11 +68,13 @@ class BstMap : public Map<K, V> {
     if (node->key == key) {
       if (node->left == NULL && node->right == NULL) {
         delete node;
+        node = NULL;
         return NULL;
       }
       else if (node->left == NULL || node->right == NULL) {
         Node * temp = node->left == NULL ? node->right : node->left;
         delete node;
+        node = NULL;
         return temp;
       }
       else {
