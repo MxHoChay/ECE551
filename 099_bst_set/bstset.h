@@ -17,12 +17,14 @@ class BstSet : public Set<T> {
     delete set;
     set = new BstMap<T, int>(*rhs.set);
   }
+
   BstSet & operator=(const BstSet & rhs) {
     if (this == &rhs) {
       return *this;
     }
     delete set;
     set = new BstMap<T, int>(*rhs.set);
+    return *this;
   }
 
   virtual void add(const T & key) { set->add(key, 0); }
@@ -31,7 +33,7 @@ class BstSet : public Set<T> {
     try {
       set->lookup(key);
     }
-    catch (std::invalid_argument) {
+    catch (std::invalid_argument & e) {
       return false;
     }
     return true;
