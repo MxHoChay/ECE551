@@ -63,6 +63,7 @@ class BstMap : public Map<K, V> {
   }
 
   Node * myremove(Node * node, const K & key) {
+    return node;
     if (node == NULL) {
       return NULL;
     }
