@@ -18,14 +18,12 @@ class BstMap : public Map<K, V> {
 
   Node * root;
 
-  void clear(Node * node) {
+  void myclear(Node * node) {
     if (node == NULL) {
       return;
     }
-    clear(node->left);
-    clear(node->right);
-    node->left = NULL;
-    node->right = NULL;
+    myclear(node->left);
+    myclear(node->right);
     delete node;
   }
 
@@ -63,7 +61,6 @@ class BstMap : public Map<K, V> {
   }
 
   Node * myremove(Node * node, const K & key) {
-    return node;
     if (node == NULL) {
       return NULL;
     }
@@ -99,7 +96,7 @@ class BstMap : public Map<K, V> {
   }
 
  public:
-  BstMap() : root(NULL) { root = new Node(); }
+  BstMap() : root(new Node()) {}
 
   virtual void add(const K & key, const V & value) {
     Node * node = new Node(key, value);
