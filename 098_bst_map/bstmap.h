@@ -11,7 +11,7 @@ class BstMap : public Map<K, V> {
     V value;
     Node * left;
     Node * right;
-    Node() : left(NULL), right(NULL) {}
+    Node() : key(K()), value(V()), left(NULL), right(NULL) {}
     Node(K k, V v) : key(k), value(v), left(NULL), right(NULL) {}
     ~Node() {}
   };
@@ -109,7 +109,7 @@ class BstMap : public Map<K, V> {
 
   virtual void remove(const K & key) { root->right = myremove(root->right, key); }
 
-  virtual ~BstMap<K, V>() { myclear(root->right); }
+  virtual ~BstMap<K, V>() { myclear(root); }
 };
 
 #endif
