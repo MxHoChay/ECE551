@@ -1,50 +1,23 @@
-Grading at 11/08/2022:21:00:37.356934
-For commit ID 53c3d9dc6168928638248ce82a7be53c04939b6d
-Grading at Tue Nov  8 04:00:36 PM EST 2022
+Grading at 11/08/2022:21:02:21.190894
+For commit ID 7e2f466219f660c3b925da7702488d67d7ea1160
+Grading at Tue Nov  8 04:02:17 PM EST 2022
 -----------------------------------------------
 testcase 1 : Testing with BstSet<int>
 ...compiling...
-In file included from 90-tester.cpp:1:
-bstset.h: In instantiation of ‘bool BstSet<T>::contains(const T&) const [with T = int]’:
-90-tester.cpp:113:26:   required from here
-bstset.h:34:17: error: catching polymorphic type ‘class std::invalid_argument’ by value [-Werror=catch-value=]
-   34 |     catch (std::invalid_argument) {
-      |                 ^~~~~~~~~~~~~~~~
-bstset.h: In member function ‘BstSet<T>& BstSet<T>::operator=(const BstSet<T>&) [with T = int]’:
-bstset.h:26:3: error: control reaches end of non-void function [-Werror=return-type]
-   26 |   }
-      |   ^
-cc1plus: all warnings being treated as errors
-The code did not compile.  This test failed.
+The code compiled.
+  - Valgrind reported errors
+Valgrind reported errors (test failed).
 -----------------------------------------------
 testcase 2 : Testing with BstSet<std::string>
 ...compiling...
-In file included from 90-tester.cpp:1:
-bstset.h: In instantiation of ‘bool BstSet<T>::contains(const T&) const [with T = std::__cxx11::basic_string<char>]’:
-90-tester.cpp:113:26:   required from here
-bstset.h:34:17: error: catching polymorphic type ‘class std::invalid_argument’ by value [-Werror=catch-value=]
-   34 |     catch (std::invalid_argument) {
-      |                 ^~~~~~~~~~~~~~~~
-bstset.h: In member function ‘BstSet<T>& BstSet<T>::operator=(const BstSet<T>&) [with T = std::__cxx11::basic_string<char>]’:
-bstset.h:26:3: error: control reaches end of non-void function [-Werror=return-type]
-   26 |   }
-      |   ^
-cc1plus: all warnings being treated as errors
-The code did not compile.  This test failed.
+The code compiled.
+  - Valgrind reported errors
+Valgrind reported errors (test failed).
 -----------------------------------------------
 testcase 3 : Testing with BstSet<(a custom class we wrote)>
 ...compiling...
-In file included from 90-tester.cpp:1:
-bstset.h: In instantiation of ‘bool BstSet<T>::contains(const T&) const [with T = Tester]’:
-90-tester.cpp:113:26:   required from here
-bstset.h:34:17: error: catching polymorphic type ‘class std::invalid_argument’ by value [-Werror=catch-value=]
-   34 |     catch (std::invalid_argument) {
-      |                 ^~~~~~~~~~~~~~~~
-bstset.h: In member function ‘BstSet<T>& BstSet<T>::operator=(const BstSet<T>&) [with T = Tester]’:
-bstset.h:26:3: error: control reaches end of non-void function [-Werror=return-type]
-   26 |   }
-      |   ^
-cc1plus: all warnings being treated as errors
-The code did not compile.  This test failed.
+The code compiled.
+  - Valgrind reported errors
+Valgrind reported errors (test failed).
 
 Overall Grade: F
