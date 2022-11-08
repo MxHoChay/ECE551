@@ -1,5 +1,5 @@
-#ifndef __SET_H__
-#define __SET_H__
+#ifndef __BSTSET_H__
+#define __BSTSET_H__
 
 #include <cstdlib>
 #include <stdexcept>
