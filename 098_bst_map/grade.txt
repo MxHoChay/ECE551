@@ -1,0 +1,176 @@
+Grading at 11/08/2022:05:00:44.737619
+For commit ID 3e66c9d94384471161679030af65713a417c2d26
+Grading at Tue Nov  8 12:00:43 AM EST 2022
+-----------------------------------------------
+testcase 1 : Testing with BstMap<int,int>
+...compiling...
+In file included from 89-tester.cpp:1:
+bstmap.h: In instantiation of ‘const V& BstMap<K, V>::lookup(const K&) const [with K = int; V = int]’:
+89-tester.cpp:119:24:   required from here
+bstmap.h:106:3: error: no return statement in function returning non-void [-Werror=return-type]
+  106 |   }
+      |   ^
+bstmap.h: In instantiation of ‘BstMap<K, V>::Node* BstMap<K, V>::myadd(BstMap<K, V>::Node*, const BstMap<K, V>::Node*) [with K = int; V = int]’:
+bstmap.h:101:19:   required from ‘void BstMap<K, V>::add(const K&, const V&) [with K = int; V = int]’
+bstmap.h:99:16:   required from here
+bstmap.h:30:14: error: invalid conversion from ‘const BstMap<int, int>::Node*’ to ‘BstMap<int, int>::Node*’ [-fpermissive]
+   30 |       return newnode;
+      |              ^~~~~~~
+      |              |
+      |              const BstMap<int, int>::Node*
+cc1plus: all warnings being treated as errors
+The code did not compile.  This test failed.
+-----------------------------------------------
+testcase 2 : Testing with BstMap<int,std::string>
+...compiling...
+In file included from 89-tester.cpp:1:
+bstmap.h: In instantiation of ‘const V& BstMap<K, V>::lookup(const K&) const [with K = int; V = std::__cxx11::basic_string<char>]’:
+89-tester.cpp:119:24:   required from here
+bstmap.h:106:3: error: no return statement in function returning non-void [-Werror=return-type]
+  106 |   }
+      |   ^
+bstmap.h: In instantiation of ‘BstMap<K, V>::Node* BstMap<K, V>::myadd(BstMap<K, V>::Node*, const BstMap<K, V>::Node*) [with K = int; V = std::__cxx11::basic_string<char>]’:
+bstmap.h:101:19:   required from ‘void BstMap<K, V>::add(const K&, const V&) [with K = int; V = std::__cxx11::basic_string<char>]’
+bstmap.h:99:16:   required from here
+bstmap.h:30:14: error: invalid conversion from ‘const BstMap<int, std::__cxx11::basic_string<char> >::Node*’ to ‘BstMap<int, std::__cxx11::basic_string<char> >::Node*’ [-fpermissive]
+   30 |       return newnode;
+      |              ^~~~~~~
+      |              |
+      |              const BstMap<int, std::__cxx11::basic_string<char> >::Node*
+cc1plus: all warnings being treated as errors
+The code did not compile.  This test failed.
+-----------------------------------------------
+testcase 3 : Testing with BstMap<int,(a custom class we wrote)>
+...compiling...
+In file included from 89-tester.cpp:1:
+bstmap.h: In instantiation of ‘const V& BstMap<K, V>::lookup(const K&) const [with K = int; V = Tester]’:
+89-tester.cpp:119:24:   required from here
+bstmap.h:106:3: error: no return statement in function returning non-void [-Werror=return-type]
+  106 |   }
+      |   ^
+bstmap.h: In instantiation of ‘BstMap<K, V>::Node* BstMap<K, V>::myadd(BstMap<K, V>::Node*, const BstMap<K, V>::Node*) [with K = int; V = Tester]’:
+bstmap.h:101:19:   required from ‘void BstMap<K, V>::add(const K&, const V&) [with K = int; V = Tester]’
+bstmap.h:99:16:   required from here
+bstmap.h:30:14: error: invalid conversion from ‘const BstMap<int, Tester>::Node*’ to ‘BstMap<int, Tester>::Node*’ [-fpermissive]
+   30 |       return newnode;
+      |              ^~~~~~~
+      |              |
+      |              const BstMap<int, Tester>::Node*
+cc1plus: all warnings being treated as errors
+The code did not compile.  This test failed.
+-----------------------------------------------
+testcase 4 : Testing with BstMap<std::string,int>
+...compiling...
+In file included from 89-tester.cpp:1:
+bstmap.h: In instantiation of ‘const V& BstMap<K, V>::lookup(const K&) const [with K = std::__cxx11::basic_string<char>; V = int]’:
+89-tester.cpp:119:24:   required from here
+bstmap.h:106:3: error: no return statement in function returning non-void [-Werror=return-type]
+  106 |   }
+      |   ^
+bstmap.h: In instantiation of ‘BstMap<K, V>::Node* BstMap<K, V>::myadd(BstMap<K, V>::Node*, const BstMap<K, V>::Node*) [with K = std::__cxx11::basic_string<char>; V = int]’:
+bstmap.h:101:19:   required from ‘void BstMap<K, V>::add(const K&, const V&) [with K = std::__cxx11::basic_string<char>; V = int]’
+bstmap.h:99:16:   required from here
+bstmap.h:30:14: error: invalid conversion from ‘const BstMap<std::__cxx11::basic_string<char>, int>::Node*’ to ‘BstMap<std::__cxx11::basic_string<char>, int>::Node*’ [-fpermissive]
+   30 |       return newnode;
+      |              ^~~~~~~
+      |              |
+      |              const BstMap<std::__cxx11::basic_string<char>, int>::Node*
+cc1plus: all warnings being treated as errors
+The code did not compile.  This test failed.
+-----------------------------------------------
+testcase 5 : Testing with BstMap<std::string,std::string>
+...compiling...
+In file included from 89-tester.cpp:1:
+bstmap.h: In instantiation of ‘const V& BstMap<K, V>::lookup(const K&) const [with K = std::__cxx11::basic_string<char>; V = std::__cxx11::basic_string<char>]’:
+89-tester.cpp:119:24:   required from here
+bstmap.h:106:3: error: no return statement in function returning non-void [-Werror=return-type]
+  106 |   }
+      |   ^
+bstmap.h: In instantiation of ‘BstMap<K, V>::Node* BstMap<K, V>::myadd(BstMap<K, V>::Node*, const BstMap<K, V>::Node*) [with K = std::__cxx11::basic_string<char>; V = std::__cxx11::basic_string<char>]’:
+bstmap.h:101:19:   required from ‘void BstMap<K, V>::add(const K&, const V&) [with K = std::__cxx11::basic_string<char>; V = std::__cxx11::basic_string<char>]’
+bstmap.h:99:16:   required from here
+bstmap.h:30:14: error: invalid conversion from ‘const BstMap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >::Node*’ to ‘BstMap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >::Node*’ [-fpermissive]
+   30 |       return newnode;
+      |              ^~~~~~~
+      |              |
+      |              const BstMap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >::Node*
+cc1plus: all warnings being treated as errors
+The code did not compile.  This test failed.
+-----------------------------------------------
+testcase 6 : Testing with BstMap<std::string,(a custom class we wrote)>
+...compiling...
+In file included from 89-tester.cpp:1:
+bstmap.h: In instantiation of ‘const V& BstMap<K, V>::lookup(const K&) const [with K = std::__cxx11::basic_string<char>; V = Tester]’:
+89-tester.cpp:119:24:   required from here
+bstmap.h:106:3: error: no return statement in function returning non-void [-Werror=return-type]
+  106 |   }
+      |   ^
+bstmap.h: In instantiation of ‘BstMap<K, V>::Node* BstMap<K, V>::myadd(BstMap<K, V>::Node*, const BstMap<K, V>::Node*) [with K = std::__cxx11::basic_string<char>; V = Tester]’:
+bstmap.h:101:19:   required from ‘void BstMap<K, V>::add(const K&, const V&) [with K = std::__cxx11::basic_string<char>; V = Tester]’
+bstmap.h:99:16:   required from here
+bstmap.h:30:14: error: invalid conversion from ‘const BstMap<std::__cxx11::basic_string<char>, Tester>::Node*’ to ‘BstMap<std::__cxx11::basic_string<char>, Tester>::Node*’ [-fpermissive]
+   30 |       return newnode;
+      |              ^~~~~~~
+      |              |
+      |              const BstMap<std::__cxx11::basic_string<char>, Tester>::Node*
+cc1plus: all warnings being treated as errors
+The code did not compile.  This test failed.
+-----------------------------------------------
+testcase 7 : Testing with BstMap<(a custom class we wrote),int>
+...compiling...
+In file included from 89-tester.cpp:1:
+bstmap.h: In instantiation of ‘const V& BstMap<K, V>::lookup(const K&) const [with K = Tester; V = int]’:
+89-tester.cpp:119:24:   required from here
+bstmap.h:106:3: error: no return statement in function returning non-void [-Werror=return-type]
+  106 |   }
+      |   ^
+bstmap.h: In instantiation of ‘BstMap<K, V>::Node* BstMap<K, V>::myadd(BstMap<K, V>::Node*, const BstMap<K, V>::Node*) [with K = Tester; V = int]’:
+bstmap.h:101:19:   required from ‘void BstMap<K, V>::add(const K&, const V&) [with K = Tester; V = int]’
+bstmap.h:99:16:   required from here
+bstmap.h:30:14: error: invalid conversion from ‘const BstMap<Tester, int>::Node*’ to ‘BstMap<Tester, int>::Node*’ [-fpermissive]
+   30 |       return newnode;
+      |              ^~~~~~~
+      |              |
+      |              const BstMap<Tester, int>::Node*
+cc1plus: all warnings being treated as errors
+The code did not compile.  This test failed.
+-----------------------------------------------
+testcase 8 : Testing with BstMap<(a custom class we wrote),std::string>
+...compiling...
+In file included from 89-tester.cpp:1:
+bstmap.h: In instantiation of ‘const V& BstMap<K, V>::lookup(const K&) const [with K = Tester; V = std::__cxx11::basic_string<char>]’:
+89-tester.cpp:119:24:   required from here
+bstmap.h:106:3: error: no return statement in function returning non-void [-Werror=return-type]
+  106 |   }
+      |   ^
+bstmap.h: In instantiation of ‘BstMap<K, V>::Node* BstMap<K, V>::myadd(BstMap<K, V>::Node*, const BstMap<K, V>::Node*) [with K = Tester; V = std::__cxx11::basic_string<char>]’:
+bstmap.h:101:19:   required from ‘void BstMap<K, V>::add(const K&, const V&) [with K = Tester; V = std::__cxx11::basic_string<char>]’
+bstmap.h:99:16:   required from here
+bstmap.h:30:14: error: invalid conversion from ‘const BstMap<Tester, std::__cxx11::basic_string<char> >::Node*’ to ‘BstMap<Tester, std::__cxx11::basic_string<char> >::Node*’ [-fpermissive]
+   30 |       return newnode;
+      |              ^~~~~~~
+      |              |
+      |              const BstMap<Tester, std::__cxx11::basic_string<char> >::Node*
+cc1plus: all warnings being treated as errors
+The code did not compile.  This test failed.
+-----------------------------------------------
+testcase 9 : Testing with BstMap<(a custom class we wrote),(a custom class we wrote)>
+...compiling...
+In file included from 89-tester.cpp:1:
+bstmap.h: In instantiation of ‘const V& BstMap<K, V>::lookup(const K&) const [with K = Tester; V = Tester]’:
+89-tester.cpp:119:24:   required from here
+bstmap.h:106:3: error: no return statement in function returning non-void [-Werror=return-type]
+  106 |   }
+      |   ^
+bstmap.h: In instantiation of ‘BstMap<K, V>::Node* BstMap<K, V>::myadd(BstMap<K, V>::Node*, const BstMap<K, V>::Node*) [with K = Tester; V = Tester]’:
+bstmap.h:101:19:   required from ‘void BstMap<K, V>::add(const K&, const V&) [with K = Tester; V = Tester]’
+bstmap.h:99:16:   required from here
+bstmap.h:30:14: error: invalid conversion from ‘const BstMap<Tester, Tester>::Node*’ to ‘BstMap<Tester, Tester>::Node*’ [-fpermissive]
+   30 |       return newnode;
+      |              ^~~~~~~
+      |              |
+      |              const BstMap<Tester, Tester>::Node*
+cc1plus: all warnings being treated as errors
+The code did not compile.  This test failed.
+
+Overall Grade: F
