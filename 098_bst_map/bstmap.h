@@ -96,18 +96,22 @@ class BstMap : public Map<K, V> {
   }
 
  public:
-  BstMap() : root(new Node()) {}
+  BstMap() : root(NULL) {}
 
   virtual void add(const K & key, const V & value) {
     Node * node = new Node(key, value);
-    root->right = myadd(root->right, node);
+    if (root == NULL) {
+      root = node;
+      return;
+    }
+    root = myadd(root, node);
   }
 
   virtual const V & lookup(const K & key) const throw(std::invalid_argument) {
-    return mylookup(root->right, key);
+    return mylookup(root, key);
   }
 
-  virtual void remove(const K & key) { root->right = myremove(root->right, key); }
+  virtual void remove(const K & key) { root = myremove(root, key); }
 
   virtual ~BstMap<K, V>() { myclear(root); }
 };
