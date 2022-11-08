@@ -101,7 +101,7 @@ class BstMap : public Map<K, V> {
   BstMap() : root(new Node()) {}
 
   virtual void add(const K & key, const V & value) {
-    if (key || value) {
+    if (key + value) {
     }
     //Node * node = new Node(key, value);
     //root->right = myadd(root->right, node);
@@ -118,7 +118,7 @@ class BstMap : public Map<K, V> {
   }
 
   virtual ~BstMap() {
-    delete root;
+    //delete root;
     //myclear(root);
   }
 };
