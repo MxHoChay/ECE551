@@ -1,3 +1,6 @@
+#ifndef __SET_H__
+#define __SET_H__
+
 #include <cstdlib>
 #include <stdexcept>
 
@@ -34,3 +37,5 @@ class BstSet : public Set<T> {
 
   virtual ~BstSet<T>() {}
 };
+
+#endif
