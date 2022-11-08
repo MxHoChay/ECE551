@@ -15,14 +15,14 @@ class BstSet : public Set<T> {
   BstSet<T>() : set(new BstMap<T, int>()) {}
   BstSet<T>(const BstSet & rhs) {
     delete set;
-    set = new BstMap<T, int>(rhs.set);
+    set = new BstMap<T, int>(*rhs.set);
   }
   BstSet & operator=(const BstSet & rhs) {
     if (this == &rhs) {
       return *this;
     }
     delete set;
-    set = new BstMap<T, int>(rhs.set);
+    set = new BstMap<T, int>(*rhs.set);
   }
 
   virtual void add(const T & key) { set->add(key, 0); }
