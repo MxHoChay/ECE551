@@ -24,7 +24,8 @@ class BstMap : public Map<K, V> {
     }
     myclear(node->left);
     myclear(node->right);
-    delete node;
+    if (node != NULL)
+      delete node;
     node = NULL;
   }
 
