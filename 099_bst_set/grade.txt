@@ -1,0 +1,107 @@
+Grading at 11/08/2022:18:43:32.039713
+For commit ID e5abb1be6d60bc8dfa994f91d08759b484099116
+Grading at Tue Nov  8 01:43:31 PM EST 2022
+-----------------------------------------------
+testcase 1 : Testing with BstSet<int>
+...compiling...
+90-tester.cpp: In function ‘int main()’:
+90-tester.cpp:70:33: error: invalid new-expression of abstract class type ‘BstSet<int>’
+   70 |   BSTSetTy * bmt = new BSTSetTy();
+      |                                 ^
+In file included from 90-tester.cpp:1:
+bstset.h:8:7: note:   because the following virtual functions are pure within ‘BstSet<int>’:
+    8 | class BstSet : public Set<T> {
+      |       ^~~~~~
+In file included from bstset.h:5,
+                 from 90-tester.cpp:1:
+set.h:9:16: note:     ‘bool Set<T>::contains(const T&) const [with T = int]’
+    9 |   virtual bool contains(const T& key) const = 0;
+      |                ^~~~~~~~
+90-tester.cpp:92:36: error: invalid new-expression of abstract class type ‘BstSet<int>’
+   92 |   BSTSetTy * m2 = new BSTSetTy(*bmt);
+      |                                    ^
+90-tester.cpp:151:26: error: invalid new-expression of abstract class type ‘BstSet<int>’
+  151 |   m = bmt = new BSTSetTy();
+      |                          ^
+In file included from 90-tester.cpp:1:
+bstset.h: In instantiation of ‘bool BstSet<T>::contains(const T&) [with T = int]’:
+90-tester.cpp:113:26:   required from here
+bstset.h:27:17: error: catching polymorphic type ‘class std::invalid_argument’ by value [-Werror=catch-value=]
+   27 |     catch (std::invalid_argument) {
+      |                 ^~~~~~~~~~~~~~~~
+bstset.h: In member function ‘BstSet<T>& BstSet<T>::operator=(const BstSet<T>&) [with T = int]’:
+bstset.h:19:3: error: control reaches end of non-void function [-Werror=return-type]
+   19 |   }
+      |   ^
+cc1plus: all warnings being treated as errors
+The code did not compile.  This test failed.
+-----------------------------------------------
+testcase 2 : Testing with BstSet<std::string>
+...compiling...
+90-tester.cpp: In function ‘int main()’:
+90-tester.cpp:70:33: error: invalid new-expression of abstract class type ‘BstSet<std::__cxx11::basic_string<char> >’
+   70 |   BSTSetTy * bmt = new BSTSetTy();
+      |                                 ^
+In file included from 90-tester.cpp:1:
+bstset.h:8:7: note:   because the following virtual functions are pure within ‘BstSet<std::__cxx11::basic_string<char> >’:
+    8 | class BstSet : public Set<T> {
+      |       ^~~~~~
+In file included from bstset.h:5,
+                 from 90-tester.cpp:1:
+set.h:9:16: note:     ‘bool Set<T>::contains(const T&) const [with T = std::__cxx11::basic_string<char>]’
+    9 |   virtual bool contains(const T& key) const = 0;
+      |                ^~~~~~~~
+90-tester.cpp:92:36: error: invalid new-expression of abstract class type ‘BstSet<std::__cxx11::basic_string<char> >’
+   92 |   BSTSetTy * m2 = new BSTSetTy(*bmt);
+      |                                    ^
+90-tester.cpp:151:26: error: invalid new-expression of abstract class type ‘BstSet<std::__cxx11::basic_string<char> >’
+  151 |   m = bmt = new BSTSetTy();
+      |                          ^
+In file included from 90-tester.cpp:1:
+bstset.h: In instantiation of ‘bool BstSet<T>::contains(const T&) [with T = std::__cxx11::basic_string<char>]’:
+90-tester.cpp:113:26:   required from here
+bstset.h:27:17: error: catching polymorphic type ‘class std::invalid_argument’ by value [-Werror=catch-value=]
+   27 |     catch (std::invalid_argument) {
+      |                 ^~~~~~~~~~~~~~~~
+bstset.h: In member function ‘BstSet<T>& BstSet<T>::operator=(const BstSet<T>&) [with T = std::__cxx11::basic_string<char>]’:
+bstset.h:19:3: error: control reaches end of non-void function [-Werror=return-type]
+   19 |   }
+      |   ^
+cc1plus: all warnings being treated as errors
+The code did not compile.  This test failed.
+-----------------------------------------------
+testcase 3 : Testing with BstSet<(a custom class we wrote)>
+...compiling...
+90-tester.cpp: In function ‘int main()’:
+90-tester.cpp:70:33: error: invalid new-expression of abstract class type ‘BstSet<Tester>’
+   70 |   BSTSetTy * bmt = new BSTSetTy();
+      |                                 ^
+In file included from 90-tester.cpp:1:
+bstset.h:8:7: note:   because the following virtual functions are pure within ‘BstSet<Tester>’:
+    8 | class BstSet : public Set<T> {
+      |       ^~~~~~
+In file included from bstset.h:5,
+                 from 90-tester.cpp:1:
+set.h:9:16: note:     ‘bool Set<T>::contains(const T&) const [with T = Tester]’
+    9 |   virtual bool contains(const T& key) const = 0;
+      |                ^~~~~~~~
+90-tester.cpp:92:36: error: invalid new-expression of abstract class type ‘BstSet<Tester>’
+   92 |   BSTSetTy * m2 = new BSTSetTy(*bmt);
+      |                                    ^
+90-tester.cpp:151:26: error: invalid new-expression of abstract class type ‘BstSet<Tester>’
+  151 |   m = bmt = new BSTSetTy();
+      |                          ^
+In file included from 90-tester.cpp:1:
+bstset.h: In instantiation of ‘bool BstSet<T>::contains(const T&) [with T = Tester]’:
+90-tester.cpp:113:26:   required from here
+bstset.h:27:17: error: catching polymorphic type ‘class std::invalid_argument’ by value [-Werror=catch-value=]
+   27 |     catch (std::invalid_argument) {
+      |                 ^~~~~~~~~~~~~~~~
+bstset.h: In member function ‘BstSet<T>& BstSet<T>::operator=(const BstSet<T>&) [with T = Tester]’:
+bstset.h:19:3: error: control reaches end of non-void function [-Werror=return-type]
+   19 |   }
+      |   ^
+cc1plus: all warnings being treated as errors
+The code did not compile.  This test failed.
+
+Overall Grade: F
