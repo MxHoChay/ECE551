@@ -19,6 +19,8 @@ class BstMap : public Map<K, V> {
   Node * root;
 
   void myclear(Node * node) {
+    delete node;
+    return;
     if (node == NULL) {
       return;
     }
@@ -115,7 +117,10 @@ class BstMap : public Map<K, V> {
     //root->right = myremove(root->right, key);
   }
 
-  virtual ~BstMap() { myclear(root); }
+  virtual ~BstMap() {
+    delete root;
+    //myclear(root);
+  }
 };
 
 #endif
