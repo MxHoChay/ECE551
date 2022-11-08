@@ -109,7 +109,8 @@ class BstMap : public Map<K, V> {
 
   virtual void remove(const K & key) { root->right = myremove(root->right, key); }
 
-  virtual ~BstMap<K, V>() { myclear(root); }
+  virtual ~BstMap<K, V>() {  // myclear(root);
+  }
 };
 
 #endif
