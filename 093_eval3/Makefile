@@ -1,2 +1,3 @@
-cyoa-step1: cyoa-step1.cpp Story.hpp Page.hpp Choice.hpp
-	g++ -o cyoa-step1 -ggdb3 -Wall -Werror -pedantic -std=gnu++98 cyoa-step1.cpp
+all: cyoa-step1 cyoa-step2
+cyoa-step%: cyoa-step%.cpp Story.hpp Page.hpp Choice.hpp
+	g++ -o cyoa-step% -std=gnu++98 -pedantic -Wall -Werror -ggdb3 cyoa-step%.cpp

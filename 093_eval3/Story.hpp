@@ -17,10 +17,13 @@
 
 class Story {
   std::vector<Page> pages;
-
+  size_t nowPage;
   // Convert string to size_t.
-  size_t myaTol(const std::string & str) {
+  size_t myaTol(const std::string & str, bool isUser = false) {
     if (str.length() == 0 || str[0] < '0' || str[0] > '9') {
+      if (isUser) {
+        return 0;
+      }
       std::cerr << "Invalid page number!\n";
       throw std::exception();
     }
@@ -28,10 +31,16 @@ class Story {
     size_t res = 0;
     for (size_t i = 0; i < str.length(); i++) {
       if (str[i] < '0' || str[i] > '9') {
+        if (isUser) {
+          return 0;
+        }
         return res;
       }
       size_t digit = str[i] - '0';
       if (res > max / 10 || (res == max / 10 && digit > max % 10)) {
+        if (isUser) {
+          return 0;
+        }
         std::cerr << "Page number excced size_t!\n";
         throw std::exception();
       }
@@ -41,7 +50,7 @@ class Story {
   }
 
  public:
-  Story() : pages(std::vector<Page>()) {}
+  Story() : pages(std::vector<Page>()), nowPage(0) {}
 
   void parseStory(const std::string & dirName) {
     FILE * f = fopen((dirName + "story.txt").c_str(), "r");
@@ -98,6 +107,40 @@ class Story {
     }
     free(line);
     fclose(f);
+  }
+
+  // To check if every page referenced by a choice is valid and every page has been referenced.
+  void verifyTheStory() {
+    size_t max = pages.size();
+    std::vector<bool> refTable;
+    for (size_t i = 0; i < max; i++) {
+      refTable.push_back(false);
+    }
+    for (size_t i = 0; i < max; i++) {
+      pages[i].verifyThePage(max, refTable);
+    }
+    for (size_t i = 1; i < max; i++) {
+      if (refTable[i] == false) {
+        std::cerr << "Page " << i << " has not been referenced!\n";
+        throw std::exception();
+      }
+    }
+  }
+
+  void readStory(const std::string & userInput) {
+    if (userInput == "&&&") {
+      pages[nowPage].readPage();
+      return;
+    }
+    size_t userChoice = myaTol(userInput, true);
+    // If the input is invalid, wait for next input.
+    if (userChoice > pages[nowPage].getSize() || userChoice == 0) {
+      std::cout << "That is not a valid choice, please try again\n";
+      return;
+    }
+    // Update the page and then print.
+    nowPage = pages[nowPage].getNext(userChoice);
+    pages[nowPage].readPage();
   }
 
   friend std::ostream & operator<<(std::ostream & s, const Story & rhs) {

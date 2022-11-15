@@ -57,6 +57,8 @@ class Page {
     input.close();
   }
 
+  size_t getSize() { return choices.size(); }
+
   // Add a new choice to this page.
   void addChoice(std::size_t d, const std::string & str) {
     if (type == W || type == L) {
@@ -66,6 +68,22 @@ class Page {
     Choice newChoice(d, str);
     choices.push_back(newChoice);
   }
+
+  // To check if each page referenced by this page is valid.
+  void verifyThePage(size_t max, std::vector<bool> & refTable) {
+    for (size_t i = 0; i < choices.size(); i++) {
+      choices[i].verifyTheChoice(max, refTable);
+    }
+  }
+
+  void readPage() {
+    std::cout << *this;
+    if (type == W || type == L) {
+      exit(EXIT_SUCCESS);
+    }
+  }
+
+  size_t getNext(size_t next) { return choices[next - 1].getDest(); }
 
   // Output the page.
   friend std::ostream & operator<<(std::ostream & s, const Page & rhs) {
