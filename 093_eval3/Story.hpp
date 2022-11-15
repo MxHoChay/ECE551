@@ -5,6 +5,7 @@
 #include <fstream>
 #include <iostream>
 #include <string>
+#include <utility>
 #include <vector>
 
 #include "Page.hpp"
@@ -47,6 +48,41 @@ class Story {
       res = res * 10 + digit;
     }
     return res;
+  }
+
+  // Try to make a choice and enter that page.
+  bool tryPage(size_t pageNum,
+               std::vector<bool> & visitTable,
+               std::vector<std::pair<size_t, size_t> > & path) {
+    std::cout << pageNum << std::endl;
+    if (visitTable[pageNum]) {
+      return false;
+    }
+    // If there is a path, then print it out.
+    if (pages[pageNum].isWin()) {
+      for (size_t i = 0; i < path.size(); i++) {
+        std::cout << path[i].first << "(" << path[i].second << "),";
+      }
+      std::cout << pageNum << "(win)\n";
+      return true;
+    }
+    else if (pages[pageNum].isLose()) {
+      return false;
+    }
+    // Read this page and try the next one.
+    visitTable[pageNum] = true;
+    bool hasPath = false;
+    for (size_t i = 0; i < pages[pageNum].getSize(); i++) {
+      size_t nextPage = pages[pageNum].getNext(i + 1);
+      std::pair<size_t, size_t> newpair(pageNum, i + 1);
+      path.push_back(newpair);
+      if (tryPage(nextPage, visitTable, path)) {
+        hasPath = true;
+      }
+      path.pop_back();
+    }
+    visitTable[pageNum] = false;
+    return hasPath;
   }
 
  public:
@@ -141,6 +177,18 @@ class Story {
     // Update the page and then print.
     nowPage = pages[nowPage].getNext(userChoice);
     pages[nowPage].readPage();
+  }
+
+  // Try to find paths which can win the game.
+  void winTheStory() {
+    std::vector<bool> visitTable;
+    std::vector<std::pair<size_t, size_t> > path;
+    for (size_t i = 0; i < pages.size(); i++) {
+      visitTable.push_back(false);
+    }
+    if (!tryPage(0, visitTable, path)) {
+      std::cout << "This story is unwinnable!\n";
+    }
   }
 
   friend std::ostream & operator<<(std::ostream & s, const Story & rhs) {

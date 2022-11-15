@@ -59,6 +59,10 @@ class Page {
 
   size_t getSize() { return choices.size(); }
 
+  bool isWin() { return type == W; }
+
+  bool isLose() { return type == L; }
+
   // Add a new choice to this page.
   void addChoice(std::size_t d, const std::string & str) {
     if (type == W || type == L) {
