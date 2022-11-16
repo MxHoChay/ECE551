@@ -1,6 +1,6 @@
-Grading at 11/15/2022:04:25:46.189708
-For commit ID 16f21bdb7c1e6c32a5467fae752e43fbff566a7e
-Grading at Mon Nov 14 11:25:45 PM EST 2022
+Grading at 11/16/2022:19:52:46.717741
+For commit ID feed65f2babadb11a8fb7c85946efdb445bbce20
+Grading at Wed Nov 16 02:52:42 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -11,10 +11,99 @@ Executable cyoa-step1 exists (good)
 ------------------------------------
 Now running YOUR tests for step 1
 ------------------------------------
+
+
+1.1: Current test is ./cyoa-step1 story1 < /dev/null
+-----------------------------
+Great: we both considered this an error
+----here is what you printed on stderr---
+No story.txt!
+terminate called after throwing an instance of 'std::exception'
+  what():  std::exception
+timeout: the monitored command dumped core
+-----------------------------------------
+Lets check if it valgrinds:
+Valgrind was clean
+
+
+1.2: Current test is ./cyoa-step1 story1 < /dev/null
+-----------------------------
+Great: we both considered this an error
+----here is what you printed on stderr---
+No story.txt!
+terminate called after throwing an instance of 'std::exception'
+  what():  std::exception
+timeout: the monitored command dumped core
+-----------------------------------------
+Lets check if it valgrinds:
+Valgrind was clean
 No request to check for intermediate deadline completion on step 1
 
 Step 2
 Checking that cyoa-step2 compiles
-The code did not compile!
+make: 'cyoa-step2' is up to date.
+The code compiled (good)
+Executable cyoa-step2 exists (good)
+------------------------------------
+Now running YOUR tests for step 2
+------------------------------------
+
+
+2.1: Current test is ./cyoa-step2 story1  <  input1.txt
+-----------------------------
+Great: we both considered this an error
+----here is what you printed on stderr---
+/dev/fd/3: line 528: input1.txt: No such file or directory
+-----------------------------------------
+Lets check if it valgrinds:
+Valgrind was clean
+No request to check for intermediate deadline completion on step 2
+
+Step 3
+Checking that cyoa-step3 compiles
+make: 'cyoa-step3' is up to date.
+The code compiled (good)
+Executable cyoa-step3 exists (good)
+------------------------------------
+Now running YOUR tests for step 3
+------------------------------------
+
+
+3.1: Current test is ./cyoa-step3 story1 < /dev/null
+-----------------------------
+Great: we both considered this an error
+----here is what you printed on stderr---
+No story.txt!
+terminate called after throwing an instance of 'std::exception'
+  what():  std::exception
+timeout: the monitored command dumped core
+-----------------------------------------
+Lets check if it valgrinds:
+Valgrind was clean
+No request to check for intermediate deadline completion on step 3
+
+Step 4
+Checking that cyoa-step4 compiles
+make: 'cyoa-step4' is up to date.
+The code compiled (good)
+Executable cyoa-step4 exists (good)
+------------------------------------
+Now running YOUR tests for step 4
+------------------------------------
+
+
+4.1: Current test is ./cyoa-step4 story3  <  input2.txt
+-----------------------------
+Great: we both considered this an error
+----here is what you printed on stderr---
+/dev/fd/3: line 528: input2.txt: No such file or directory
+-----------------------------------------
+Lets check if it valgrinds:
+Valgrind was clean
+No request to check for intermediate deadline completion on step 4
+
+You have passed the test cases YOU provided
+If your tests are good, this is great. 
+If your tests are insufficient, you should do much more testing
 
 Overall Grade: NO GRADE YET
