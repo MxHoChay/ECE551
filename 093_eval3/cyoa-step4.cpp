@@ -6,7 +6,7 @@
 
 int main(int argc, char ** argv) {
   if (argc != 2) {
-    std::cerr << "Please input one directory path!\n";
+    std::cerr << "Please input right directory path!\n";
     throw std::exception();
   }
   std::string dirName(argv[1]);

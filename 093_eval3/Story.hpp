@@ -4,6 +4,7 @@
 #include <cstdlib>
 #include <fstream>
 #include <iostream>
+#include <regex>
 #include <string>
 #include <utility>
 #include <vector>
@@ -19,42 +20,25 @@
 class Story {
   std::vector<Page> pages;
   size_t nowPage;
+  std::map<std::string, long int> variables;
+
   // Convert string to size_t.
   size_t myaTol(const std::string & str, bool isUser = false) {
-    if (str.length() == 0 || str[0] < '0' || str[0] > '9') {
-      if (isUser) {
-        return 0;
-      }
-      std::cerr << "Invalid page number!\n";
+    // To make sure there is no other character in the user's input.
+    if (isUser && !std::regex_match(str, std::regex("\\d+"))) {
+      return 0;
+    }
+    if (str.length() == 0 || str[0] == '-') {
+      std::cerr << "Invalid number! Any number should fit in size_t!\n";
       throw std::exception();
     }
-    size_t max = -1;
-    size_t res = 0;
-    for (size_t i = 0; i < str.length(); i++) {
-      if (str[i] < '0' || str[i] > '9') {
-        if (isUser) {
-          return 0;
-        }
-        return res;
-      }
-      size_t digit = str[i] - '0';
-      if (res > max / 10 || (res == max / 10 && digit > max % 10)) {
-        if (isUser) {
-          return 0;
-        }
-        std::cerr << "Page number excced size_t!\n";
-        throw std::exception();
-      }
-      res = res * 10 + digit;
-    }
-    return res;
+    return (size_t)std::stoull(str);
   }
 
   // Try to make a choice and enter that page.
   bool tryPage(size_t pageNum,
                std::vector<bool> & visitTable,
                std::vector<std::pair<size_t, size_t> > & path) {
-    std::cout << pageNum << std::endl;
     if (visitTable[pageNum]) {
       return false;
     }
@@ -73,7 +57,7 @@ class Story {
     visitTable[pageNum] = true;
     bool hasPath = false;
     for (size_t i = 0; i < pages[pageNum].getSize(); i++) {
-      size_t nextPage = pages[pageNum].getNext(i + 1);
+      size_t nextPage = pages[pageNum].getNext(i + 1, variables);
       std::pair<size_t, size_t> newpair(pageNum, i + 1);
       path.push_back(newpair);
       if (tryPage(nextPage, visitTable, path)) {
@@ -101,37 +85,14 @@ class Story {
       if (strline[strline.length() - 1] == '\n') {
         strline.erase(strline.length() - 1);
       }
-      // To check if the line is blank.
-      bool isBlank = true;
-      for (size_t i = 0; i < strline.length(); i++) {
-        if (strline[i] != ' ' || strline[i] != '\n') {
-          isBlank = false;
-          break;
-        }
-      }
-      // If the line is blank, ignore it and goto the next line.
-      if (isBlank) {
+      // Skip the blank line.
+      if (std::regex_match(strline, std::regex("\\s*"))) {
         continue;
       }
-      size_t at_index = strline.find_first_of('@', 0);
-      if (at_index == std::string::npos) {
-        size_t first = strline.find_first_of(':', 0);
-        size_t second = strline.find_first_of(':', first + 1);
-        if (first == std::string::npos || second == std::string::npos) {
-          std::cerr << "Invalid choice line: Lack two ':'s!";
-          throw std::exception();
-        }
-        size_t pageNum = myaTol(strline.c_str());
-        size_t destPageNum = myaTol(strline.substr(first + 1).c_str());
-        // To check the choice is allowed
-        if (pageNum >= pages.size()) {
-          std::cerr << "Invalid page operation:\n";
-          std::cerr << pageNum << " " << destPageNum << " " << pages.size() << std::endl;
-          throw std::exception();
-        }
-        pages[pageNum].addChoice(destPageNum, strline.substr(second + 1));
-      }
-      else {
+      // To check if the line is a new page.
+      // Lines: number@type:filename
+      if (std::regex_match(strline, std::regex("\\d+@[NLW]:.+"))) {
+        size_t at_index = strline.find_first_of('@');
         size_t pageNum = myaTol(strline.c_str());
         if (pageNum != pages.size()) {
           std::cerr << "Wrong page order!\n";
@@ -139,6 +100,42 @@ class Story {
         }
         Page newPage(dirName, strline.substr(at_index + 1));
         pages.push_back(newPage);
+      }
+      // Lines: pagenum:destpage:text  and  pagenum[var=value]:dest:text
+      else if (std::regex_match(strline, std::regex("\\d+(\\[[^=]+=\\d+\\])?:\\d+:.*"))) {
+        size_t equal = 0;
+        std::string condition;
+        // Lines: pagenum[var=value]:dest:text
+        if (std::regex_match(strline, std::regex("\\d+\\[[^=]+=\\d+\\]:\\d+:.*"))) {
+          equal = strline.find_first_of('=');
+          size_t leftB = strline.find_first_of('[');
+          size_t rightB = strline.find_first_of(']', equal + 1);
+          condition = strline.substr(leftB + 1, rightB - leftB - 1);
+        }
+        size_t first = strline.find_first_of(':', equal + 1);
+        size_t second = strline.find_first_of(':', first + 1);
+        size_t pageNum = myaTol(strline.c_str());
+        size_t destPageNum = myaTol(strline.substr(first + 1).c_str());
+        // To check the choice is allowed
+        if (pageNum >= pages.size()) {
+          std::cerr << "Invalid page operation!\n";
+          throw std::exception();
+        }
+        pages[pageNum].addChoice(destPageNum, strline.substr(second + 1), condition);
+      }
+      // Lines: pagenum$var=value
+      else if (std::regex_match(strline, std::regex("\\d+\\$[^=]+=\\d+"))) {
+        size_t dollar = strline.find_first_of('$');
+        size_t pageNum = myaTol(strline.c_str());
+        if (pageNum >= pages.size()) {
+          std::cerr << "Invalid page operation!\n";
+          throw std::exception();
+        }
+        pages[pageNum].addVar(strline.substr(dollar + 1));
+      }
+      else {
+        std::cerr << "Invalid input line!\n";
+        throw std::exception();
       }
     }
     free(line);
@@ -165,18 +162,27 @@ class Story {
 
   void readStory(const std::string & userInput) {
     if (userInput == "&&&") {
-      pages[nowPage].readPage();
+      variables = std::map<std::string, long int>();
+      pages[nowPage].updateVar(variables);
+      pages[nowPage].readPage(std::cout, variables, true);
       return;
     }
     size_t userChoice = myaTol(userInput, true);
+    size_t nextPage = pages[nowPage].getNext(userChoice, variables);
     // If the input is invalid, wait for next input.
     if (userChoice > pages[nowPage].getSize() || userChoice == 0) {
       std::cout << "That is not a valid choice, please try again\n";
       return;
     }
+    // If the user attempts to select an unavailable option.
+    if (nextPage + 1 == 0) {
+      std::cout << "That choice is not available at this time, please try again\n";
+      return;
+    }
     // Update the page and then print.
-    nowPage = pages[nowPage].getNext(userChoice);
-    pages[nowPage].readPage();
+    nowPage = nextPage;
+    pages[nowPage].updateVar(variables);
+    pages[nowPage].readPage(std::cout, variables, true);
   }
 
   // Try to find paths which can win the game.

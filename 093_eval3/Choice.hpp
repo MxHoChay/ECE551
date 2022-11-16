@@ -2,6 +2,7 @@
 #define __CHOICE_HPP__
 
 #include <iostream>
+#include <map>
 #include <string>
 #include <vector>
 
@@ -13,10 +14,24 @@
 class Choice {
   size_t dest;
   std::string text;
+  std::string var;
+  long int value;
 
  public:
-  Choice() : dest(0), text("") {}
-  Choice(size_t d, const std::string & str) : dest(d), text(str) {}
+  Choice() : dest(0) {}
+  Choice(size_t d, const std::string & str, const std::string & cond) :
+      dest(d), text(str), value(-1) {
+    if (cond == "") {
+      return;
+    }
+    size_t equal = cond.find_first_of('=');
+    var = cond.substr(0, equal);
+    value = (long int)std::stoll(cond.substr(equal + 1));
+    if ((long long)value != std::stoll(cond.substr(equal + 1))) {
+      std::cerr << "Invalid value number!\n";
+      throw std::exception();
+    }
+  }
 
   // To check each page referenced by this choice is valid.
   void verifyTheChoice(size_t max, std::vector<bool> & refTable) {
@@ -27,11 +42,47 @@ class Choice {
     refTable[dest] = true;
   }
 
-  size_t getDest() const { return dest; }
+  // To check if the choice meets the variable condition
+  bool isAvaliable(const std::map<std::string, long int> & storyVar) const {
+    if (var == "") {
+      return true;
+    }
+    try {
+      if (storyVar.at(var) == value) {
+        return true;
+      }
+    }
+    catch (std::exception & e) {
+      if (value == 0) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  size_t getDest(const std::map<std::string, long int> & storyVar) const {
+    if (isAvaliable(storyVar)) {
+      return dest;
+    }
+    else {
+      return -1;
+    }
+  }
+
+  void readChoice(std::ostream & s,
+                  const std::map<std::string, long int> & storyVar,
+                  bool isUserReading = false) const {
+    if (!isUserReading || isAvaliable(storyVar)) {
+      s << text << std::endl;
+    }
+    else {
+      s << "<UNAVAILABLE>\n";
+    }
+  }
 
   // Output the choice
   friend std::ostream & operator<<(std::ostream & s, const Choice & rhs) {
-    s << rhs.text << std::endl;
+    rhs.readChoice(s, std::map<std::string, long int>());
     return s;
   }
 };

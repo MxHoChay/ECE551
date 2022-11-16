@@ -1,4 +1,4 @@
-CFLAGS=-std=gnu++98 -pedantic -Wall -Werror -ggdb3
+CFLAGS=-std=gnu++11 -pedantic -Wall -Werror -ggdb3
 cyoa-step1: cyoa-step1.cpp Story.hpp Page.hpp Choice.hpp
 	g++ -o cyoa-step1 $(CFLAGS) cyoa-step1.cpp
 cyoa-step2: cyoa-step2.cpp Story.hpp Page.hpp Choice.hpp
