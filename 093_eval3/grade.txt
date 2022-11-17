@@ -1,6 +1,6 @@
-Grading at 11/17/2022:18:19:32.729485
-For commit ID a968efb7a518c280869950f50c448b23a2f9a861
-Grading at Thu Nov 17 01:19:07 PM EST 2022
+Grading at 11/17/2022:18:31:48.653708
+For commit ID 12dfb989f0847a0d0ac53de881233a6598dbe694
+Grading at Thu Nov 17 01:31:23 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -71,17 +71,17 @@ Now running YOUR tests for step 4
 ------------------------------------
 
 
-4.1: Current test is ./cyoa-step4 story3  <  ./story3/inputs/input2.txt
+4.1: Current test is ./cyoa-step4 story3  <  ./story3/inputs/input17.txt
 -----------------------------
 Your output looks good. Lets check valgrind
   - Valgrind reported errors
 Valgrind reported errors or memory leaks:
-==96717== Memcheck, a memory error detector
-==96717== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==96717== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==96717== Command: ./cyoa-step4 story3
-==96717== Parent PID: 96716
-==96717== 
+==104973== Memcheck, a memory error detector
+==104973== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==104973== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==104973== Command: ./cyoa-step4 story3
+==104973== Parent PID: 104972
+==104973== 
 No request to check for intermediate deadline completion on step 4
 
 You have NOT passed your test cases!
