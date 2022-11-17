@@ -2,4 +2,4 @@ cyoa-step1 story1
 cyoa-step1 story1
 cyoa-step2 story1 < ./story1/inputs/input1.txt
 cyoa-step3 story1
-cyoa-step4 story3 < ./story3/inputs/input2.txt
+cyoa-step4 story3 < ./story3/inputs/input17.txt
