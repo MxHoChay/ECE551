@@ -1,6 +1,6 @@
-Grading at 11/17/2022:17:55:36.142052
-For commit ID 1c5de3b5fa8888663f6b8a8679ccf72e2ec9509d
-Grading at Thu Nov 17 12:55:15 PM EST 2022
+Grading at 11/17/2022:18:19:32.729485
+For commit ID a968efb7a518c280869950f50c448b23a2f9a861
+Grading at Thu Nov 17 01:19:07 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -73,9 +73,15 @@ Now running YOUR tests for step 4
 
 4.1: Current test is ./cyoa-step4 story3  <  ./story3/inputs/input2.txt
 -----------------------------
-You considered this a failure case:
-timeout: the monitored command dumped core
-But we did not.
+Your output looks good. Lets check valgrind
+  - Valgrind reported errors
+Valgrind reported errors or memory leaks:
+==96717== Memcheck, a memory error detector
+==96717== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==96717== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==96717== Command: ./cyoa-step4 story3
+==96717== Parent PID: 96716
+==96717== 
 No request to check for intermediate deadline completion on step 4
 
 You have NOT passed your test cases!
