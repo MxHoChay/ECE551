@@ -18,9 +18,9 @@ class Choice {
   long int value;
 
  public:
-  Choice() : dest(0) {}
+  Choice() : dest(0), text(std::string("")), var(std::string("")), value(-1) {}
   Choice(size_t d, const std::string & str, const std::string & cond) :
-      dest(d), text(str), var("+Nothing+"), value(-1) {
+      dest(d), text(str), var(std::string("+Nothing+")), value(-1) {
     if (cond == "") {
       return;
     }

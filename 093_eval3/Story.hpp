@@ -173,12 +173,12 @@ class Story {
       return false;
     }
     size_t userChoice = myaTol(userInput, true);
-    size_t nextPage = pages[nowPage].getNext(userChoice, variables);
     // If the input is invalid, wait for next input.
     if (userChoice > pages[nowPage].getSize() || userChoice == 0) {
       std::cout << "That is not a valid choice, please try again\n";
       return false;
     }
+    size_t nextPage = pages[nowPage].getNext(userChoice, variables);
     // If the user attempts to select an unavailable option.
     if (nextPage + 1 == 0) {
       std::cout << "That choice is not available at this time, please try again\n";
