@@ -91,7 +91,7 @@ class Story {
       }
       // To check if the line is a new page.
       // Lines: number@type:filename
-      if (std::regex_match(strline, std::regex("\\d+@[NLW]:.+"))) {
+      if (std::regex_match(strline, std::regex("\\s*\\d+@[NLW]:.+"))) {
         size_t at_index = strline.find_first_of('@');
         size_t pageNum = myaTol(strline.c_str());
         if (pageNum != pages.size()) {
@@ -102,11 +102,14 @@ class Story {
         pages.push_back(newPage);
       }
       // Lines: pagenum:destpage:text  and  pagenum[var=value]:dest:text
-      else if (std::regex_match(strline, std::regex("\\d+(\\[[^=]+=\\d+\\])?:\\d+:.*"))) {
+      else if (std::regex_match(
+                   strline,
+                   std::regex("\\s*\\d+(\\[[^=]*=\\s*-?\\d+\\])?:\\s*\\d+:.*"))) {
         size_t equal = 0;
         std::string condition;
         // Lines: pagenum[var=value]:dest:text
-        if (std::regex_match(strline, std::regex("\\d+\\[[^=]+=\\d+\\]:\\d+:.*"))) {
+        if (std::regex_match(strline,
+                             std::regex("\\s*\\d+\\[[^=]*=\\s*-?\\d+\\]:\\s*\\d+:.*"))) {
           equal = strline.find_first_of('=');
           size_t leftB = strline.find_first_of('[');
           size_t rightB = strline.find_first_of(']', equal + 1);
@@ -124,7 +127,7 @@ class Story {
         pages[pageNum].addChoice(destPageNum, strline.substr(second + 1), condition);
       }
       // Lines: pagenum$var=value
-      else if (std::regex_match(strline, std::regex("\\d+\\$[^=]+=\\d+"))) {
+      else if (std::regex_match(strline, std::regex("\\s*\\d+\\$[^=]*=\\s*-?\\d+"))) {
         size_t dollar = strline.find_first_of('$');
         size_t pageNum = myaTol(strline.c_str());
         if (pageNum >= pages.size()) {

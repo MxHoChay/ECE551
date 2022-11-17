@@ -76,7 +76,7 @@ class Page {
 
   // Set value to the variable
   void addVar(const std::string & str) {
-    size_t equal = str.find_last_of('=');
+    size_t equal = str.find_first_of('=');
     std::string var = str.substr(0, equal);
     long int value = (long int)std::stoll(str.substr(equal + 1));
     if ((long long)value != std::stoll(str.substr(equal + 1))) {

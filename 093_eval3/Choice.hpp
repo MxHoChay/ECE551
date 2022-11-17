@@ -20,7 +20,7 @@ class Choice {
  public:
   Choice() : dest(0) {}
   Choice(size_t d, const std::string & str, const std::string & cond) :
-      dest(d), text(str), value(-1) {
+      dest(d), text(str), var("+Nothing+"), value(-1) {
     if (cond == "") {
       return;
     }
@@ -44,7 +44,7 @@ class Choice {
 
   // To check if the choice meets the variable condition
   bool isAvaliable(const std::map<std::string, long int> & storyVar) const {
-    if (var == "") {
+    if (var == "+Nothing+") {
       return true;
     }
     try {
