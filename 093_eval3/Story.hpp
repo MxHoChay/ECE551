@@ -69,6 +69,121 @@ class Story {
     return hasPath;
   }
 
+  bool isNum(const std::string & str, size_t & i, bool hasSign = false) {
+    while (i < str.length() && str[i] == ' ') {
+      ++i;
+    }
+    if (hasSign) {
+      if (i == str.length()) {
+        return false;
+      }
+      if (str[i] == '-') {
+        ++i;
+      }
+    }
+    if (i == str.length() || str[i] < '0' || str[i] > '9') {
+      return false;
+    }
+    while (i < str.length() && str[i] >= '0' && str[i] <= '9') {
+      ++i;
+    }
+    return true;
+  }
+
+  bool isMatch(const std::string & str, int pattern) {
+    size_t i = 0;
+    size_t len = str.length();
+    if (pattern == 0) {
+      while (i < len && str[i] == ' ') {
+        ++i;
+      }
+      if (i < len) {
+        return false;
+      }
+    }
+    // number@type:filename \\s*\\d+@[NLW]:.+
+    else if (pattern == 1) {
+      if (!isNum(str, i)) {
+        return false;
+      }
+      if (i == len || str[i] != '@') {
+        return false;
+      }
+      ++i;
+      if (i == len || (str[i] != 'N' && str[i] != 'L' && str[i] != 'W')) {
+        return false;
+      }
+      ++i;
+      if (i == len || str[i] != ':') {
+        return false;
+      }
+      ++i;
+      if (i == len) {
+        return false;
+      }
+    }
+    // pagenum:destpage:text  and  pagenum[var=value]:dest:text
+    else if (pattern == 2 || pattern == 3) {
+      if (!isNum(str, i)) {
+        return false;
+      }
+      if (pattern == 3) {
+        if (i == len || str[i] != '[') {
+          return false;
+        }
+        ++i;
+        while (i < len && str[i] != '=') {
+          ++i;
+        }
+        if (i == len) {
+          return false;
+        }
+        ++i;
+        if (!isNum(str, i, true)) {
+          return false;
+        }
+        if (i == len || str[i] != ']') {
+          return false;
+        }
+        ++i;
+      }
+      if (i == len || str[i] != ':') {
+        return false;
+      }
+      ++i;
+      if (!isNum(str, i)) {
+        return false;
+      }
+      if (i == len || str[i] != ':') {
+        return false;
+      }
+    }
+    // pagenum$var=value
+    else if (pattern == 4) {
+      if (!isNum(str, i)) {
+        return false;
+      }
+      if (i == len || str[i] != '$') {
+        return false;
+      }
+      ++i;
+      while (i < len && str[i] != '=') {
+        ++i;
+      }
+      if (i == len) {
+        return false;
+      }
+      ++i;
+      if (!isNum(str, i, true)) {
+        return false;
+      }
+      if (i < len) {
+        return false;
+      }
+    }
+    return true;
+  }
+
  public:
   Story() : pages(std::vector<Page>()), nowPage(0) {}
 
@@ -86,12 +201,16 @@ class Story {
         strline.erase(strline.length() - 1);
       }
       // Skip the blank line.
-      if (std::regex_match(strline, std::regex("\\s*"))) {
+      if (isMatch(strline, 0)) {
         continue;
       }
+      bool isFileDefine = isMatch(strline, 1);
+      bool isDestPage = isMatch(strline, 2);
+      bool isPageWithCond = isMatch(strline, 3);
+      bool isVarDefine = isMatch(strline, 4);
       // To check if the line is a new page.
       // Lines: number@type:filename
-      if (std::regex_match(strline, std::regex("\\s*\\d+@[NLW]:.+"))) {
+      if (isFileDefine) {
         size_t at_index = strline.find_first_of('@');
         size_t pageNum = myaTol(strline.c_str());
         if (pageNum != pages.size()) {
@@ -102,14 +221,11 @@ class Story {
         pages.push_back(newPage);
       }
       // Lines: pagenum:destpage:text  and  pagenum[var=value]:dest:text
-      else if (std::regex_match(
-                   strline,
-                   std::regex("\\s*\\d+(\\[[^=]*=\\s*-?\\d+\\])?:\\s*\\d+:.*"))) {
+      else if (isDestPage || isPageWithCond) {
         size_t equal = 0;
         std::string condition;
         // Lines: pagenum[var=value]:dest:text
-        if (std::regex_match(strline,
-                             std::regex("\\s*\\d+\\[[^=]*=\\s*-?\\d+\\]:\\s*\\d+:.*"))) {
+        if (isPageWithCond) {
           equal = strline.find_first_of('=');
           size_t leftB = strline.find_first_of('[');
           size_t rightB = strline.find_first_of(']', equal + 1);
@@ -127,7 +243,7 @@ class Story {
         pages[pageNum].addChoice(destPageNum, strline.substr(second + 1), condition);
       }
       // Lines: pagenum$var=value
-      else if (std::regex_match(strline, std::regex("\\s*\\d+\\$[^=]*=\\s*-?\\d+"))) {
+      else if (isVarDefine) {
         size_t dollar = strline.find_first_of('$');
         size_t pageNum = myaTol(strline.c_str());
         if (pageNum >= pages.size()) {
@@ -138,6 +254,7 @@ class Story {
       }
       else {
         std::cerr << "Invalid input line!\n";
+        std::cout << strline << std::endl;
         throw std::exception();
       }
     }
