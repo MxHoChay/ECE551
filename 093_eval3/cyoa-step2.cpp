@@ -13,8 +13,10 @@ int main(int argc, char ** argv) {
   Story mystory;
   mystory.parseStory(dirName + "/");
   mystory.verifyTheStory();
-  mystory.readStory("&&&");
-  char * line;
+  if (mystory.readStory("&&&")) {
+    return EXIT_SUCCESS;
+  }
+  char * line = NULL;
   size_t sz = 0;
   while (getline(&line, &sz, stdin) > 0) {
     std::string str(line);
@@ -23,7 +25,9 @@ int main(int argc, char ** argv) {
     }
     free(line);
     line = NULL;
-    mystory.readStory(str);
+    if (mystory.readStory(str)) {
+      return EXIT_SUCCESS;
+    }
   }
   free(line);
   return EXIT_SUCCESS;

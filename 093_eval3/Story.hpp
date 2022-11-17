@@ -163,29 +163,34 @@ class Story {
     }
   }
 
-  void readStory(const std::string & userInput) {
+  bool readStory(const std::string & userInput) {
     if (userInput == "&&&") {
       variables = std::map<std::string, long int>();
       pages[nowPage].updateVar(variables);
-      pages[nowPage].readPage(std::cout, variables, true);
-      return;
+      if (pages[nowPage].readPage(std::cout, variables, true)) {
+        return true;
+      }
+      return false;
     }
     size_t userChoice = myaTol(userInput, true);
     size_t nextPage = pages[nowPage].getNext(userChoice, variables);
     // If the input is invalid, wait for next input.
     if (userChoice > pages[nowPage].getSize() || userChoice == 0) {
       std::cout << "That is not a valid choice, please try again\n";
-      return;
+      return false;
     }
     // If the user attempts to select an unavailable option.
     if (nextPage + 1 == 0) {
       std::cout << "That choice is not available at this time, please try again\n";
-      return;
+      return false;
     }
     // Update the page and then print.
     nowPage = nextPage;
     pages[nowPage].updateVar(variables);
-    pages[nowPage].readPage(std::cout, variables, true);
+    if (pages[nowPage].readPage(std::cout, variables, true)) {
+      return true;
+    }
+    return false;
   }
 
   // Try to find paths which can win the game.

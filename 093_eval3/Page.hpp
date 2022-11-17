@@ -106,7 +106,7 @@ class Page {
     return choices[next - 1].getDest(storyVar);
   }
 
-  void readPage(std::ostream & s,
+  bool readPage(std::ostream & s,
                 const std::map<std::string, long int> & storyVar,
                 bool isUserReading = false) const {
     s << text << std::endl;
@@ -124,8 +124,9 @@ class Page {
       }
     }
     if (isUserReading && type != N) {
-      exit(EXIT_SUCCESS);
+      return true;
     }
+    return false;
   }
 
   friend std::ostream & operator<<(std::ostream & s, const Page & rhs) {
