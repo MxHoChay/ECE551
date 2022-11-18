@@ -1,9 +1,10 @@
-CFLAGS=-std=gnu++11 -pedantic -Wall -Werror -ggdb3
-cyoa-step1: cyoa-step1.cpp Story.hpp Page.hpp Choice.hpp
+CFLAG=-std=gnu++11 -Werror -Wall -pedantic -ggdb3
+all: cyoa-step1 cyoa-step2 cyoa-step3 cyoa-step4
+cyoa-step1: cyoa-step1.cpp Story.hpp Page.hpp Choice.hpp Tool.hpp
 	g++ -o cyoa-step1 $(CFLAGS) cyoa-step1.cpp
-cyoa-step2: cyoa-step2.cpp Story.hpp Page.hpp Choice.hpp
-	g++ -o cyoa-step2 $(CFLAGS) cyoa-step2.cpp
-cyoa-step3: cyoa-step3.cpp Story.hpp Page.hpp Choice.hpp
+cyoa-step2: cyoa-step2.cpp Story.hpp Page.hpp Choice.hpp Tool.hpp
+	g++ -o cyoa-step2 $(CFLAGS) cyoa-step2.cpp	
+cyoa-step3: cyoa-step3.cpp Story.hpp Page.hpp Choice.hpp Tool.hpp
 	g++ -o cyoa-step3 $(CFLAGS) cyoa-step3.cpp
-cyoa-step4: cyoa-step4.cpp Story.hpp Page.hpp Choice.hpp
+cyoa-step4: cyoa-step4.cpp Story.hpp Page.hpp Choice.hpp Tool.hpp
 	g++ -o cyoa-step4 $(CFLAGS) cyoa-step4.cpp

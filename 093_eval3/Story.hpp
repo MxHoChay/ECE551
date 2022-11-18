@@ -10,6 +10,7 @@
 #include <vector>
 
 #include "Page.hpp"
+#include "Tool.hpp"
 
 /**
  * This class is the whole story.
@@ -21,19 +22,6 @@ class Story {
   std::vector<Page> pages;
   size_t nowPage;
   std::map<std::string, long int> variables;
-
-  // Convert string to size_t.
-  size_t myaTol(const std::string & str, bool isUser = false) {
-    // To make sure there is no other character in the user's input.
-    if (isUser && !std::regex_match(str, std::regex("\\d+"))) {
-      return 0;
-    }
-    if (str.length() == 0 || str[0] == '-') {
-      std::cerr << "Invalid number! Any number should fit in size_t!\n";
-      throw std::exception();
-    }
-    return (size_t)std::stoull(str);
-  }
 
   // Try to make a choice and enter that page.
   bool tryPage(size_t pageNum,
@@ -69,121 +57,6 @@ class Story {
     return hasPath;
   }
 
-  bool isNum(const std::string & str, size_t & i, bool hasSign = false) {
-    while (i < str.length() && str[i] == ' ') {
-      ++i;
-    }
-    if (hasSign) {
-      if (i == str.length()) {
-        return false;
-      }
-      if (str[i] == '-') {
-        ++i;
-      }
-    }
-    if (i == str.length() || str[i] < '0' || str[i] > '9') {
-      return false;
-    }
-    while (i < str.length() && str[i] >= '0' && str[i] <= '9') {
-      ++i;
-    }
-    return true;
-  }
-
-  bool isMatch(const std::string & str, int pattern) {
-    size_t i = 0;
-    size_t len = str.length();
-    if (pattern == 0) {
-      while (i < len && str[i] == ' ') {
-        ++i;
-      }
-      if (i < len) {
-        return false;
-      }
-    }
-    // number@type:filename \\s*\\d+@[NLW]:.+
-    else if (pattern == 1) {
-      if (!isNum(str, i)) {
-        return false;
-      }
-      if (i == len || str[i] != '@') {
-        return false;
-      }
-      ++i;
-      if (i == len || (str[i] != 'N' && str[i] != 'L' && str[i] != 'W')) {
-        return false;
-      }
-      ++i;
-      if (i == len || str[i] != ':') {
-        return false;
-      }
-      ++i;
-      if (i == len) {
-        return false;
-      }
-    }
-    // pagenum:destpage:text  and  pagenum[var=value]:dest:text
-    else if (pattern == 2 || pattern == 3) {
-      if (!isNum(str, i)) {
-        return false;
-      }
-      if (pattern == 3) {
-        if (i == len || str[i] != '[') {
-          return false;
-        }
-        ++i;
-        while (i < len && str[i] != '=') {
-          ++i;
-        }
-        if (i == len) {
-          return false;
-        }
-        ++i;
-        if (!isNum(str, i, true)) {
-          return false;
-        }
-        if (i == len || str[i] != ']') {
-          return false;
-        }
-        ++i;
-      }
-      if (i == len || str[i] != ':') {
-        return false;
-      }
-      ++i;
-      if (!isNum(str, i)) {
-        return false;
-      }
-      if (i == len || str[i] != ':') {
-        return false;
-      }
-    }
-    // pagenum$var=value
-    else if (pattern == 4) {
-      if (!isNum(str, i)) {
-        return false;
-      }
-      if (i == len || str[i] != '$') {
-        return false;
-      }
-      ++i;
-      while (i < len && str[i] != '=') {
-        ++i;
-      }
-      if (i == len) {
-        return false;
-      }
-      ++i;
-      if (!isNum(str, i, true)) {
-        return false;
-      }
-      if (i < len) {
-        return false;
-      }
-    }
-    return true;
-  }
-
  public:
   Story() : pages(std::vector<Page>()), nowPage(0) {}
 
@@ -208,7 +81,7 @@ class Story {
       bool isDestPage = isMatch(strline, 2);
       bool isPageWithCond = isMatch(strline, 3);
       bool isVarDefine = isMatch(strline, 4);
-      // To check if the line is a new page.
+      // To check if the line adds a new page.
       // Lines: number@type:filename
       if (isFileDefine) {
         size_t at_index = strline.find_first_of('@');

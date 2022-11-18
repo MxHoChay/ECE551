@@ -78,11 +78,7 @@ class Page {
   void addVar(const std::string & str) {
     size_t equal = str.find_first_of('=');
     std::string var = str.substr(0, equal);
-    long int value = (long int)std::stoll(str.substr(equal + 1));
-    if ((long long)value != std::stoll(str.substr(equal + 1))) {
-      std::cerr << "Invalid variable value!\n";
-      throw std::exception();
-    }
+    long int value = std::stol(str.substr(equal + 1));
     variables[var] = value;
   }
 
