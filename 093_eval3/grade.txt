@@ -1,6 +1,6 @@
-Grading at 11/17/2022:21:56:10.787140
-For commit ID 86dc1a3caa31527277ab122f7532e951661fc5ec
-Grading at Thu Nov 17 04:56:04 PM EST 2022
+Grading at 11/18/2022:00:27:17.107536
+For commit ID e407941f4ade1766b66866aebee0210d7d05431f
+Grading at Thu Nov 17 07:27:12 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -56,9 +56,13 @@ Now running YOUR tests for step 3
 
 3.1: Current test is ./cyoa-step3 story1 < /dev/null
 -----------------------------
-Your output looks good. Lets check valgrind
-  - Valgrind was clean (no errors, no memory leaks)
-Valgrind was clean
+It looks like you got different output from us on that case.
+Here is the diff (yours on left, ours on right):
+
+0(1),1(2),3(1),8(win)					      <
+0(1),1(3),4(2),12(win)					      <
+Your file did not match the expected ouput
+
 No request to check for intermediate deadline completion on step 3
 
 Step 4
@@ -78,8 +82,8 @@ Your output looks good. Lets check valgrind
 Valgrind was clean
 No request to check for intermediate deadline completion on step 4
 
-You have passed the test cases YOU provided
-If your tests are good, this is great. 
-If your tests are insufficient, you should do much more testing
+You have NOT passed your test cases!
+You should go and figure out/understand where thing went wrong
+And fix the problem(s) before the deadline
 
 Overall Grade: NO GRADE YET
