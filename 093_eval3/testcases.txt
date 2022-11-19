@@ -51,3 +51,7 @@ cyoa-step4 story3 < ./story3/inputs/input22.txt
 cyoa-step4 story3 < ./story3/inputs/input23.txt
 cyoa-step4 story3 < ./story3/inputs/input24.txt
 cyoa-step4 story3 < ./story3/inputs/input25.txt
+ec:step1
+ec:step2
+ec:step3
+ec:step4
