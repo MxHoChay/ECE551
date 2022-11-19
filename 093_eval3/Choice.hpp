@@ -6,6 +6,8 @@
 #include <string>
 #include <vector>
 
+#include "MyException.hpp"
+
 /**
  * This class is used as a single choice in each page.
  * For each choice, we have the destnation page and text as fields.
@@ -19,6 +21,7 @@ class Choice {
 
  public:
   Choice() : dest(0), text(std::string("")), var(std::string("")), value(-1) {}
+  // Construct the choice with condition.
   Choice(size_t d, const std::string & str, const std::string & cond) :
       dest(d), text(str), var(std::string("+Nothing+")), value(-1) {
     if (cond == "") {
@@ -26,10 +29,9 @@ class Choice {
     }
     size_t equal = cond.find_first_of('=');
     var = cond.substr(0, equal);
-    value = (long int)std::stoll(cond.substr(equal + 1));
-    if ((long long)value != std::stoll(cond.substr(equal + 1))) {
-      std::cerr << "Invalid value number!\n";
-      throw std::exception();
+    value = std::strtol(cond.substr(equal + 1).c_str(), NULL, 10);
+    if (errno != 0) {
+      throw NumOutOfRange();
     }
   }
 
@@ -60,6 +62,7 @@ class Choice {
     return false;
   }
 
+  // Return the destpage of this choice.
   size_t getDest(const std::map<std::string, long int> & storyVar) const {
     if (isAvaliable(storyVar)) {
       return dest;
@@ -69,6 +72,7 @@ class Choice {
     }
   }
 
+  // Print the choice and the text. If the choice is unavailable under the condition, then print <UNAVAILABLE>.
   void readChoice(std::ostream & s,
                   const std::map<std::string, long int> & storyVar,
                   bool isUserReading = false) const {

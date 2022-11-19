@@ -123,35 +123,17 @@ bool isMatch(const std::string & str, int pattern) {
 size_t myaTol(const std::string & str, bool isUser = false) {
   size_t i = 0;
   size_t len = str.length();
-  size_t res = 0;
-  size_t max = -1;
-  bool invalid = false;
-  while (i < len && str[i] == ' ') {
-    ++i;
-  }
-  if (i == len || str[i] < '0' || str[i] > '9') {
-    invalid = true;
-  }
-  while (i < len && str[i] >= '0' && str[i] <= '9') {
-    if (res > max / 10 || (res == max / 10 && (size_t)(str[i] - '0') > max % 10)) {
-      invalid = true;
-      break;
-    }
-    res = res * 10 + (size_t)(str[i] - '0');
-    ++i;
-  }
-  if (isUser) {
-    if (invalid || i < len) {
-      return 0;
-    }
+  if (isUser && (!isNum(str, i) || i != len)) {
+    return 0;
   }
   else {
-    if (invalid) {
-      std::cerr << "Number cannot fits in size_t!\n";
+    size_t res = std::strtoul(str.c_str(), NULL, 10);
+    if (errno != 0) {
+      std::cerr << "Invalid number!\n";
       throw std::exception();
     }
+    return res;
   }
-  return res;
 }
 
 #endif

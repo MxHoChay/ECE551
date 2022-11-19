@@ -9,6 +9,7 @@
 #include <vector>
 
 #include "Choice.hpp"
+#include "MyException.hpp"
 
 /**
  * This class is used as a single page in the whole stroy.
@@ -44,13 +45,12 @@ class Page {
     setText(dirName + str.substr(2));
   }
 
-  // Open the file and get the text of this page.
+  // Open the file and set the text of this page.
   void setText(const std::string & filename) {
     std::ifstream input;
     input.open(filename.c_str(), std::ifstream::in);
     if (!input.is_open()) {
-      std::cerr << "No page file! File path :" << filename << std::endl;
-      throw std::exception();
+      throw NoSuchFile();
     }
     std::stringstream buffer;
     buffer << input.rdbuf();
@@ -58,6 +58,7 @@ class Page {
     input.close();
   }
 
+  // Return the number of choices in this page.
   size_t getSize() { return choices.size(); }
 
   bool isWin() { return type == W; }
@@ -67,8 +68,7 @@ class Page {
   // Add a new choice to this page.
   void addChoice(std::size_t d, const std::string & str, const std::string & condition) {
     if (type == W || type == L) {
-      std::cerr << "Can't add choice to a WIN/LOSS page!\n";
-      throw std::exception();
+      throw InvalidChoiceAdd();
     }
     Choice newChoice(d, str, condition);
     choices.push_back(newChoice);
@@ -78,7 +78,10 @@ class Page {
   void addVar(const std::string & str) {
     size_t equal = str.find_first_of('=');
     std::string var = str.substr(0, equal);
-    long int value = std::stol(str.substr(equal + 1));
+    long int value = std::strtol(str.substr(equal + 1).c_str(), NULL, 10);
+    if (errno != 0) {
+      throw NumOutOfRange();
+    }
     variables[var] = value;
   }
 
@@ -98,10 +101,12 @@ class Page {
     }
   }
 
+  // Return the destpage of the chosen choice.
   size_t getNext(size_t next, const std::map<std::string, long int> & storyVar) {
     return choices[next - 1].getDest(storyVar);
   }
 
+  // Print the text and choices of the page.
   bool readPage(std::ostream & s,
                 const std::map<std::string, long int> & storyVar,
                 bool isUserReading = false) const {
@@ -114,6 +119,7 @@ class Page {
     }
     else {
       s << "What would you like to do?" << std::endl << std::endl;
+      // Print all the choices.
       for (std::size_t i = 0; i < choices.size(); i++) {
         s << " " << i + 1 << ". ";
         choices[i].readChoice(std::cout, storyVar, isUserReading);

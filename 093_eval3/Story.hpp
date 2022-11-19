@@ -4,11 +4,11 @@
 #include <cstdlib>
 #include <fstream>
 #include <iostream>
-#include <regex>
 #include <string>
 #include <utility>
 #include <vector>
 
+#include "MyException.hpp"
 #include "Page.hpp"
 #include "Tool.hpp"
 
@@ -23,7 +23,7 @@ class Story {
   size_t nowPage;
   std::map<std::string, long int> variables;
 
-  // Try to make a choice and enter that page.
+  // Try to make a choice and enter that page. Use DFS to implemente this step.
   bool tryPage(size_t pageNum,
                std::vector<bool> & visitTable,
                std::vector<std::pair<size_t, size_t> > & path) {
@@ -48,6 +48,7 @@ class Story {
       size_t nextPage = pages[pageNum].getNext(i + 1, variables);
       std::pair<size_t, size_t> newpair(pageNum, i + 1);
       path.push_back(newpair);
+      // Recursion
       if (tryPage(nextPage, visitTable, path)) {
         hasPath = true;
       }
@@ -60,11 +61,11 @@ class Story {
  public:
   Story() : pages(std::vector<Page>()), nowPage(0) {}
 
+  // Construct the whole story by reading each line of story.txt
   void parseStory(const std::string & dirName) {
     FILE * f = fopen((dirName + "story.txt").c_str(), "r");
     if (f == NULL) {
-      std::cerr << "No story.txt!\n";
-      throw std::exception();
+      throw NoSuchFile();
     }
     char * line = NULL;
     size_t sz = 0;
@@ -81,15 +82,14 @@ class Story {
       bool isDestPage = isMatch(strline, 2);
       bool isPageWithCond = isMatch(strline, 3);
       bool isVarDefine = isMatch(strline, 4);
-      // To check if the line adds a new page.
       // Lines: number@type:filename
       if (isFileDefine) {
         size_t at_index = strline.find_first_of('@');
         size_t pageNum = myaTol(strline.c_str());
         if (pageNum != pages.size()) {
-          std::cerr << "Wrong page order!\n";
-          throw std::exception();
+          throw WrongPageOrder();
         }
+        // Add the new page.
         Page newPage(dirName, strline.substr(at_index + 1));
         pages.push_back(newPage);
       }
@@ -104,14 +104,14 @@ class Story {
           size_t rightB = strline.find_first_of(']', equal + 1);
           condition = strline.substr(leftB + 1, rightB - leftB - 1);
         }
+        // Parse the pagenum and destpage.
         size_t first = strline.find_first_of(':', equal + 1);
         size_t second = strline.find_first_of(':', first + 1);
         size_t pageNum = myaTol(strline.c_str());
         size_t destPageNum = myaTol(strline.substr(first + 1).c_str());
-        // To check the choice is allowed
+        // To check if the choice is allowed
         if (pageNum >= pages.size()) {
-          std::cerr << "Invalid page operation!\n";
-          throw std::exception();
+          throw InvalidPageOp();
         }
         pages[pageNum].addChoice(destPageNum, strline.substr(second + 1), condition);
       }
@@ -120,15 +120,13 @@ class Story {
         size_t dollar = strline.find_first_of('$');
         size_t pageNum = myaTol(strline.c_str());
         if (pageNum >= pages.size()) {
-          std::cerr << "Invalid page operation!\n";
-          throw std::exception();
+          throw InvalidPageOp();
         }
+        // Add the var-value to the page.
         pages[pageNum].addVar(strline.substr(dollar + 1));
       }
       else {
-        std::cerr << "Invalid input line!\n";
-        std::cout << strline << std::endl;
-        throw std::exception();
+        throw InvalidInputLine();
       }
     }
     free(line);
@@ -147,13 +145,14 @@ class Story {
     }
     for (size_t i = 1; i < max; i++) {
       if (refTable[i] == false) {
-        std::cerr << "Page " << i << " has not been referenced!\n";
-        throw std::exception();
+        throw NotComRef();
       }
     }
   }
 
+  // Read and print the story with the user's input.
   bool readStory(const std::string & userInput) {
+    // Print the first page.
     if (userInput == "&&&") {
       variables = std::map<std::string, long int>();
       pages[nowPage].updateVar(variables);
