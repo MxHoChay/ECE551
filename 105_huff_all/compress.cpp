@@ -65,5 +65,6 @@ int main(int argc, char ** argv) {
   BitString empty;
   tree->buildMap(empty, theMap);
   writeCompressedOutput(argv[1], argv[2], theMap);
+  delete tree;
   return EXIT_SUCCESS;
 }
