@@ -25,16 +25,18 @@ void printSym(std::ostream & s, unsigned sym) {
 }
 uint64_t * readFrequencies(const char * fname) {
   //WRITE ME!
-  std::ifstream f;
-  f.open(fname, std::ifstream::in);
+  FILE * f = fopen(fname, "r");
   uint64_t * res = new uint64_t[257];
   for (size_t i = 0; i < 257; ++i) {
     res[i] = 0;
   }
-  char c;
-  while (!f.eof()) {
-    f >> c;
+  int c;
+  while ((c = getc(f)) != -1) {
     ++res[(size_t)c];
   }
+  if (c == -1) {
+    ++res[256];
+  }
+  fclose(f);
   return res;
 }
