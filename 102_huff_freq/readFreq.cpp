@@ -27,7 +27,7 @@ uint64_t * readFrequencies(const char * fname) {
   //WRITE ME!
   std::ifstream f;
   f.open(fname, std::ifstream::in);
-  uint64_t * res = (uint64_t *)malloc(257 * sizeof(*res));
+  uint64_t * res = new uint64_t[257];
   for (size_t i = 0; i < 257; ++i) {
     res[i] = 0;
   }
