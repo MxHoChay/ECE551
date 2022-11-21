@@ -1,0 +1,180 @@
+Grading at 11/21/2022:17:32:32.030007
+For commit ID 87b77f70f9f3dedbbaac2c8502f8c2bd5c3f0af9
+Grading at Mon Nov 21 12:32:27 PM EST 2022
+compiling
+g++ -ggdb3 -Wall -Werror -pedantic -o testFreq testFreq.cpp readFreq.cpp
+Make succeed, testFreq created
+Testcase 1
+-----------------------
+  - Valgrind reported errors
+Valgrind reported errors (test failed).
+==3603525== Memcheck, a memory error detector
+==3603525== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==3603525== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==3603525== Command: ./testFreq /etc/issue
+==3603525== Parent PID: 3603524
+==3603525== 
+==3603525== Conditional jump or move depends on uninitialised value(s)
+==3603525==    at 0x10946B: main (testFreq.cpp:13)
+==3603525== 
+==3603525== Use of uninitialised value of size 8
+==3603525==    at 0x499181B: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3603525==    by 0x4991F99: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<unsigned long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, unsigned long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3603525==    by 0x49A0399: std::ostream& std::ostream::_M_insert<unsigned long>(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3603525==    by 0x1094BC: main (testFreq.cpp:17)
+==3603525== 
+==3603525== Conditional jump or move depends on uninitialised value(s)
+==3603525==    at 0x499182D: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3603525==    by 0x4991F99: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<unsigned long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, unsigned long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3603525==    by 0x49A0399: std::ostream& std::ostream::_M_insert<unsigned long>(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3603525==    by 0x1094BC: main (testFreq.cpp:17)
+==3603525== 
+==3603525== Mismatched free() / delete / delete []
+==3603525==    at 0x484CA8F: operator delete[](void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3603525==    by 0x1094F5: main (testFreq.cpp:19)
+==3603525==  Address 0x4dd4ee0 is 0 bytes inside a block of size 2,056 alloc'd
+==3603525==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3603525==    by 0x109706: readFrequencies(char const*) (readFreq.cpp:30)
+==3603525==    by 0x109413: main (testFreq.cpp:10)
+==3603525== 
+==3603525== 
+==3603525== HEAP SUMMARY:
+==3603525==     in use at exit: 0 bytes in 0 blocks
+==3603525==   total heap usage: 5 allocs, 5 frees, 87,520 bytes allocated
+==3603525== 
+==3603525== All heap blocks were freed -- no leaks are possible
+==3603525== 
+==3603525== Use --track-origins=yes to see where uninitialised values come from
+==3603525== For lists of detected and suppressed errors, rerun with: -s
+==3603525== ERROR SUMMARY: 288 errors from 4 contexts (suppressed: 0 from 0)
+Testcase 2
+-----------------------
+  - Valgrind reported errors
+Valgrind reported errors (test failed).
+==3603540== Memcheck, a memory error detector
+==3603540== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==3603540== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==3603540== Command: ./testFreq /etc/services
+==3603540== Parent PID: 3603539
+==3603540== 
+==3603540== Conditional jump or move depends on uninitialised value(s)
+==3603540==    at 0x10946B: main (testFreq.cpp:13)
+==3603540== 
+==3603540== Use of uninitialised value of size 8
+==3603540==    at 0x499181B: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3603540==    by 0x4991F99: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<unsigned long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, unsigned long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3603540==    by 0x49A0399: std::ostream& std::ostream::_M_insert<unsigned long>(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3603540==    by 0x1094BC: main (testFreq.cpp:17)
+==3603540== 
+==3603540== Conditional jump or move depends on uninitialised value(s)
+==3603540==    at 0x499182D: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3603540==    by 0x4991F99: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<unsigned long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, unsigned long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3603540==    by 0x49A0399: std::ostream& std::ostream::_M_insert<unsigned long>(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3603540==    by 0x1094BC: main (testFreq.cpp:17)
+==3603540== 
+==3603540== Mismatched free() / delete / delete []
+==3603540==    at 0x484CA8F: operator delete[](void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3603540==    by 0x1094F5: main (testFreq.cpp:19)
+==3603540==  Address 0x4dd4ee0 is 0 bytes inside a block of size 2,056 alloc'd
+==3603540==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3603540==    by 0x109706: readFrequencies(char const*) (readFreq.cpp:30)
+==3603540==    by 0x109413: main (testFreq.cpp:10)
+==3603540== 
+==3603540== 
+==3603540== HEAP SUMMARY:
+==3603540==     in use at exit: 0 bytes in 0 blocks
+==3603540==   total heap usage: 5 allocs, 5 frees, 87,520 bytes allocated
+==3603540== 
+==3603540== All heap blocks were freed -- no leaks are possible
+==3603540== 
+==3603540== Use --track-origins=yes to see where uninitialised values come from
+==3603540== For lists of detected and suppressed errors, rerun with: -s
+==3603540== ERROR SUMMARY: 594 errors from 4 contexts (suppressed: 0 from 0)
+Testcase 3
+-----------------------
+  - Valgrind reported errors
+Valgrind reported errors (test failed).
+==3603556== Memcheck, a memory error detector
+==3603556== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==3603556== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==3603556== Command: ./testFreq /usr/share/dict/words
+==3603556== Parent PID: 3603555
+==3603556== 
+==3603556== Conditional jump or move depends on uninitialised value(s)
+==3603556==    at 0x10946B: main (testFreq.cpp:13)
+==3603556== 
+==3603556== Use of uninitialised value of size 8
+==3603556==    at 0x499181B: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3603556==    by 0x4991F99: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<unsigned long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, unsigned long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3603556==    by 0x49A0399: std::ostream& std::ostream::_M_insert<unsigned long>(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3603556==    by 0x1094BC: main (testFreq.cpp:17)
+==3603556== 
+==3603556== Conditional jump or move depends on uninitialised value(s)
+==3603556==    at 0x499182D: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3603556==    by 0x4991F99: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<unsigned long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, unsigned long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3603556==    by 0x49A0399: std::ostream& std::ostream::_M_insert<unsigned long>(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3603556==    by 0x1094BC: main (testFreq.cpp:17)
+==3603556== 
+==3603556== Mismatched free() / delete / delete []
+==3603556==    at 0x484CA8F: operator delete[](void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3603556==    by 0x1094F5: main (testFreq.cpp:19)
+==3603556==  Address 0x4dd4ee0 is 0 bytes inside a block of size 2,056 alloc'd
+==3603556==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3603556==    by 0x109706: readFrequencies(char const*) (readFreq.cpp:30)
+==3603556==    by 0x109413: main (testFreq.cpp:10)
+==3603556== 
+==3603556== 
+==3603556== HEAP SUMMARY:
+==3603556==     in use at exit: 0 bytes in 0 blocks
+==3603556==   total heap usage: 5 allocs, 5 frees, 87,520 bytes allocated
+==3603556== 
+==3603556== All heap blocks were freed -- no leaks are possible
+==3603556== 
+==3603556== Use --track-origins=yes to see where uninitialised values come from
+==3603556== For lists of detected and suppressed errors, rerun with: -s
+==3603556== ERROR SUMMARY: 704 errors from 4 contexts (suppressed: 0 from 0)
+Testcase 4
+-----------------------
+  - Valgrind reported errors
+Valgrind reported errors (test failed).
+==3603595== Memcheck, a memory error detector
+==3603595== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==3603595== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==3603595== Command: ./testFreq /etc/issue
+==3603595== Parent PID: 3603594
+==3603595== 
+==3603595== Conditional jump or move depends on uninitialised value(s)
+==3603595==    at 0x10946B: main (testFreq.cpp:13)
+==3603595== 
+==3603595== Use of uninitialised value of size 8
+==3603595==    at 0x499181B: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3603595==    by 0x4991F99: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<unsigned long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, unsigned long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3603595==    by 0x49A0399: std::ostream& std::ostream::_M_insert<unsigned long>(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3603595==    by 0x1094BC: main (testFreq.cpp:17)
+==3603595== 
+==3603595== Conditional jump or move depends on uninitialised value(s)
+==3603595==    at 0x499182D: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3603595==    by 0x4991F99: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<unsigned long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, unsigned long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3603595==    by 0x49A0399: std::ostream& std::ostream::_M_insert<unsigned long>(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==3603595==    by 0x1094BC: main (testFreq.cpp:17)
+==3603595== 
+==3603595== Mismatched free() / delete / delete []
+==3603595==    at 0x484CA8F: operator delete[](void*) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3603595==    by 0x1094F5: main (testFreq.cpp:19)
+==3603595==  Address 0x4dd4ee0 is 0 bytes inside a block of size 2,056 alloc'd
+==3603595==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3603595==    by 0x109706: readFrequencies(char const*) (readFreq.cpp:30)
+==3603595==    by 0x109413: main (testFreq.cpp:10)
+==3603595== 
+==3603595== 
+==3603595== HEAP SUMMARY:
+==3603595==     in use at exit: 0 bytes in 0 blocks
+==3603595==   total heap usage: 5 allocs, 5 frees, 87,520 bytes allocated
+==3603595== 
+==3603595== All heap blocks were freed -- no leaks are possible
+==3603595== 
+==3603595== Use --track-origins=yes to see where uninitialised values come from
+==3603595== For lists of detected and suppressed errors, rerun with: -s
+==3603595== ERROR SUMMARY: 288 errors from 4 contexts (suppressed: 0 from 0)
+
+Overall Grade: F
