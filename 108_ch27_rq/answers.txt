@@ -4,8 +4,8 @@ G
 D
 C
 F
-B
-B
-C
+D
+D
 A
+D
 B
