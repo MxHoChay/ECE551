@@ -1,6 +1,8 @@
 #ifndef __TOOL_HPP__
 #define __TOOL_HPP__
 
+#include <cerrno>
+#include <cstdlib>
 #include <iostream>
 #include <string>
 
