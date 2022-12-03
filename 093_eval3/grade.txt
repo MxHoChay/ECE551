@@ -1,6 +1,6 @@
-Grading at 12/03/2022:21:58:43.089606
-For commit ID 716b2c042c5e1d4d2c23c883d5ff6df69b3e1af5
-Grading at Sat Dec  3 04:58:35 PM EST 2022
+Grading at 12/03/2022:22:00:21.069135
+For commit ID 7f77444d1a687c4e3a38b90f29fb472acb87843d
+Grading at Sat Dec  3 05:00:13 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -54,14 +54,8 @@ Valgrind was clean
 
 1.4: Current test is ./cyoa-step1 goodstory < /dev/null
 -----------------------------
-Great: we both considered this an error
-----here is what you printed on stderr---
-terminate called after throwing an instance of 'InvalidChoiceAdd'
-  what():  Can't add choice to a WIN/LOSS page!
-
-timeout: the monitored command dumped core
------------------------------------------
-Lets check if it valgrinds:
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
 No request to check for intermediate deadline completion on step 1
 
@@ -77,7 +71,7 @@ No request to check for intermediate deadline completion on step 2
 
 Step 3
 Checking that cyoa-step3 compiles
-make: 'cyoa-step3' is up to date.
+g++ -o cyoa-step3 -std=gnu++98 -Werror -Wall -pedantic -ggdb3 cyoa-step3.cpp
 The code compiled (good)
 Executable cyoa-step3 exists (good)
 ------------------------------------
@@ -87,14 +81,8 @@ Now running YOUR tests for step 3
 
 3.1: Current test is ./cyoa-step3 goodstory < /dev/null
 -----------------------------
-Great: we both considered this an error
-----here is what you printed on stderr---
-terminate called after throwing an instance of 'InvalidChoiceAdd'
-  what():  Can't add choice to a WIN/LOSS page!
-
-timeout: the monitored command dumped core
------------------------------------------
-Lets check if it valgrinds:
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
 No request to check for intermediate deadline completion on step 3
 
