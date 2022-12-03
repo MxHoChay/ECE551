@@ -1,0 +1,28 @@
+             0@N:page0.txt
+0:    1:
+  0:2:sdfasdfasd
+0:3:aaaaa
+0:4:sdfsdafs
+0:5:
+1@N:page1.txt
+1:2:sdfsdafs
+1:3:csdcsd
+
+
+
+1:4:csda
+1:5:sd
+2@N:page2.txt
+3@L:page3.txt
+4@N:page4.txt
+5@W:page5.txt
+
+
+
+2:3:
+2:4:
+2:5:
+3:4:
+3:5:
+
+4:5:

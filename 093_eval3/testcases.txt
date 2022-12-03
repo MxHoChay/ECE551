@@ -1,3 +1,5 @@
 cyoa-step1 numfault1
 cyoa-step1 numfault2
 cyoa-step1 numfault3
+cyoa-step1 goodstory
+cyoa-step3 goodstory
