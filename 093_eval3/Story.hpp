@@ -137,16 +137,22 @@ class Story {
   void verifyTheStory() {
     size_t max = pages.size();
     std::vector<bool> refTable;
+    std::vector<bool> winandlose;
+    winandlose.push_back(false);
+    winandlose.push_back(false);
     for (size_t i = 0; i < max; i++) {
       refTable.push_back(false);
     }
     for (size_t i = 0; i < max; i++) {
-      pages[i].verifyThePage(max, refTable);
+      pages[i].verifyThePage(max, refTable, winandlose);
     }
     for (size_t i = 1; i < max; i++) {
       if (refTable[i] == false) {
-        throw NotComRef();
+        throw InvalidStory();
       }
+    }
+    if (!(winandlose[0] && winandlose[1])) {
+      throw InvalidStory();
     }
   }
 

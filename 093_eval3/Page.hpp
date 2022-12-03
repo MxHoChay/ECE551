@@ -95,9 +95,17 @@ class Page {
   }
 
   // To check if each page referenced by this page is valid.
-  void verifyThePage(size_t max, std::vector<bool> & refTable) {
+  void verifyThePage(size_t max,
+                     std::vector<bool> & refTable,
+                     std::vector<bool> & winandlose) {
     for (size_t i = 0; i < choices.size(); i++) {
       choices[i].verifyTheChoice(max, refTable);
+    }
+    if (type == W) {
+      winandlose[0] = true;
+    }
+    if (type == L) {
+      winandlose[1] = true;
     }
   }
 

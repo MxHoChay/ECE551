@@ -3,6 +3,7 @@
 
 #include <exception>
 #include <string>
+
 class WrongPageOrder : public std::exception {
  public:
   virtual const char * what() const throw() { return "Wrong page order!\n"; }
@@ -23,9 +24,9 @@ class InvalidInputLine : public std::exception {
   virtual const char * what() const throw() { return "Invalid input line!\n"; }
 };
 
-class NotComRef : public std::exception {
+class InvalidStory : public std::exception {
  public:
-  virtual const char * what() const throw() { return "Not completely referenced!\n"; }
+  virtual const char * what() const throw() { return "It is not a valid story!\n"; }
 };
 
 class InvalidChoiceAdd : public std::exception {
