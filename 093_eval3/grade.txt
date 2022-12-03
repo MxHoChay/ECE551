@@ -1,6 +1,6 @@
-Grading at 12/03/2022:21:42:30.655863
-For commit ID 34d4fbb10f758f9a9de35fd1db4b435b12dd36b5
-Grading at Sat Dec  3 04:42:24 PM EST 2022
+Grading at 12/03/2022:21:46:05.511108
+For commit ID 38fedfb67e746b503f86079ce9e332f8f352b99e
+Grading at Sat Dec  3 04:46:00 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -43,9 +43,9 @@ Valgrind was clean
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
-Invalid number!
-terminate called after throwing an instance of 'std::exception'
-  what():  std::exception
+terminate called after throwing an instance of 'NumOutOfRange'
+  what():  Number out of range!
+
 timeout: the monitored command dumped core
 -----------------------------------------
 Lets check if it valgrinds:
@@ -54,7 +54,7 @@ No request to check for intermediate deadline completion on step 1
 
 Step 2
 Checking that cyoa-step2 compiles
-g++ -o cyoa-step2 -std=gnu++98 -Werror -Wall -pedantic -ggdb3 cyoa-step2.cpp	
+make: 'cyoa-step2' is up to date.
 The code compiled (good)
 Executable cyoa-step2 exists (good)
 ------------------------------------
@@ -64,7 +64,7 @@ No request to check for intermediate deadline completion on step 2
 
 Step 3
 Checking that cyoa-step3 compiles
-g++ -o cyoa-step3 -std=gnu++98 -Werror -Wall -pedantic -ggdb3 cyoa-step3.cpp
+make: 'cyoa-step3' is up to date.
 The code compiled (good)
 Executable cyoa-step3 exists (good)
 ------------------------------------
@@ -74,7 +74,7 @@ No request to check for intermediate deadline completion on step 3
 
 Step 4
 Checking that cyoa-step4 compiles
-g++ -o cyoa-step4 -std=gnu++98 -Werror -Wall -pedantic -ggdb3 cyoa-step4.cpp
+make: 'cyoa-step4' is up to date.
 The code compiled (good)
 Executable cyoa-step4 exists (good)
 ------------------------------------
