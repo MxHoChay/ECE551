@@ -6,6 +6,8 @@
 #include <iostream>
 #include <string>
 
+#include "MyException.hpp"
+
 bool isNum(const std::string & str, size_t & i, bool hasSign = false) {
   while (i < str.length() && str[i] == ' ') {
     ++i;
@@ -131,8 +133,7 @@ size_t myaTol(const std::string & str, bool isUser = false) {
   else {
     size_t res = std::strtoul(str.c_str(), NULL, 10);
     if (errno != 0) {
-      std::cerr << "Invalid number!\n";
-      throw std::exception();
+      throw NumOutOfRange();
     }
     return res;
   }
