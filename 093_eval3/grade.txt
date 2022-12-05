@@ -1,11 +1,14 @@
-Grading at 12/03/2022:22:24:17.755350
-For commit ID 611603c44cb6839cca820ea95f6113ebaf16bc3f
-Grading at Sat Dec  3 05:24:12 PM EST 2022
+Grading at 12/05/2022:21:26:30.419124
+For commit ID ca15d175974264647a2d69087a1d47d3dc921dc5
+Grading at Mon Dec  5 04:26:21 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
 Checking that cyoa-step1 compiles
-make: 'cyoa-step1' is up to date.
+rm -f *~ cyoa-step1 cyoa-step2 cyoa-step3 cyoa-step4  cyoa-step1.o  cyoa-step2.o  cyoa-step3.o  cyoa-step4.o
+g++ -std=gnu++98 -Werror -Wall -pedantic -ggdb3 -c cyoa-step1.cpp
+g++ -o cyoa-step1 cyoa-step1.o
+rm cyoa-step1.o
 The code compiled (good)
 Executable cyoa-step1 exists (good)
 ------------------------------------
@@ -61,7 +64,10 @@ No request to check for intermediate deadline completion on step 1
 
 Step 2
 Checking that cyoa-step2 compiles
-make: 'cyoa-step2' is up to date.
+rm -f *~ cyoa-step1 cyoa-step2 cyoa-step3 cyoa-step4  cyoa-step1.o  cyoa-step2.o  cyoa-step3.o  cyoa-step4.o
+g++ -std=gnu++98 -Werror -Wall -pedantic -ggdb3 -c cyoa-step2.cpp
+g++ -o cyoa-step2 cyoa-step2.o
+rm cyoa-step2.o
 The code compiled (good)
 Executable cyoa-step2 exists (good)
 ------------------------------------
@@ -71,7 +77,10 @@ No request to check for intermediate deadline completion on step 2
 
 Step 3
 Checking that cyoa-step3 compiles
-make: 'cyoa-step3' is up to date.
+rm -f *~ cyoa-step1 cyoa-step2 cyoa-step3 cyoa-step4  cyoa-step1.o  cyoa-step2.o  cyoa-step3.o  cyoa-step4.o
+g++ -std=gnu++98 -Werror -Wall -pedantic -ggdb3 -c cyoa-step3.cpp
+g++ -o cyoa-step3 cyoa-step3.o
+rm cyoa-step3.o
 The code compiled (good)
 Executable cyoa-step3 exists (good)
 ------------------------------------
@@ -88,7 +97,10 @@ No request to check for intermediate deadline completion on step 3
 
 Step 4
 Checking that cyoa-step4 compiles
-make: 'cyoa-step4' is up to date.
+rm -f *~ cyoa-step1 cyoa-step2 cyoa-step3 cyoa-step4  cyoa-step1.o  cyoa-step2.o  cyoa-step3.o  cyoa-step4.o
+g++ -std=gnu++98 -Werror -Wall -pedantic -ggdb3 -c cyoa-step4.cpp
+g++ -o cyoa-step4 cyoa-step4.o
+rm cyoa-step4.o
 The code compiled (good)
 Executable cyoa-step4 exists (good)
 ------------------------------------
