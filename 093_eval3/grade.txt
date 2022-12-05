@@ -1,6 +1,6 @@
-Grading at 12/05/2022:21:31:04.748115
-For commit ID 27b127133ed7f894d9d7ecb26a14444f17d9755b
-Grading at Mon Dec  5 04:30:55 PM EST 2022
+Grading at 12/05/2022:21:33:54.674269
+For commit ID 87b601e9cce659d97db06c1d01214064b731bc98
+Grading at Mon Dec  5 04:33:44 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -77,8 +77,9 @@ Now running YOUR tests for step 2
 
 2.1: Current test is ./cyoa-step2 /usr/local/ece551/cyoa/story1  <  ./input1.txt
 -----------------------------
-We considered this a failure case.
-But you did not (exit status was EXIT_SUCCESS).
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
+Valgrind was clean
 No request to check for intermediate deadline completion on step 2
 
 Step 3
@@ -114,8 +115,8 @@ Now running YOUR tests for step 4
 ------------------------------------
 No request to check for intermediate deadline completion on step 4
 
-You have NOT passed your test cases!
-You should go and figure out/understand where thing went wrong
-And fix the problem(s) before the deadline
+You have passed the test cases YOU provided
+If your tests are good, this is great. 
+If your tests are insufficient, you should do much more testing
 
 Overall Grade: NO GRADE YET
