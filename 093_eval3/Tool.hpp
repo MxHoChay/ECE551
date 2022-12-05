@@ -131,7 +131,7 @@ size_t myaTol(const std::string & str, bool isUser = false) {
     return 0;
   }
   else {
-    size_t res = std::strtoul(str.c_str(), NULL, 10);
+    size_t res = strtoul(str.c_str(), NULL, 10);
     if (errno != 0) {
       throw NumOutOfRange();
     }

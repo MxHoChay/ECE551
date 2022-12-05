@@ -1,6 +1,8 @@
 #ifndef __PAGE_HPP__
 #define __PAGE_HPP__
 
+#include <cerrno>
+#include <cstdlib>
 #include <fstream>
 #include <iostream>
 #include <map>
@@ -78,7 +80,7 @@ class Page {
   void addVar(const std::string & str) {
     size_t equal = str.find_first_of('=');
     std::string var = str.substr(0, equal);
-    long int value = std::strtol(str.substr(equal + 1).c_str(), NULL, 10);
+    long int value = strtol(str.substr(equal + 1).c_str(), NULL, 10);
     if (errno != 0) {
       throw NumOutOfRange();
     }

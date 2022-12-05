@@ -1,6 +1,8 @@
 #ifndef __CHOICE_HPP__
 #define __CHOICE_HPP__
 
+#include <cerrno>
+#include <cstdlib>
 #include <iostream>
 #include <map>
 #include <string>
@@ -29,7 +31,7 @@ class Choice {
     }
     size_t equal = cond.find_first_of('=');
     var = cond.substr(0, equal);
-    value = std::strtol(cond.substr(equal + 1).c_str(), NULL, 10);
+    value = strtol(cond.substr(equal + 1).c_str(), NULL, 10);
     if (errno != 0) {
       throw NumOutOfRange();
     }

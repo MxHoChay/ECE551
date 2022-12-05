@@ -1,10 +1,12 @@
 CFLAGS=-std=gnu++98 -Werror -Wall -pedantic -ggdb3
-all: cyoa-step1 cyoa-step2 cyoa-step3 cyoa-step4
-cyoa-step1: cyoa-step1.cpp Story.hpp Page.hpp Choice.hpp Tool.hpp MyException.hpp
-	g++ -o cyoa-step1 $(CFLAGS) cyoa-step1.cpp
-cyoa-step2: cyoa-step2.cpp Story.hpp Page.hpp Choice.hpp Tool.hpp MyException.hpp
-	g++ -o cyoa-step2 $(CFLAGS) cyoa-step2.cpp	
-cyoa-step3: cyoa-step3.cpp Story.hpp Page.hpp Choice.hpp Tool.hpp MyException.hpp
-	g++ -o cyoa-step3 $(CFLAGS) cyoa-step3.cpp
-cyoa-step4: cyoa-step4.cpp Story.hpp Page.hpp Choice.hpp Tool.hpp MyException.hpp
-	g++ -o cyoa-step4 $(CFLAGS) cyoa-step4.cpp
+PROGS=cyoa-step1 cyoa-step2 cyoa-step3 cyoa-step4
+OBJS=$(patsubst %, %.o, $(PROGS))
+all: $(PROGS)
+cyoa-step%: cyoa-step%.o
+	g++ -o $@ $^
+cyoa-step%.o: cyoa-step%.cpp
+	g++ $(CFLAGS) -c $<
+
+.PHONY: clean
+clean:
+	rm -f *~ $(PROGS) $(OBJS)
