@@ -1,6 +1,6 @@
-Grading at 12/05/2022:21:34:54.226144
-For commit ID 38c2c78581f1a4e6c2eac87aefe28d0eb735481b
-Grading at Mon Dec  5 04:34:44 PM EST 2022
+Grading at 12/07/2022:19:13:23.536405
+For commit ID eae9ef86efe46c7a98f90de94fae31a78a828a22
+Grading at Wed Dec  7 02:13:14 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -77,8 +77,98 @@ Now running YOUR tests for step 2
 
 2.1: Current test is ./cyoa-step2 /usr/local/ece551/cyoa/story1  <  ./input1.txt
 -----------------------------
-We considered this a failure case.
-But you did not (exit status was EXIT_SUCCESS).
+It looks like you got different output from us on that case.
+Here is the diff (yours on left, ours on right):
+
+Welcome to choose your own adventure.				Welcome to choose your own adventure.
+Get ready for the thrilling tale of dragons and brunches.	Get ready for the thrilling tale of dragons and brunches.
+Will you get help from Grew and/or Denevieve?			Will you get help from Grew and/or Denevieve?
+Will you be eaten by a dragon?					Will you be eaten by a dragon?
+
+Only you can decide....						Only you can decide....
+
+What would you like to do?					What would you like to do?
+
+ 1. I am ready for this story!					 1. I am ready for this story!
+That is not a valid choice, please try again			That is not a valid choice, please try again
+That is not a valid choice, please try again		      <
+One day, a strange old wizard comes to your village and tells	One day, a strange old wizard comes to your village and tells
+there is an evil dragon lurking in the hills. This wizard's s	there is an evil dragon lurking in the hills. This wizard's s
+why the village's goats and cows have been going missing late	why the village's goats and cows have been going missing late
+
+The wizard tells you: "It is up to you, hero, to stop this dr	The wizard tells you: "It is up to you, hero, to stop this dr
+else in this village is foolish...errrr I mean brave enough t	else in this village is foolish...errrr I mean brave enough t
+dragon." 							dragon." 
+
+The wizard offers you a choice of one of three magic items to	The wizard offers you a choice of one of three magic items to
+your quest. 							your quest. 
+
+The first is a magic whistle that lets you make any bird call	The first is a magic whistle that lets you make any bird call
+want. The second is a pair of magic shoes that let you jump 1	want. The second is a pair of magic shoes that let you jump 1
+air. The third is a magic toaster, which can take any item th	air. The third is a magic toaster, which can take any item th
+into it, and turn it into perfectly cooked toast (optionally 	into it, and turn it into perfectly cooked toast (optionally 
+and/or jam). 							and/or jam). 
+
+"Choose wisely, for your quest and your village depend on you	"Choose wisely, for your quest and your village depend on you
+
+What would you like to do?					What would you like to do?
+
+ 1. Choose the magic whistle.					 1. Choose the magic whistle.
+ 2. Choose the magic shoes.					 2. Choose the magic shoes.
+ 3. Choose the magic toaster.					 3. Choose the magic toaster.
+As you take the magic toaster from the wizard's hand, he disa	As you take the magic toaster from the wizard's hand, he disa
+puff of smoke. You decide that you should give the toaster a 	puff of smoke. You decide that you should give the toaster a 
+set off to deal with the dragon (after all, if you learned no	set off to deal with the dragon (after all, if you learned no
+school, it was that testing is VERY important). 		school, it was that testing is VERY important). 
+
+Having not had any breakfast, you are quite hungry, so testin	Having not had any breakfast, you are quite hungry, so testin
+seems like a great solution to two problems. You grab a rock 	seems like a great solution to two problems. You grab a rock 
+ground, stuff it in, and think of delicious toast with raspbe	ground, stuff it in, and think of delicious toast with raspbe
+seconds later, out pops the most perfectly done toast with ju	seconds later, out pops the most perfectly done toast with ju
+amount of butter and jam. Wow that is good! You spend a while	amount of butter and jam. Wow that is good! You spend a while
+testing the toaster again and again "just to be sure". After 	testing the toaster again and again "just to be sure". After 
+stuffed on toast, you start to wonder how this will help you 	stuffed on toast, you start to wonder how this will help you 
+dragon. 							dragon. 
+
+Putting that question in the back of your mind, you contempla	Putting that question in the back of your mind, you contempla
+not you should get some help before you set out. On the one h	not you should get some help before you set out. On the one h
+alone, you might be able to better sneak into the dragon's la	alone, you might be able to better sneak into the dragon's la
+other hand, help might be useful.				other hand, help might be useful.
+
+Fortunately for you, the two wisest people you know, Deneviev	Fortunately for you, the two wisest people you know, Deneviev
+live in the next village over. Thinking about it for several 	live in the next village over. Thinking about it for several 
+decide whom to go to for help.					decide whom to go to for help.
+
+What would you like to do?					What would you like to do?
+
+ 1. Go to Denevieve for help.					 1. Go to Denevieve for help.
+ 2. Go to Grew for help.					 2. Go to Grew for help.
+ 3. Go alone.							 3. Go alone.
+After thinking about it for a bit, you decide to go to Grew f	After thinking about it for a bit, you decide to go to Grew f
+you explain your quest, and that you have a magic toaster, Gr	you explain your quest, and that you have a magic toaster, Gr
+idea. 								idea. 
+
+"Well, dragons really love to eat, so lets just give them a b	"Well, dragons really love to eat, so lets just give them a b
+than the animals in the area!" Grew exclaims. He goes on to e	than the animals in the area!" Grew exclaims. He goes on to e
+will create the best all-you-can-eat brunch buffet ever. Grew	will create the best all-you-can-eat brunch buffet ever. Grew
+for berries, smoked salmon, pastries, and you will provide li	for berries, smoked salmon, pastries, and you will provide li
+all-you-can-eat toast with the magic toaster. 			all-you-can-eat toast with the magic toaster. 
+
+You swing by Troll Foods, the local grocery store (yes, run b	You swing by Troll Foods, the local grocery store (yes, run b
+trolls--but they are nice trolls) and pick up the supplies: 1	trolls--but they are nice trolls) and pick up the supplies: 1
+salmon, 20 kg of mixed berries, and 100 pastries.		salmon, 20 kg of mixed berries, and 100 pastries.
+
+Upon arriving at the dragon's cave, you lay out the buffet an	Upon arriving at the dragon's cave, you lay out the buffet an
+toast. The dragon is so happy with the food, and thrilled tha	toast. The dragon is so happy with the food, and thrilled tha
+all the toast he wants, that he agrees to stop eating people'	all the toast he wants, that he agrees to stop eating people'
+animals, on one condition: you and Grew have to come back eac	animals, on one condition: you and Grew have to come back eac
+have brunch with him.						have brunch with him.
+
+You all live happily ever after.				You all live happily ever after.
+
+Congratulations! You have won. Hooray!				Congratulations! You have won. Hooray!
+Your file did not match the expected output
+
 No request to check for intermediate deadline completion on step 2
 
 Step 3
