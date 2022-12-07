@@ -4,6 +4,7 @@
 #include <cstdlib>
 #include <fstream>
 #include <iostream>
+#include <set>
 #include <string>
 #include <utility>
 #include <vector>
@@ -44,8 +45,15 @@ class Story {
     // Read this page and try the next one.
     visitTable[pageNum] = true;
     bool hasPath = false;
+    std::set<size_t> pageset;
     for (size_t i = 0; i < pages[pageNum].getSize(); i++) {
       size_t nextPage = pages[pageNum].getNext(i + 1, variables);
+      if (pageset.find(nextPage) == pageset.end()) {
+        pageset.insert(nextPage);
+      }
+      else {
+        continue;
+      }
       std::pair<size_t, size_t> newpair(pageNum, i + 1);
       path.push_back(newpair);
       // Recursion
