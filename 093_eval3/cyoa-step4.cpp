@@ -18,6 +18,7 @@ int main(int argc, char ** argv) {
   }
   char * line = NULL;
   size_t sz = 0;
+  // Get user input.
   while (getline(&line, &sz, stdin) > 0) {
     std::string str(line);
     if (str[str.length() - 1] == '\n') {
