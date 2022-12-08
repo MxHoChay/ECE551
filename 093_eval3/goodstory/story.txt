@@ -16,7 +16,7 @@
 2@N:page2.txt
 3@N:page3.txt
 4@N:page4.txt
-5@W:page5.txt
+5@N:page5.txt
 
 3:4:
 3:5:
@@ -27,3 +27,9 @@
 
 4:5:
 6@L:page6.txt
+7@N:page7.txt
+8@N:page8.txt
+9@W:page9.txt
+7:8:sdfsdafs
+8:7:sdfasdfasd
+8:9:win
