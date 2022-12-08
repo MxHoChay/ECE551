@@ -1,6 +1,6 @@
-Grading at 12/08/2022:20:37:50.794800
-For commit ID bc4be92de90ad92f4d12bf30732831cce1d99143
-Grading at Thu Dec  8 03:37:40 PM EST 2022
+Grading at 12/08/2022:20:46:48.268071
+For commit ID a6ffc1a739aa4039c7a5c8c9ccb73aac69f2af3b
+Grading at Thu Dec  8 03:46:34 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -208,8 +208,8 @@ Now running YOUR tests for step 4
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
-terminate called after throwing an instance of 'NumOutOfRange'
-  what():  Number out of range!
+terminate called after throwing an instance of 'InvalidInputLine'
+  what():  Invalid input line!
 
 timeout: the monitored command dumped core
 -----------------------------------------
@@ -221,8 +221,8 @@ Valgrind was clean
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
-terminate called after throwing an instance of 'NumOutOfRange'
-  what():  Number out of range!
+terminate called after throwing an instance of 'InvalidInputLine'
+  what():  Invalid input line!
 
 timeout: the monitored command dumped core
 -----------------------------------------
