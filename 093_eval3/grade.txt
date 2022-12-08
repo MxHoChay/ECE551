@@ -1,6 +1,6 @@
-Grading at 12/08/2022:19:18:25.342732
-For commit ID 2abe482c6bb6ba2f460c40950c70a1debabf587b
-Grading at Thu Dec  8 02:18:16 PM EST 2022
+Grading at 12/08/2022:20:03:59.378453
+For commit ID 7a031bb9ccab7c52dd9777dc893b7abfefae6bef
+Grading at Thu Dec  8 03:03:50 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -202,6 +202,18 @@ Executable cyoa-step4 exists (good)
 ------------------------------------
 Now running YOUR tests for step 4
 ------------------------------------
+
+
+4.1: Current test is ./cyoa-step4 goodstory4  <  goodstory4/input1.txt
+-----------------------------
+We considered this a failure case.
+But you did not (exit status was EXIT_SUCCESS).
+
+
+4.2: Current test is ./cyoa-step4 goodstory4  <  goodstory4/input2.txt
+-----------------------------
+We considered this a failure case.
+But you did not (exit status was EXIT_SUCCESS).
 No request to check for intermediate deadline completion on step 4
 
 You have NOT passed your test cases!
