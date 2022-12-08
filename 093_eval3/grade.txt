@@ -1,6 +1,6 @@
-Grading at 12/08/2022:21:08:12.594604
-For commit ID 8c38bb9ad930ce162039c0ff518798704d54b592
-Grading at Thu Dec  8 04:08:06 PM EST 2022
+Grading at 12/08/2022:21:10:21.056199
+For commit ID 22fde98d6e3c3a8fc0ab7be0d3a9f7139d25b0ca
+Grading at Thu Dec  8 04:10:15 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -57,14 +57,8 @@ Now running YOUR tests for step 4
 
 4.1: Current test is ./cyoa-step4 goodstory4  <  goodstory4/input1.txt
 -----------------------------
-Great: we both considered this an error
-----here is what you printed on stderr---
-terminate called after throwing an instance of 'InvalidStory'
-  what():  It is not a valid story!
-
-timeout: the monitored command dumped core
------------------------------------------
-Lets check if it valgrinds:
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
 No request to check for intermediate deadline completion on step 4
 
