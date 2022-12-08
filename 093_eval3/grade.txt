@@ -1,6 +1,6 @@
-Grading at 12/08/2022:21:00:18.728336
-For commit ID c8fda8b89a3cab3d0c1ea33aa7a3fbdaea35880d
-Grading at Thu Dec  8 04:00:13 PM EST 2022
+Grading at 12/08/2022:21:01:35.056983
+For commit ID 3eddbbd5432384b8e0ceeabb8c1db294a3490021
+Grading at Thu Dec  8 04:01:29 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -57,8 +57,14 @@ Now running YOUR tests for step 4
 
 4.1: Current test is ./cyoa-step4 goodstory4  <  goodstory4/input1.txt
 -----------------------------
-Your output looks good. Lets check valgrind
-  - Valgrind was clean (no errors, no memory leaks)
+Great: we both considered this an error
+----here is what you printed on stderr---
+terminate called after throwing an instance of 'InvalidInputLine'
+  what():  Invalid input line!
+
+timeout: the monitored command dumped core
+-----------------------------------------
+Lets check if it valgrinds:
 Valgrind was clean
 No request to check for intermediate deadline completion on step 4
 
