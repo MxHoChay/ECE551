@@ -1,6 +1,6 @@
-Grading at 12/08/2022:19:16:56.589479
-For commit ID 31ba0009918cbb1b10aa317c888e9bcdcf71333c
-Grading at Thu Dec  8 02:16:47 PM EST 2022
+Grading at 12/08/2022:19:18:25.342732
+For commit ID 2abe482c6bb6ba2f460c40950c70a1debabf587b
+Grading at Thu Dec  8 02:18:16 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -57,14 +57,8 @@ Valgrind was clean
 
 1.4: Current test is ./cyoa-step1 goodstory < /dev/null
 -----------------------------
-Great: we both considered this an error
-----here is what you printed on stderr---
-terminate called after throwing an instance of 'NoSuchFile'
-  what():  No such file!
-
-timeout: the monitored command dumped core
------------------------------------------
-Lets check if it valgrinds:
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
 No request to check for intermediate deadline completion on step 1
 
@@ -192,14 +186,8 @@ Now running YOUR tests for step 3
 
 3.1: Current test is ./cyoa-step3 goodstory < /dev/null
 -----------------------------
-Great: we both considered this an error
-----here is what you printed on stderr---
-terminate called after throwing an instance of 'NoSuchFile'
-  what():  No such file!
-
-timeout: the monitored command dumped core
------------------------------------------
-Lets check if it valgrinds:
+Your output looks good. Lets check valgrind
+  - Valgrind was clean (no errors, no memory leaks)
 Valgrind was clean
 No request to check for intermediate deadline completion on step 3
 
