@@ -8,6 +8,12 @@
 
 #include "MyException.hpp"
 
+/**
+ * To verify whether the input is a valid number or not.
+ * parameter: str: the input string
+              i: the position in the string
+              hasSign: unsigned or not
+ */
 bool isNum(const std::string & str, size_t & i, bool hasSign = false) {
   while (i < str.length() && str[i] == ' ') {
     ++i;
@@ -29,6 +35,9 @@ bool isNum(const std::string & str, size_t & i, bool hasSign = false) {
   return true;
 }
 
+/**
+ * Construct a DFA to judge the pattern of the string by using regular expression.
+ */
 bool isMatch(const std::string & str, int pattern) {
   size_t i = 0;
   size_t len = str.length();
@@ -123,7 +132,10 @@ bool isMatch(const std::string & str, int pattern) {
   return true;
 }
 
-// Convert string to size_t.
+/**
+ * Convert string to size_t.
+ * Can throw an error if the number can be converted to size_t.
+ */
 size_t myaTol(const std::string & str, bool isUser = false) {
   size_t i = 0;
   size_t len = str.length();

@@ -47,7 +47,9 @@ class Page {
     setText(dirName + str.substr(2));
   }
 
-  // Open the file and set the text of this page.
+  /**
+   * Open the file and set the text of this page.
+   */
   void setText(const std::string & filename) {
     std::ifstream input;
     input.open(filename.c_str(), std::ifstream::in);
@@ -60,14 +62,15 @@ class Page {
     input.close();
   }
 
-  // Return the number of choices in this page.
   size_t getSize() { return choices.size(); }
 
   bool isWin() { return type == W; }
 
   bool isLose() { return type == L; }
 
-  // Add a new choice to this page.
+  /**
+   * Add a new choice to this page.
+   */
   void addChoice(std::size_t d, const std::string & str, const std::string & condition) {
     if (type == W || type == L) {
       throw InvalidChoiceAdd();
@@ -76,7 +79,9 @@ class Page {
     choices.push_back(newChoice);
   }
 
-  // Set value to the variable
+  /**
+   * Set value to the variable
+   */
   void addVar(const std::string & str) {
     size_t equal = str.find_first_of('=');
     std::string var = str.substr(0, equal);
@@ -87,7 +92,9 @@ class Page {
     variables[var] = value;
   }
 
-  // Update global variables when moving to this page.
+  /**
+   * Update variable-value map when entering this page.
+   */
   void updateVar(std::map<std::string, long int> & storyVar) {
     for (std::map<std::string, long int>::iterator it = variables.begin();
          it != variables.end();
@@ -96,12 +103,17 @@ class Page {
     }
   }
 
-  // To check if each page referenced by this page is valid.
-  void verifyThePage(size_t max,
+  /**
+   * To check if each page referenced by this page is valid.
+   * parameters: nowpage: current page number
+                 max: the total number of pages
+   */
+  void verifyThePage(size_t nowpage,
+                     size_t max,
                      std::vector<bool> & refTable,
                      std::vector<bool> & winandlose) {
     for (size_t i = 0; i < choices.size(); i++) {
-      choices[i].verifyTheChoice(max, refTable);
+      choices[i].verifyTheChoice(nowpage, max, refTable);
     }
     if (type == W) {
       winandlose[0] = true;
@@ -111,12 +123,16 @@ class Page {
     }
   }
 
-  // Return the destpage of the chosen choice.
+  /**
+   * Return the destpage of the chosen choice.
+   */
   size_t getNext(size_t next, const std::map<std::string, long int> & storyVar) {
     return choices[next - 1].getDest(storyVar);
   }
 
-  // Print the text and choices of the page.
+  /**
+   * Print the text and choices of the page.
+   */
   bool readPage(std::ostream & s,
                 const std::map<std::string, long int> & storyVar,
                 bool isUserReading = false) const {

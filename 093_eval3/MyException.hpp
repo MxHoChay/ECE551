@@ -4,6 +4,10 @@
 #include <exception>
 #include <string>
 
+/**
+ * All the exceptions can be used in this project.
+ */
+
 class WrongPageOrder : public std::exception {
  public:
   virtual const char * what() const throw() { return "Wrong page order!\n"; }

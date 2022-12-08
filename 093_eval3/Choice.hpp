@@ -23,7 +23,10 @@ class Choice {
 
  public:
   Choice() : dest(0), text(std::string("")), var(std::string("")), value(-1) {}
-  // Construct the choice with condition.
+
+  /**
+   * Construct the choice with variable-value.
+   */
   Choice(size_t d, const std::string & str, const std::string & cond) :
       dest(d), text(str), var(std::string("+Nothing+")), value(-1) {
     if (cond == "") {
@@ -37,16 +40,22 @@ class Choice {
     }
   }
 
-  // To check each page referenced by this choice is valid.
-  void verifyTheChoice(size_t max, std::vector<bool> & refTable) {
+  /**
+   * To check each page referenced by this choice is valid.
+   */
+  void verifyTheChoice(size_t nowpage, size_t max, std::vector<bool> & refTable) {
     if (dest >= max) {
       std::cerr << "Invalid reference!\n";
       throw std::exception();
     }
-    refTable[dest] = true;
+    if (dest != nowpage) {
+      refTable[dest] = true;
+    }
   }
 
-  // To check if the choice meets the variable condition
+  /**
+   * To check if the choice meets the variable-value condition
+   */
   bool isAvaliable(const std::map<std::string, long int> & storyVar) const {
     if (var == "+Nothing+") {
       return true;
@@ -64,7 +73,9 @@ class Choice {
     return false;
   }
 
-  // Return the destpage of this choice.
+  /**
+   * Return the destpage of this choice.
+   */
   size_t getDest(const std::map<std::string, long int> & storyVar) const {
     if (isAvaliable(storyVar)) {
       return dest;
@@ -74,7 +85,9 @@ class Choice {
     }
   }
 
-  // Print the choice and the text. If the choice is unavailable under the condition, then print <UNAVAILABLE>.
+  /**
+   * Print the choice and the text. If the choice is unavailable under the condition, then print <UNAVAILABLE>.
+   */
   void readChoice(std::ostream & s,
                   const std::map<std::string, long int> & storyVar,
                   bool isUserReading = false) const {
@@ -86,7 +99,6 @@ class Choice {
     }
   }
 
-  // Output the choice
   friend std::ostream & operator<<(std::ostream & s, const Choice & rhs) {
     rhs.readChoice(s, std::map<std::string, long int>());
     return s;

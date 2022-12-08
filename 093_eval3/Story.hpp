@@ -24,14 +24,22 @@ class Story {
   size_t nowPage;
   std::map<std::string, long int> variables;
 
-  // Try to make a choice and enter that page. Use DFS to implemente this step.
+  /**
+   * Try to make a choice and enter that page.
+   * Use DFS to implement this step.
+   * parameters: pageNum: the page entered this step; 
+                 visitTable: to record pages that have been visited;
+		 path: record the path
+     return value: indicate if there is a path or not
+   */
   bool tryPage(size_t pageNum,
                std::vector<bool> & visitTable,
                std::vector<std::pair<size_t, size_t> > & path) {
+    // Avoid the visited page.
     if (visitTable[pageNum]) {
       return false;
     }
-    // If there is a path, then print it out.
+    // If reach the WIN page, then print the path out.
     if (pages[pageNum].isWin()) {
       for (size_t i = 0; i < path.size(); i++) {
         std::cout << path[i].first << "(" << path[i].second << "),";
@@ -39,6 +47,7 @@ class Story {
       std::cout << pageNum << "(win)\n";
       return true;
     }
+    // If reach the LOSE page, the return false.
     else if (pages[pageNum].isLose()) {
       return false;
     }
@@ -46,14 +55,17 @@ class Story {
     visitTable[pageNum] = true;
     bool hasPath = false;
     std::set<size_t> pageset;
+    // Try each choice in this page and enter the page.
     for (size_t i = 0; i < pages[pageNum].getSize(); i++) {
       size_t nextPage = pages[pageNum].getNext(i + 1, variables);
+      // To avoid entering the same page.
       if (pageset.find(nextPage) == pageset.end()) {
         pageset.insert(nextPage);
       }
       else {
         continue;
       }
+      // Record the path.
       std::pair<size_t, size_t> newpair(pageNum, i + 1);
       path.push_back(newpair);
       // Recursion
@@ -69,7 +81,10 @@ class Story {
  public:
   Story() : pages(std::vector<Page>()), nowPage(0) {}
 
-  // Construct the whole story by reading each line of story.txt
+  /**
+   * Construct the whole story by reading each line of story.txt
+   * parameter: dirName: the path of the directory of the story.
+   */
   void parseStory(const std::string & dirName) {
     FILE * f = fopen((dirName + "story.txt").c_str(), "r");
     if (f == NULL) {
@@ -77,8 +92,10 @@ class Story {
     }
     char * line = NULL;
     size_t sz = 0;
+    // Read each line of story.txt.
     while (getline(&line, &sz, f) > 0) {
       std::string strline(line);
+      // Remove the newline character.
       if (strline[strline.length() - 1] == '\n') {
         strline.erase(strline.length() - 1);
       }
@@ -86,6 +103,7 @@ class Story {
       if (isMatch(strline, 0)) {
         continue;
       }
+      // Get the pattern of the new line.
       bool isFileDefine = isMatch(strline, 1);
       bool isDestPage = isMatch(strline, 2);
       bool isPageWithCond = isMatch(strline, 3);
@@ -141,18 +159,23 @@ class Story {
     fclose(f);
   }
 
-  // To check if every page referenced by a choice is valid and every page has been referenced.
+  /**
+   * To check if every page referenced by a choice is valid and every page has been referenced.
+   */
   void verifyTheStory() {
     size_t max = pages.size();
+    // To record if every page is referenced by another one;
     std::vector<bool> refTable;
+    // To record if there is at least one WIN and one LOSE page.
     std::vector<bool> winandlose;
     winandlose.push_back(false);
     winandlose.push_back(false);
     for (size_t i = 0; i < max; i++) {
       refTable.push_back(false);
     }
+    // Verify each page.
     for (size_t i = 0; i < max; i++) {
-      pages[i].verifyThePage(max, refTable, winandlose);
+      pages[i].verifyThePage(i, max, refTable, winandlose);
     }
     for (size_t i = 1; i < max; i++) {
       if (refTable[i] == false) {
@@ -164,10 +187,15 @@ class Story {
     }
   }
 
-  // Read and print the story with the user's input.
+  /**
+   * Read and print the story with the user's input.
+   * This function is used in step2 and step4.
+   * parameter: userInput: Input string from user.
+   */
   bool readStory(const std::string & userInput) {
     // Print the first page.
     if (userInput == "&&&") {
+      // Record the variable-value pairs when going through the whole story.
       variables = std::map<std::string, long int>();
       pages[nowPage].updateVar(variables);
       if (pages[nowPage].readPage(std::cout, variables, true)) {
@@ -196,7 +224,9 @@ class Story {
     return false;
   }
 
-  // Try to find paths which can win the game.
+  /**
+   * Try to find paths which can win the game.
+   */
   void winTheStory() {
     std::vector<bool> visitTable;
     std::vector<std::pair<size_t, size_t> > path;
