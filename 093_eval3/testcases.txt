@@ -4,3 +4,5 @@ cyoa-step1 numfault3
 cyoa-step1 goodstory
 cyoa-step3 goodstory
 cyoa-step2 /usr/local/ece551/cyoa/story1 < ./input1.txt
+cyoa-step4 goodstory4 < goodstory4/input1.txt
+cyoa-step4 goodstory4 < goodstory4/input2.txt

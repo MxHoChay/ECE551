@@ -1,0 +1,19 @@
+0@N:page0.txt
+       0$=-2147483648
+0[sds=0]:1:Hello
+0[=2]:2:Hello
+0[=2147483647]:3:Hello
+0[sdf=2]:4:sdjfkls
+0[=-2147483647]:5:sdjfklsdj
+1@N:page1.txt
+1$=        0002
+1[    sdfsd=    -0]:      0:sdfsd
+2@N:page2.txt
+2$=      -0002147483648
+2[=2146483647]:3:hlll
+2[=  -0000002147483648]:    4:sdfjksld
+3@L:page3.txt
+4@W:page4.txt
+5@N:page5.txt
+5$sdf=2
+5[=-2147483648]:0:sdjfkls
