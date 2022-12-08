@@ -1,6 +1,6 @@
-Grading at 12/08/2022:21:05:45.724144
-For commit ID 7042daa4cc34852f700d23051370aba946b2e484
-Grading at Thu Dec  8 04:05:39 PM EST 2022
+Grading at 12/08/2022:21:08:12.594604
+For commit ID 8c38bb9ad930ce162039c0ff518798704d54b592
+Grading at Thu Dec  8 04:08:06 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -59,9 +59,9 @@ Now running YOUR tests for step 4
 -----------------------------
 Great: we both considered this an error
 ----here is what you printed on stderr---
-Invalid reference!
-terminate called after throwing an instance of 'std::exception'
-  what():  std::exception
+terminate called after throwing an instance of 'InvalidStory'
+  what():  It is not a valid story!
+
 timeout: the monitored command dumped core
 -----------------------------------------
 Lets check if it valgrinds:
