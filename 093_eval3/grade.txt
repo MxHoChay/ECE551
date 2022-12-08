@@ -1,6 +1,6 @@
-Grading at 12/08/2022:21:22:23.146413
-For commit ID e774da89c8222e948496b54a14d92a88611c3ee9
-Grading at Thu Dec  8 04:22:18 PM EST 2022
+Grading at 12/08/2022:21:23:41.756160
+For commit ID 8385e53c2cde58b72622c9f649f806a7b8b4456a
+Grading at Thu Dec  8 04:23:38 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -57,19 +57,79 @@ Now running YOUR tests for step 4
 
 4.1: Current test is ./cyoa-step4 goodstory4  <  goodstory4/input1.txt
 -----------------------------
-Great: we both considered this an error
-----here is what you printed on stderr---
-terminate called after throwing an instance of 'InvalidInputLine'
-  what():  Invalid input line!
+It looks like you got different output from us on that case.
+Here is the diff (yours on left, ours on right):
 
-timeout: the monitored command dumped core
------------------------------------------
-Lets check if it valgrinds:
-Valgrind was clean
+sdfsdf								sdfsdf
+
+
+What would you like to do?					What would you like to do?
+
+ 1. <UNAVAILABLE>						 1. <UNAVAILABLE>
+ 2. <UNAVAILABLE>						 2. <UNAVAILABLE>
+ 3. Hello							 3. Hello
+That choice is not available at this time, please try again	That choice is not available at this time, please try again
+That choice is not available at this time, please try again	That choice is not available at this time, please try again
+sdjfklsjdkl							sdjfklsjdkl
+
+
+What would you like to do?					What would you like to do?
+
+ 1. sdjfkls							 1. sdjfkls
+ 2. <UNAVAILABLE>						 2. <UNAVAILABLE>
+ 3. $@$@::::::  sdfsd						 3. $@$@::::::  sdfsd
+ 4. sdfsd							 4. sdfsd
+sdfsdf								sdfsdf
+
+
+What would you like to do?					What would you like to do?
+
+ 1. Hello							 1. Hello
+ 2. <UNAVAILABLE>						 2. <UNAVAILABLE>
+ 3. Hello							 3. Hello
+sdjfklsjdkl							sdjfklsjdkl
+
+
+What would you like to do?					What would you like to do?
+
+ 1. sdjfkls							 1. sdjfkls
+ 2. <UNAVAILABLE>						 2. <UNAVAILABLE>
+ 3. $@$@::::::  sdfsd						 3. $@$@::::::  sdfsd
+ 4. sdfsd							 4. sdfsd
+sdjfklsdjfkl							sdjfklsdjfkl
+
+
+What would you like to do?					What would you like to do?
+
+ 1. hlll							 1. hlll
+ 2. sdfjksld							 2. sdfjksld
+sdjfklsjdkl							sdjfklsjdkl
+
+
+What would you like to do?					What would you like to do?
+
+ 1. sdjfkls							 1. sdjfkls
+ 2. sdjfklsdj							 2. sdjfklsdj
+ 3. $@$@::::::  sdfsd						 3. $@$@::::::  sdfsd
+ 4. sdfsd							 4. sdfsd
+sdfjksdlf							sdfjksdlf
+
+
+What would you like to do?					What would you like to do?
+
+ 1. <UNAVAILABLE>						 1. <UNAVAILABLE>
+ 2. lose							 2. lose
+That is not a valid choice, please try again		      <
+sdncjksdjkf							sdncjksdjkf
+
+
+Sorry, you have lost. Better luck next time!			Sorry, you have lost. Better luck next time!
+Your file did not match the expected output
+
 No request to check for intermediate deadline completion on step 4
 
-You have passed the test cases YOU provided
-If your tests are good, this is great. 
-If your tests are insufficient, you should do much more testing
+You have NOT passed your test cases!
+You should go and figure out/understand where thing went wrong
+And fix the problem(s) before the deadline
 
 Overall Grade: NO GRADE YET
