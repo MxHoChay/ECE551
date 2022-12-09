@@ -20,18 +20,19 @@ int main(int argc, char ** argv) {
   char * line = NULL;
   size_t sz = 0;
   // Get user input.
-  while (getline(&line, &sz, stdin) > 0) {
-    std::string str(line);
+  std::string str;
+  while (!std::cin.eof()) {
+    //std::string str(line);
     if (str[str.length() - 1] == '\n') {
       str.erase(str.length() - 1);
     }
-    free(line);
+    //free(line);
     line = NULL;
     if (mystory.readStory(str)) {
       return EXIT_SUCCESS;
     }
   }
-  free(line);
+  //free(line);
   throw UnFinished();
   return EXIT_FAILURE;
 }
