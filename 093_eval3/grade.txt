@@ -1,6 +1,6 @@
-Grading at 12/09/2022:19:32:50.425467
-For commit ID 3b00bcdbc44422d09ca6832260e193425e00ede2
-Grading at Fri Dec  9 02:32:45 PM EST 2022
+Grading at 12/09/2022:19:36:57.717246
+For commit ID 83b43f7f1264c4a2d7b0494e7b0fee566abbfac9
+Grading at Fri Dec  9 02:36:49 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -57,11 +57,19 @@ Now running YOUR tests for step 4
 
 4.1: Current test is ./cyoa-step4 goodstory4  <  goodstory4/input2.txt
 -----------------------------
-You exited with a failure status (good) but did not print to stderr (bad)
+Great: we both considered this an error
+----here is what you printed on stderr---
+terminate called after throwing an instance of 'UnFinished'
+  what():  The story is not finished!
+
+timeout: the monitored command dumped core
+-----------------------------------------
+Lets check if it valgrinds:
+Valgrind was clean
 No request to check for intermediate deadline completion on step 4
 
-You have NOT passed your test cases!
-You should go and figure out/understand where thing went wrong
-And fix the problem(s) before the deadline
+You have passed the test cases YOU provided
+If your tests are good, this is great. 
+If your tests are insufficient, you should do much more testing
 
 Overall Grade: NO GRADE YET
