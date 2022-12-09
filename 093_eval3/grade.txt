@@ -1,6 +1,6 @@
-Grading at 12/09/2022:20:01:47.829545
-For commit ID a4965b75ac5349d0fda95f94d72a336ba9f722cb
-Grading at Fri Dec  9 03:01:43 PM EST 2022
+Grading at 12/09/2022:20:03:12.645784
+For commit ID a13994bd880eff948aef6c6d723f038844945071
+Grading at Fri Dec  9 03:03:08 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -46,6 +46,24 @@ Step 4
 Checking that cyoa-step4 compiles
 rm -f *~ cyoa-step1 cyoa-step2 cyoa-step3 cyoa-step4  cyoa-step1.o  cyoa-step2.o  cyoa-step3.o  cyoa-step4.o
 g++ -std=gnu++98 -Werror -Wall -pedantic -ggdb3 -c cyoa-step4.cpp
-The code did not compile!
+g++ -o cyoa-step4 cyoa-step4.o
+rm cyoa-step4.o
+The code compiled (good)
+Executable cyoa-step4 exists (good)
+------------------------------------
+Now running YOUR tests for step 4
+------------------------------------
+
+
+4.1: Current test is ./cyoa-step4 goodstory4  <  goodstory4/input1.txt
+-----------------------------
+You considered this a failure case:
+timeout: the monitored command dumped core
+But we did not.
+No request to check for intermediate deadline completion on step 4
+
+You have NOT passed your test cases!
+You should go and figure out/understand where thing went wrong
+And fix the problem(s) before the deadline
 
 Overall Grade: NO GRADE YET
