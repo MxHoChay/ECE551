@@ -17,21 +17,14 @@ int main(int argc, char ** argv) {
   if (mystory.readStory("&&&")) {
     return EXIT_SUCCESS;
   }
-  char * line = NULL;
-  size_t sz = 0;
   // Get user input.
-  while (getline(&line, &sz, stdin) > 0) {
-    std::string str(line);
-    if (str[str.length() - 1] == '\n') {
-      str.erase(str.length() - 1);
-    }
-    free(line);
-    line = NULL;
+  std::string str;
+  while (!std::cin.eof()) {
+    std::cin >> str;
     if (mystory.readStory(str)) {
       return EXIT_SUCCESS;
     }
   }
-  free(line);
   throw UnFinished();
   return EXIT_FAILURE;
 }
