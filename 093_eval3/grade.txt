@@ -1,6 +1,6 @@
-Grading at 12/09/2022:20:03:12.645784
-For commit ID a13994bd880eff948aef6c6d723f038844945071
-Grading at Fri Dec  9 03:03:08 PM EST 2022
+Grading at 12/09/2022:20:07:45.790554
+For commit ID e4c964ef4cef5e71bd080c3722c4fa9f840af9b7
+Grading at Fri Dec  9 03:07:38 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -57,9 +57,54 @@ Now running YOUR tests for step 4
 
 4.1: Current test is ./cyoa-step4 goodstory4  <  goodstory4/input1.txt
 -----------------------------
-You considered this a failure case:
-timeout: the monitored command dumped core
-But we did not.
+It looks like you got different output from us on that case.
+Here is the diff (yours on left, ours on right):
+
+sdfsdf								sdfsdf
+
+
+What would you like to do?					What would you like to do?
+
+ 1. <UNAVAILABLE>						 1. <UNAVAILABLE>
+ 2. <UNAVAILABLE>						 2. <UNAVAILABLE>
+ 3. Hello							 3. Hello
+That choice is not available at this time, please try again	That choice is not available at this time, please try again
+							      >	That choice is not available at this time, please try again
+That is not a valid choice, please try again			That is not a valid choice, please try again
+That choice is not available at this time, please try again	That choice is not available at this time, please try again
+sdjfklsjdkl							sdjfklsjdkl
+
+
+What would you like to do?					What would you like to do?
+
+ 1. sdjfkls							 1. sdjfkls
+ 2. <UNAVAILABLE>						 2. <UNAVAILABLE>
+ 3. $@$@::::::  sdfsd						 3. $@$@::::::  sdfsd
+ 4. sdfsd							 4. sdfsd
+That choice is not available at this time, please try again	That choice is not available at this time, please try again
+sdfsdf								sdfsdf
+
+
+What would you like to do?					What would you like to do?
+
+ 1. Hello							 1. Hello
+ 2. <UNAVAILABLE>						 2. <UNAVAILABLE>
+ 3. Hello							 3. Hello
+sdjfklsjdkl							sdjfklsjdkl
+
+
+What would you like to do?					What would you like to do?
+
+ 1. sdjfkls							 1. sdjfkls
+ 2. <UNAVAILABLE>						 2. <UNAVAILABLE>
+ 3. $@$@::::::  sdfsd						 3. $@$@::::::  sdfsd
+ 4. sdfsd							 4. sdfsd
+sdfjksdlf							sdfjksdlf
+
+
+Congratulations! You have won. Hooray!				Congratulations! You have won. Hooray!
+Your file did not match the expected output
+
 No request to check for intermediate deadline completion on step 4
 
 You have NOT passed your test cases!
