@@ -23,6 +23,7 @@ int main(int argc, char ** argv) {
   std::string str;
   while (!std::cin.eof()) {
     //std::string str(line);
+    std::cin >> str;
     if (str[str.length() - 1] == '\n') {
       str.erase(str.length() - 1);
     }
