@@ -24,5 +24,3 @@
 5$sdf=2
 5[[0]=-2147483648]:0:sdjfkls
 5:3:lose
-6@N:page5.txt
-6:6:sdfsd
