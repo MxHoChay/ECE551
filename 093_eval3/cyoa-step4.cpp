@@ -17,8 +17,8 @@ int main(int argc, char ** argv) {
   if (mystory.readStory("&&&")) {
     return EXIT_SUCCESS;
   }
-  char * line = NULL;
-  size_t sz = 0;
+  //char * line = NULL;
+  //size_t sz = 0;
   // Get user input.
   std::string str;
   while (!std::cin.eof()) {
@@ -27,7 +27,7 @@ int main(int argc, char ** argv) {
       str.erase(str.length() - 1);
     }
     //free(line);
-    line = NULL;
+    //line = NULL;
     if (mystory.readStory(str)) {
       return EXIT_SUCCESS;
     }
