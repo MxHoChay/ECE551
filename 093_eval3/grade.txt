@@ -1,6 +1,6 @@
-Grading at 12/09/2022:19:36:57.717246
-For commit ID 83b43f7f1264c4a2d7b0494e7b0fee566abbfac9
-Grading at Fri Dec  9 02:36:49 PM EST 2022
+Grading at 12/09/2022:20:01:47.829545
+For commit ID a4965b75ac5349d0fda95f94d72a336ba9f722cb
+Grading at Fri Dec  9 03:01:43 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -46,30 +46,6 @@ Step 4
 Checking that cyoa-step4 compiles
 rm -f *~ cyoa-step1 cyoa-step2 cyoa-step3 cyoa-step4  cyoa-step1.o  cyoa-step2.o  cyoa-step3.o  cyoa-step4.o
 g++ -std=gnu++98 -Werror -Wall -pedantic -ggdb3 -c cyoa-step4.cpp
-g++ -o cyoa-step4 cyoa-step4.o
-rm cyoa-step4.o
-The code compiled (good)
-Executable cyoa-step4 exists (good)
-------------------------------------
-Now running YOUR tests for step 4
-------------------------------------
-
-
-4.1: Current test is ./cyoa-step4 goodstory4  <  goodstory4/input2.txt
------------------------------
-Great: we both considered this an error
-----here is what you printed on stderr---
-terminate called after throwing an instance of 'UnFinished'
-  what():  The story is not finished!
-
-timeout: the monitored command dumped core
------------------------------------------
-Lets check if it valgrinds:
-Valgrind was clean
-No request to check for intermediate deadline completion on step 4
-
-You have passed the test cases YOU provided
-If your tests are good, this is great. 
-If your tests are insufficient, you should do much more testing
+The code did not compile!
 
 Overall Grade: NO GRADE YET
