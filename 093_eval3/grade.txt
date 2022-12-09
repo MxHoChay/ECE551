@@ -1,6 +1,6 @@
-Grading at 12/09/2022:19:08:57.048999
-For commit ID 5211e7ef682ee8eaaa7d9ad37db29d8a4c8308ab
-Grading at Fri Dec  9 02:08:52 PM EST 2022
+Grading at 12/09/2022:19:20:27.254049
+For commit ID 5064cc2934291f7b6bfa03f8a9abb3c06d160079
+Grading at Fri Dec  9 02:20:20 PM EST 2022
 Doing some basic checking for your submission
 
 Step 1
@@ -55,80 +55,10 @@ Now running YOUR tests for step 4
 ------------------------------------
 
 
-4.1: Current test is ./cyoa-step4 goodstory4  <  goodstory4/input1.txt
+4.1: Current test is ./cyoa-step4 goodstory4  <  goodstory4/input2.txt
 -----------------------------
-It looks like you got different output from us on that case.
-Here is the diff (yours on left, ours on right):
-
-sdfsdf								sdfsdf
-
-
-What would you like to do?					What would you like to do?
-
- 1. <UNAVAILABLE>						 1. <UNAVAILABLE>
- 2. <UNAVAILABLE>						 2. <UNAVAILABLE>
- 3. Hello							 3. Hello
-That choice is not available at this time, please try again	That choice is not available at this time, please try again
-That is not a valid choice, please try again		      |	That choice is not available at this time, please try again
-That is not a valid choice, please try again			That is not a valid choice, please try again
-That choice is not available at this time, please try again	That choice is not available at this time, please try again
-sdjfklsjdkl							sdjfklsjdkl
-
-
-What would you like to do?					What would you like to do?
-
- 1. sdjfkls							 1. sdjfkls
- 2. <UNAVAILABLE>						 2. <UNAVAILABLE>
- 3. $@$@::::::  sdfsd						 3. $@$@::::::  sdfsd
- 4. sdfsd							 4. sdfsd
-							      >	That choice is not available at this time, please try again
-sdfsdf								sdfsdf
-
-
-What would you like to do?					What would you like to do?
-
- 1. Hello							 1. Hello
- 2. <UNAVAILABLE>						 2. <UNAVAILABLE>
- 3. Hello							 3. Hello
-sdjfklsjdkl							sdjfklsjdkl
-
-
-What would you like to do?					What would you like to do?
-
- 1. sdjfkls							 1. sdjfkls
- 2. <UNAVAILABLE>						 2. <UNAVAILABLE>
- 3. $@$@::::::  sdfsd						 3. $@$@::::::  sdfsd
- 4. sdfsd							 4. sdfsd
-sdjfklsdjfkl						      |	sdfjksdlf
-							      <
-							      <
-What would you like to do?				      <
-							      <
- 1. hlll						      <
- 2. sdfjksld						      <
-sdjfklsjdkl						      <
-							      <
-							      <
-What would you like to do?				      <
-							      <
- 1. sdjfkls						      <
- 2. sdjfklsdj						      <
- 3. $@$@::::::  sdfsd					      <
- 4. sdfsd						      <
-sdjjsdklfjl						      <
-							      <
-							      <
-							      <
-What would you like to do?				      <
-							      <
- 1. <UNAVAILABLE>					      <
- 2. lose						      <
-sdncjksdjkf						      <
-
-
-Sorry, you have lost. Better luck next time!		      |	Congratulations! You have won. Hooray!
-Your file did not match the expected output
-
+We considered this a failure case.
+But you did not (exit status was EXIT_SUCCESS).
 No request to check for intermediate deadline completion on step 4
 
 You have NOT passed your test cases!
