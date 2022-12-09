@@ -1,1 +1,1 @@
-cyoa-step4 goodstory4 < goodstory4/input1.txt
+cyoa-step4 goodstory4 < goodstory4/input2.txt
