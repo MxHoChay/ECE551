@@ -45,4 +45,9 @@ class NumOutOfRange : public std::exception {
   virtual const char * what() const throw() { return "Number out of range!\n"; }
 };
 
+class UnFinished : public std::exception {
+ public:
+  virtual const char * what() const throw() { return "The story is not finished!\n"; }
+};
+
 #endif

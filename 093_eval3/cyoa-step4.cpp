@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 
+#include "MyException.hpp"
 #include "Story.hpp"
 
 int main(int argc, char ** argv) {
@@ -31,5 +32,6 @@ int main(int argc, char ** argv) {
     }
   }
   free(line);
+  throw UnFinished();
   return EXIT_FAILURE;
 }
